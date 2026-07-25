@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- White Side Body of Container (Perspective) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,38 L85,45 L85,75 L35,78 Z" />
+
+    <!-- Vertical ribs for texture -->
+    <path
+        android:strokeColor="#E0E0E0"
+        android:strokeWidth="0.8"
+        android:pathData="M40,39 L40,77 M45,40 L45,76 M50,41 L50,75 M55,42 L55,75 M60,43 L60,75 M65,44 L65,75 M70,44 L70,75 M75,44 L75,75 M80,44 L80,75" />
+
+    <!-- Blue Front Cooling Unit -->
+    <path
+        android:fillColor="#003399"
+        android:pathData="M15,45 L35,38 L35,78 L15,70 Z" />
+
+    <!-- Front Details (Cooling Unit grills/panels) -->
+    <path
+        android:fillColor="#1A237E"
+        android:pathData="M18,49 L32,46 L32,54 L18,57 Z" />
+    <path
+        android:fillColor="#1A237E"
+        android:pathData="M18,60 L25,58 L25,64 L18,66 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M27,60 A2,2 0 1,0 31,60 A2,2 0 1,0 27,60" />
+
+    <!-- Top Surface -->
+    <path
+        android:fillColor="#F5F5F5"
+        android:pathData="M15,45 L40,32 L90,45 L35,38 Z" />
+
+    <!-- Green Checkmark with Bold Black Border (Matching the image) -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="1.8"
+        android:strokeLineJoin="round"
+        android:fillColor="#4CAF50"
+        android:pathData="M30,58 L45,75 L85,42 L78,35 L45,63 L38,54 Z" />
+</vector>

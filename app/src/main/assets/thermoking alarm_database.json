@@ -1,0 +1,410 @@
+[
+  {
+    "alarm no.": "0",
+    "alarm description": "Supply Air Sensor Open Circuit",
+    "Description": "When the sensor circuit resistance is higher than 1300Ω. \nIndicates: \nOpen circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller.",
+    "Corrective Action": "Check for damaged sensor wires. \nCheck sensor connections at controller. \nThe sensor is a pt1000 – 2 wire sensor, connected to the MP-4000 at connector J3\npin 1 and 2. CM-4000 upper left connector J3, 17 pin wide, pin number 1 is the\nright pin, seen at the backside of the controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical\nresistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ)\nrange. \nThe sensor is a pt1000 – positive temperature coefficient, which means that the\nelectrical resistance of the sensor increases with temperature. \nThe sensor is defined to be 1000Ω@ 0°C. \nNormal condition measuring with disconnected sensor is 960Ω@-10°C,\n1000Ω@0°C,1039Ω@+10°C, 1058Ω@+15°C, 1078Ω@+20°C. \nThe valid measuring limit for this pt1000 sensor is -100°C(602Ω)\n+75°C(approx 1300Ω)."
+  },
+  {
+    "alarm no.": "1",
+    "alarm description": "Supply Air Sensor Short Circuit",
+    "Description": "When the sensor circuit resistance is lower than 602Ω. \nIndicates: \nShort circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller.",
+    "Corrective Action": "Check for damaged sensor wires. \nCheck sensor connections at controller. \nThe sensor is a pt1000 – 2 wire sensor, connected to the MP-4000 at connector J3\npin 1 and 2. CM-4000 upper left connector J3, 17 pin wide, pin number 1 is the\nright pin, seen at the backside of the controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical\nresistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ)\nrange. \nThe sensor is a pt1000 – positive temperature coefficient, which means that the\nelectrical resistance of the sensor increases with temperature. \nThe sensor is defined to be 1000Ω@ 0°C. \nNormal condition measuring with disconnected sensor is 960Ω@-10°C,\n1000Ω@0°C,1039Ω@+10°C, 1058Ω@+15°C, 1078Ω@+20°C. \nThe valid measuring limit for this pt1000 sensor is -100°C(602Ω)\n+75°C(approx 1300Ω)."
+  },
+  {
+    "alarm no.": "2",
+    "alarm description": "Return Air Sensor Open Circuit",
+    "Description": "When the sensor circuit resistance is higher than 1300Ω. \nIndicates: \nOpen circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller. \nCheck for damaged sensor wires.",
+    "Corrective Action": "Check sensor connections at controller. \nThe sensor is a pt1000 – 2 wire sensor, connected to the MP-4000 at connector J3 pin 3 and 4. CM-4000 upper left connector J3, 17 pin wide, pin number 1 is the right pin, seen at the backside of the controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical resistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ) range. \nThe sensor is a pt1000 – positive temperature coefficient, which means that the electrical resistance of the sensor increases with temperature. \nThe sensor is defined to be 1000Ω@ 0°C. \nNormal condition measuring with disconnected sensor is 960Ω@-10°C, 1000Ω@0°C,1039Ω@+10°C, 1058Ω@+15°C, 1078Ω@+20°C. \nThe valid measuring limit for this pt1000 sensor is -100°C(602Ω) +75°C(approx 1300Ω)."
+  },
+  {
+    "alarm no.": "3",
+    "alarm description": "Return Air Sensor Short Circuit",
+    "Description": "When the sensor circuit resistance is lower than 602Ω. \nIndicates: \nShort circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller.",
+    "Corrective Action": "Check for damaged sensor wires. \nCheck sensor connections at controller. \nThe sensor is a pt1000 – 2 wire sensor, connected to the MP-4000 at connector J3 pin 3 and 4. CM-4000 upper left connector J3, 17 pin wide, pin number 1 is the right pin, seen at the backside of the controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical resistance between the two sensor wires.\nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ) range. \nThe sensor is a pt1000 – positive temperature coefficient, which means that the electrical resistance of the sensor increases with temperature. \nThe sensor is defined to be 1000Ω@ 0°C. \nNormal condition measuring with disconnected sensor is 960Ω@-10°C, 1000Ω@0°C,1039Ω@+10°C, 1058Ω@+15°C, 1078Ω@+20°C. \nThe valid measuring limit for this pt1000 sensor is"
+  },
+  {
+    "alarm no.": "4",
+    "alarm description": "Evaporator Coil Sensor Open Circuit",
+    "Description": "When the sensor circuit resistance is higher than 1300Ω. \nIndicates: \nOpen circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller. \nCheck for damaged sensor wires.",
+    "Corrective Action": "Check sensor connections at controller. \nThe sensor is a pt1000 – 2 wire sensor, connected to the MP-4000 at connector J3 pin 5 and 6. CM-4000 upper left connector J3, 17 pin wide, pin number 1 is the right pin, seen at the backside of the controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical resistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ) range. \nThe sensor is a pt1000 – positive temperature coefficient, which means that the electrical resistance of the sensor increases with temperature. \nThe sensor is defined to be 1000Ω@ 0°C. \nNormal condition measuring with disconnected sensor is 960Ω@-10°C, 1000Ω@0°C,1039Ω@+10°C, 1058Ω@+15°C, 1078Ω@+20°C. \nThe valid measuring limit for this pt1000 sensor is -100°C(602Ω) +75°C(approx 1300Ω)"
+  },
+  {
+    "alarm no.": "5",
+    "alarm description": "Evaporator Coil Sensor Short Circuit",
+    "Description": "When the sensor circuit resistance is lower than 602Ω. \nIndicates: \nShort circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller.",
+    "Corrective Action": "Check for damaged sensor wires. \nCheck sensor connections at controller. \nThe sensor is a pt1000 – 2 wire sensor, connected to the MP-4000 at connector J3 pin 5 and 6. CM-4000 upper left connector J3, 17 pin wide, pin number 1 is the right pin, seen at the backside of the controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical resistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ) range. \nThe sensor is a pt1000 – positive temperature coefficient, which means that the electrical resistance of the sensor increases with temperature. \nThe sensor is defined to be 1000Ω@ 0°C. \nNormal condition measuring with disconnected sensor is 960Ω@-10°C, 1000Ω@0°C,1039Ω@+10°C, 1058Ω@+15°C, 1078Ω@+20°C. \nThe valid measuring limit for this pt1000 sensor is -100°C(602Ω) +75°C(approx 1300Ω)"
+  },
+  {
+    "alarm no.": "6",
+    "alarm description": "Compressor Current Too High",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nDuring compressor test, if Compressor power consumption is 25% above expected\ncurrent draw or compressor phase current level differs 33% or more. \nIf both alarm #6 and #7 is active this indicates too high phase difference. \nExpected compressor current is a function of the surrounding conditions. \nIndicates: \nDefective Digital Control valve. \nDefective compressor. \nDefective volt or amp meter on power module. \nInaccurate ambient, condenser or evaporator temperature measurement. \nExcessive condenser pressure due to air or wrong refrigerant in system, or\nrefrigerant over charge",
+    "Corrective Action": "Check evaporator and condenser sensor temperatures for correct value (± 5 C [± 9\nF]) by viewing Data menu. \nTo determine the current draw measurement, enter Manual Function Test menu.\nStart and check current draw of the following components separately and together:\ncompressor, compressor full loaded, condenser fan and evaporator fan (high or\nlow). \nCheck power supply volts on all 3 phases.Check evaporator and condenser sensor temperatures for correct value (± 5 C [± 9\nF]) by viewing Data menu. \nTo determine the current draw measurement, enter Manual Function Test menu.\nStart and check current draw of the following components separately and together:\ncompressor, compressor full loaded, condenser fan and evaporator fan (high or\nlow). \nCheck power supply volts on all 3 phases."
+  },
+  {
+    "alarm no.": "7",
+    "alarm description": "Compressor Current Too Low",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nDuring compressor test, if Compressor power consumption is 25% below expected\ncurrent draw or compressor phase current level differs 33% or more. \nIf both alarm #6 and #7 is active this indicates too high phase difference. \nExpected compressor current is a function of the surrounding conditions. \nIndicates: \nDefective or open high pressure cutout switch. \nDefective or open low pressure cutout switch or transmitter if mounted. \nDefective compressor relay. \nDefective volt or amp meter on power module. \nLow refrigerant charge \nDefective compressor. \nDefective volt or amp meter on power module. \nInaccurate condenser or evaporator temperature measurement. \nDefective or open compressor motor internal over temperature protection switch.",
+    "Corrective Action": "Check evaporator, condenser sensor temperatures for correct value (± 5 °C [± 9 F])\nby viewing Data menu. \nTo determine the current draw measurement, enter Manual Function Test menu.\nStart and check current draw of the following components separately and together:\ncompressor, compressor full loaded, condenser fan and evaporator fan (high or\nlow). \nCheck discharge and suction pressure gauge readings. \nCheck power supply volts on all 3 phases."
+  },
+  {
+    "alarm no.": "10",
+    "alarm description": "Heater Current Too High",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nHeater power consumption is 25% above expected current draw or phase current\nlevel differs 33% or more. \nIf both alarm #10 and #11 is active this indicates too high phase difference. \nExpected heater current is a function of the heating element resistance and the\npower supply voltage. \nThe Magnum+ may be equipped with extended heating capability. \nNormal heating element 4kw@460VAC - above approximately 6,3Amp / 5,3Amp. \nExtended heating element 6kw@460VAC - above approximately 9,4Amp / 8,1Amp. \nIndicates: \nIncorrect heaters or heater connections. \nDefective heater element. \nDefective volt or amp meter on power module.",
+    "Corrective Action": "Enter Manual Function Test and turn heaters on. Check current draw on each phase.\nEvaluate current draw in relation to expected values. \nEnter configuration menu and check the heating element setting. \nCheck heater resistance. \nThe electrical resistance towards chassis must be above meg ohm (MΩ) range. \nNormal heating element 4kw@460VAC - expects 5,0Amp@460VAC - expects 4,3Amp@400VAC - expected resistance 99Ω on each leg. \nExtended heating element 6kw@460VAC - expects 7,5Amp@460VAC - expects 6,5Amp@400VAC - expected resistance 66Ω on each leg."
+  },
+  {
+    "alarm no.": "11",
+    "alarm description": "Heater Current Too Low",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nHeater power consumption is 25% below expected current draw or phase current\nlevel differs 33% or more. \nIf both alarm #10 and #11 is active this indicates too high phase difference. \nExpected heater current is a function of the heating element resistance and the\npower supply voltage. \nThe Magnum+ may be equipped with extended heating capability. \nNormal heating element 4kw@460VAC - below approximately 3,7Amp / 3,2Amp. \nExtended heating element 6kw@460VAC - below approximately 5,6Amp / 4,8Amp. \nIndicates: \nIncorrect heaters or heater connections. \nDefective heating element. \nDefective volt or amp meter on power module.",
+    "Corrective Action": "Enter Manual Function Test and turn heaters on. Check current draw on each phase.\nEvaluate current draw in relation to expected values. \nEnter configuration menu and check the heating element setting. \nCheck heater resistance. \nThe electrical resistance towards chassis must be above meg ohm (MΩ) range. \nNormal heating element 4kw@460VAC                                                                                                         - expects 5,0Amp@460VAC - expects 4,3Amp@400VAC - expected resistance 99Ω on each leg. \nExtended heating element 6kw@460VAC                                                                                               - expects 7,5Amp@460VAC - expects 6,5Amp@400VAC - expected resistance 66Ω on each leg."
+  },
+  {
+    "alarm no.": "12",
+    "alarm description": "Evaporator Fan High Current Too High",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nFan power consumption is 33% above expected current draw or phase current level\ndiffers 33% or more. \nIf both alarm #12 and #13 is active this indicates too high phase difference. \nExpected fan current is a function of the power line frequency and the supply\nvoltage. \nWith 20’ setting above approximately - 3,4Amp@400VAC/50Hz - 4,2Amp@460VAC/60Hz \nWith 40’ setting above approximately - 2,7Amp@400VAC/50Hz - 3,4Amp@460VAC/60Hz \nIndicates: \nDefective or stuck evaporator fan motor. \nIncorrect motor or motor connections. \nDefective volt or amp meter on power module.",
+    "Corrective Action": "Open evaporator door and make sure all fans rotate freely. \nEnter Manual Function Test and start evaporator fans on high speed. Make sure all\nfans start on high speed. Check fan motor volts and amps. \nWith 20’ setting expect - 2,4Amp@400VAC/50Hz - 3,1Amp@460VAC/60Hz \nWith 40’ setting expect - 1,8Amp@400VAC/50Hz - 2,4Amp@460VAC/60Hz"
+  },
+  {
+    "alarm no.": "13",
+    "alarm description": "Evaporator Fan High Current Too Low",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nFan power consumption is 33% below expected current draw or phase current level\ndiffers 33% or more. \nIf both alarm #12 and #13 is active this indicates too high phase difference. \nExpected fan current is a function of the power line frequency and the supply\nvoltage. \nWith 20’ setting below approximately - 1,4Amp@400VAC/50Hz - 2,0Amp@460VAC/60Hz \nWith 40’ setting below approximately - 0,9Amp@400VAC/50Hz - 1,4Amp@460VAC/60Hz \nIndicates: \nDefective or open fan motor internal over temperature protection switch. \nIncorrect motor or motor connections. \nDefective volt or amp meter on power module.",
+    "Corrective Action": "Open evaporator door and make sure all fans rotate freely. \nEnter Manual Function Test and start evaporator fans on high speed. Make sure all\nfans start on high speed. If a motor does not start and is very hot, wait 10 minutes\nfor internal over temperature switch to close. \nEnter Manual Function Test and start evaporator fans on high speed. Make sure all\nfans start on high speed. Check fan motor volts and amps. \nWith 20’ setting expect                                                                                                                                                                    - 2,4Amp@400VAC/50Hz - 3,1Amp@460VAC/60Hz \nWith 40’ setting expect                                                                                                                                      - 1,8Amp@400VAC/50Hz - 2,4Amp@460VAC/6"
+  },
+  {
+    "alarm no.": "14",
+    "alarm description": "Evaporator Fan Low Current Too High",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nFan power consumption is 33% above expected current draw or phase current level\ndiffers 33% or more. \nIf both alarm #14 and #15 is active this indicates too high phase difference. \nExpected fan current is a function of the power line frequency and the supply\nvoltage. \nWith 20’ setting above approximately - 1,0Amp@400VAC/50Hz - 1,2Amp@460VAC/60Hz \nWith 40’ setting above approximately - 1,0Amp@400VAC/50Hz - 1,2Amp@460VAC/60Hz \nIndicates: \nDefective or stuck evaporator fan motor. \nIncorrect motor or motor connections. \nDefective volt or amp meter on power module.",
+    "Corrective Action": "Open evaporator door and make sure all fans rotate freely. \nEnter Manual Function Test and start evaporator fans on Low speed. Make sure all\nfans start on low speed. Check fan motor volts and amps.                                                                       With 20’ setting expect - 0,8Amp@400VAC/50Hz 0,9Amp@460VAC/60Hz                                        With 40’ setting expect                                                                                                                                   - 0,8Amp@400VAC/50Hz - 0,9Amp@460VAC/60Hz"
+  },
+  {
+    "alarm no.": "15",
+    "alarm description": "Evaporator Fan Low Current Too Low",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nFan power consumption is 33% below expected current draw or phase current level\ndiffers 33% or more. \nIf both alarm #14 and #15 is active this indicates too high phase difference. \nExpected fan current is a function of the power line frequency and the supply\nvoltage. \nWith 20’ setting below approximately - 0,5Amp@400VAC/50Hz - 0,6Amp@460VAC/60Hz \nWith 40’ setting below approximately - 0,5Amp@400VAC/50Hz - 0,6Amp@460VAC/60Hz \nIndicates: \nDefective or open fan motor internal over temperature protection switch. \nIncorrect motor or motor connections. \nDefective volt or amp meter on power module.",
+    "Corrective Action": "Open evaporator door and make sure all fans rotate freely. \nEnter Manual Function Test and start evaporator fans on low speed. Make sure all\nfans start on low speed. If a motor does not start and is very hot, wait 10 minutes\nfor internal over temperature switch to close. \nEnter Manual Function Test and start evaporator fans on high speed. Make sure all\nfans start on high speed. Check fan motor volts and amps.                                                               With 20’ setting expect                                                                                                                                 Amp@400VAC/50Hz - 0,9Amp@460VAC/60Hz                                                                                       With 40’ setting expect                                                                                                                                     0,8Amp@400VAC/50Hz - 0,9Amp@460VAC/60Hz"
+  },
+  {
+    "alarm no.": "16",
+    "alarm description": "Condenser Fan Current Too High",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nFan power consumption is 33% above expected current draw or phase current level\ndiffers 33% or more. \nIf both alarm #16 and #17 is active this indicates too high phase difference. \nExpected fan current is a function of the power line frequency and the supply\nvoltage. \nAbove approximately - 1,5Amp@400VAC/50Hz - 1,8Amp@460VAC/60Hz \nIndicates: \nDefective or stuck condenser fan motor. \nIncorrect motor or motor connections. \nDefective volt or amp meter on power module.",
+    "Corrective Action": "Enter Manual Function Test and start condenser fan. Make sure the fan starts. \nCheck fan motor volts and amps. \nExpect - 1,0Amp@400VAC/50Hz - 1,2Amp@460VAC/60Hz"
+  },
+  {
+    "alarm no.": "17",
+    "alarm description": "Condenser Fan Current Too low",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nFan power consumption is 33% below expected current draw or phase current level\ndiffers 33% or more. \nIf both alarm #16 and #17 is active this indicates too high phase difference. \nExpected fan current is a function of the power line frequency and the supply\nvoltage. \nAbove approximately - 0,5Amp@400VAC/50Hz - 0,6Amp@460VAC/60Hz \nIndicates: \nDefective condenser fan motor relay. \nIncorrect motor or motor connections. \nDefective or open fan motor internal over temperature protection switch. \nDefective volt or amp meter on power module.",
+    "Corrective Action": "Enter Manual Function Test and start condenser fan. Make sure the fan starts. \nCheck fan motor volts and amps. \nExpect - 1,0Amp@400VAC/50Hz - 1,2Amp@460VAC/60Hz"
+  },
+  {
+    "alarm no.": "18",
+    "alarm description": "Power Supply Phase Error",
+    "Description": "Shutdown Alarm \nThe power module is not capable of detecting the rotation direction. \nIndicates: \nPhase(s) missing at the power supply line. \nDefective fuse at power module. \nPower module failure. \nHeating element problem (used for current load to decide the rotation direction).",
+    "Corrective Action": "Check fuses on the power module. \nCheck power line voltage on all 3 phases. \nUse the tester to detect the problem. \nReplace power module."
+  },
+  {
+    "alarm no.": "19",
+    "alarm description": "Temperature Too Far From Setpoint",
+    "Description": "Occurs during Normal Run only. \nAfter 75 minutes of operation, supply or return air temperature is not in-range and\ndoes not approach setpoint within preset pull-down rate. \nIndicates: \nIce or frost on evaporator coil. \nLow refrigerant charge. \nAir exchange vent open too much. \nContainer air leakage (doors open).",
+    "Corrective Action": "Use DATA menu to check supply and return air sensor temperatures. \nCompare temperatures to evaluate unit cooling capacity and performance. \nTemperature difference should be 4 C to 6 C (7.2 F to 10.8 F). \nOpen evaporator door. Inspect coil for ice or frost and initiate manual defrost if\nnecessary. • Check refrigerant charge \nNOTE: This alarm can be activated if the supply or return air temperature varies, even if the\nmean temperature does approach setpoint."
+  },
+  {
+    "alarm no.": "20",
+    "alarm description": "Defrost Time Too Long",
+    "Description": "May occur during any defrost. \nHeat signal has been on for too long. \nTime limit is 90 minutes with supply voltage above 440VAC and 120 minutes below\n440VAC. \nIndicates: \nLow power supply voltage. \nDefective heater elements. \nEvaporator fans running during defrost. \nEvaporator sensor placed wrong.",
+    "Corrective Action": "Initiate a manual defrost and check amperage draw and evaporator coil\ntemperature. Evaluate defrost performance. \nOpen evaporator door and check location of evaporator coil sensor. \nNOTE: This alarm can be activated at low voltage and very low box temperature conditions,\neven under normal operating conditions."
+  },
+  {
+    "alarm no.": "22",
+    "alarm description": "Capacity Test 1 Error",
+    "Description": "Occurs during pretrip (PTI) test only. \nDifference between supply and return air temperature is too small with high speed\nevaporator fans (less than approximately 4.5 C [8 F]). \nWhen the return air temperature does not reach -18 C (0 F) within preset time. \nIndicates: \nIncorrect location of supply or return air sensor. \nAir leakage at supply sensor cable. \nDefective supply or return air sensor. \nInterchanged sensor connections. \nIncorrect evaporator fan rotation or high speed operation. \nIncorrect refrigeration system operation. \nContainer/side panels defective, damaged or leaking. \nEconomizer circuit defective.",
+    "Corrective Action": "Enter Manual Function Test and start evaporator fans on high speed and let operate\nfans for 5 minutes. Check supply, return and evaporator coil (defrost) sensor\ntemperatures. Sensor readings should be the same (evaporator coil may be 0.5 C\n[1.0 F] lower due to fan motor heat).                                                                                                     Open evaporator door and inspect evaporator fan rotation. Make sure fans are\nrotating correctly on high speed. \nCheck the sensor connections. \nEnter Manual Function Test menu. Start and check current draw of the following\ncomponents separately and together: compressor, vapor on, condenser fan and\nevaporator fans (high). Check discharge and suction pressure readings. Also check\nthe refrigerant charge. \nNOTE: This alarm can be activated in ambient temperatures below -10 C (14 F), even under\nnormal conditions."
+  },
+  {
+    "alarm no.": "23",
+    "alarm description": "Capacity Test 2 Error",
+    "Description": "Occurs during pretrip (PTI) test only. \nWhen the supply air temperature does not reach 0 °C (32 F) within preset time. \nIndicates: \nIncorrect location of supply air sensor. \nAir leakage at supply sensor cable. \nDefective supply air sensor. \nInterchanged sensor connections. \nIncorrect evaporator fan rotation or high speed operation. \nIncorrect refrigeration system operation. \nContainer/side panels defective, damaged or leaking. \nAir exchange vent open too much. \nLow refrigerant charge. \nCooling circuit defective.",
+    "Corrective Action": "Enter Manual Function Test and start evaporator fans on high speed and let operate\nfans for 5 minutes. Check supply, return and evaporator coil (defrost) sensor\ntemperatures. Sensor readings should be the same (supply air may be 0.5 °C [1.0\nF] higher due to fan motor heat).                                                                                                               Open evaporator door and inspect evaporator fan rotation. Make sure fans are\nrotating correctly on low and high speed. \nCheck the sensor connections. \nEnter Manual Function Test menu. Start and check current draw of the following\ncomponents separately and together: compressor, vapor on, condenser fan and\nevaporator fans (high). Check discharge and suction pressure readings. Also check\nthe refrigerant charge."
+  },
+  {
+    "alarm no.": "26",
+    "alarm description": "Vapor Injection Error",
+    "Description": "Occurs during pti, brief pti and function tests. \nPower consumption does not increase when activating economizer valve. \nCurrent consumption not correct for valve position.",
+    "Corrective Action": "Enter Manual Function Test and start compressor and evaporator fans on high\nspeed, with digital valve off, operate vapor injection valve and observe current\nconsumption change. An increase in current consumption is expected. \nCheck vapor valve function. \nEvaluate economizer Tx valve operation.                                                                                             NOTE: This alarm can be activated in low ambient temperatures where condenser\ntemperature may not be high."
+  },
+  {
+    "alarm no.": "31",
+    "alarm description": "Low Pressure Cut Out",
+    "Description": "If Low pressure switch is mounted. \nThe switch is OPEN. \nIf pressure transducer is mounted. \nThe suction pressure has been measured below -0,27BarR and has not yet increased above \n+0,38BarR. \nIndicates: \nLow refrigerant charge. \nRefrigeration system restriction at filter drier or expansion valve. \nDefective low pressure cutout switch. \nDefective low pressure transmitter.",
+    "Corrective Action": "Check discharge and suction pressure gauge readings: \nIf refrigerant pressures are low, check for a restriction and leak check the\nrefrigeration system. \nIf refrigerant pressures are high, check for a high refrigerant charge (see\nbelow). \nCheck for a restriction: \nCheck for frost on downstream side of the filter drier. \nCheck for high evaporator superheat using supply air sensor temperature\nreadings in Data menu or a frost pattern on expansion valve side of the\nevaporator coil. A large temperature difference between the left hand and\nright hand supply air sensors indicates a possible evaporator restriction or\nincorrect superheat. \nIf Low pressure switch is mounted \nCheck low pressure cutout switch wiring. \nMeasure the voltage across the switch, located at J9 pin 6 and pin 5. - Switch closed (normal) voltage is 0VDC. - Switch open (LPCO) voltage is approx. 12VDC. \nReplace switch. \nIf pressure transducer is mounted, \nMeasure the transducer supply voltage at J1 pin 8 related to J1 pin 9\n(GND). Expects to be approx. 12VDC. \nMeasure the transducer output voltage at J1 pin 7 related to J1 pin 9\n(GND). Expects to be above 0,5VDC (0BarR = 0,8VDC)"
+  },
+  {
+    "alarm no.": "32",
+    "alarm description": "Condenser Temperature Sensor Open Circuit",
+    "Description": "When the sensor circuit resistance is above 1785Ω. \nIndicates: \nOpen circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller.",
+    "Corrective Action": "Check for damaged sensor wires. \nCheck for sensor connections at controller. \nThe sensor is a pt1000 – 2 wire sensor, connected to the MP-4000 at connector J3\npin 7 and 8. CM-4000 upper left connector J3, 17 pin wide, pin number 1 is the\nright pin, seen at the backside of the controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical\nresistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ)\nrange. • \nThe sensor is a pt1000 – positive temperature coefficient, which means that the\nelectrical resistance of the sensor increases with temperature. \nThe sensor is defined to be 1000Ω@ 0°C. \nNormal condition measuring with disconnected sensor is 960Ω@-10°C,\n1000Ω@0°C,1039Ω@+10°C, 1058Ω@+15°C, 1078Ω@+20°C. \nThe valid measuring limit for this pt1000 sensor is -100°C(602Ω)\n+200°C(approx 1758Ω)."
+  },
+  {
+    "alarm no.": "33",
+    "alarm description": "Condenser Temperature Sensor Short Circuit",
+    "Description": "When the sensor circuit resistance is below 602Ω. \nIndicates: \nOpen circuit. \nDefective or wrong sensor. \nDefective wiring \nDefective controller.",
+    "Corrective Action": "Check for damaged sensor wires. \nCheck sensor connections at controller. \nThe sensor is a pt1000 – 2 wire sensor, connected to the MP-4000 at connector J3\npin 7 and 8. CM-4000 upper left connector J3, 17 pin wide, pin number 1 is the\nright pin, seen at the backside of the controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical\nresistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ)\nrange. \nThe sensor is a pt1000 – positive temperature coefficient, which means that the\nelectrical resistance of the sensor increases with temperature. \nThe sensor is defined to be 1000Ω@ 0°C. \nNormal condition measuring with disconnected sensor is 960Ω@-10°C,\n1000Ω@0°C,1039Ω@+10°C, 1058Ω@+15°C, 1078Ω@+20°C. \nThe valid measuring limit for this pt1000 sensor is -100°C(602Ω)\n+200°C(approx 1758Ω)."
+  },
+  {
+    "alarm no.": "34",
+    "alarm description": "Ambient Air Sensor Open Circuit",
+    "Description": "When the sensor circuit resistance is above 1785Ω. \nIndicates: \nOpen circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller.",
+    "Corrective Action": "Check for damaged sensor wires. \nCheck sensor connections at controller. \nThe sensor is a pt1000 – 2 wire sensor, connected to the MP-4000 at connector J3\npin 9 and 10. CM-4000 upper left connector J3, 17 pin wide, pin number 1 is the\nright pin, seen at the backside of the controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical\nresistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ)\nrange. \nThe sensor is a pt1000 – positive temperature coefficient, which means that the\nelectrical resistance of the sensor increases with temperature. \nThe sensor is defined to be 1000Ω@ 0°C. \nNormal condition measuring with disconnected sensor is 960Ω@-10°C,\n1000Ω@0°C,1039Ω@+10°C, 1058Ω@+15°C, 1078Ω@+20°C. \nThe valid measuring limit for this pt1000 sensor is -100°C(602Ω)\n+200°C(approx 1758Ω)."
+  },
+  {
+    "alarm no.": "35",
+    "alarm description": "Ambient Air Sensor Short Circuit",
+    "Description": "When the sensor circuit resistance is below 602Ω. \nIndicates: \nShort circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller.",
+    "Corrective Action": "Check for damaged sensor wires. \nCheck sensor connections at controller. \nThe sensor is a pt1000 – 2 wire sensor, connected to the MP-4000 at connector J3\npin 9 and 10. CM-4000 upper left connector J3, 17 pin wide, pin number 1 is the\nright pin, seen at the backside of the controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical\nresistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ)\nrange. \nThe sensor is a pt1000 – positive temperature coefficient, which means that the\nelectrical resistance of the sensor increases with temperature. \nThe sensor is defined to be 1000Ω@ 0°C. \nNormal condition measuring with disconnected sensor is 960Ω@-10°C,\n1000Ω@0°C,1039Ω@+10°C, 1058Ω@+15°C, 1078Ω@+20°C. \nThe valid measuring limit for this pt1000 sensor is -100°C(602Ω)\n+200°C(approx 1758Ω)."
+  },
+  {
+    "alarm no.": "43",
+    "alarm description": "Return Air Temperature - Too High",
+    "Description": "Occurs during defrost. \nWith dehumidify operation; during defrost the return air temperature increases\nabove 38 °C (100 F). \nIndicates: \nDefective return or evaporator coil sensor. \nReturn and evaporator coil sensor connections are reversed.",
+    "Corrective Action": "Check for sensor alarm codes. \nCheck supply and return sensor connections and locations."
+  },
+  {
+    "alarm no.": "44",
+    "alarm description": "Return Air Temperature - Too Low",
+    "Description": "Occurs during Normal Run only. \nOnly active with the surveillance active (OOCL option) \nDuring dehumidify operation or if ambient air temperature is below set point: \nIf return air temperature is below set point -3C. \nElse (other operation range): \nIf return air temperature is below set point -1C. \nThe alarm state has to be present for 15minutes before the alarm is set. \nIndicates: \nContainer/side panels defective, damaged or leaking.",
+    "Corrective Action": "Using DATA menu to evaluate sensors. \nUse PROBE TEST to help determine the problem. \nReplace sensor."
+  },
+  {
+    "alarm no.": "51",
+    "alarm description": "Power Line Voltage Too Low",
+    "Description": "Shutdown Alarm \nOccurs if line voltage has been below 330VAC and is below 340 volts for 30\nminutes. \nDuring the 30 minutes and until voltage gets back above 340VAC the compressor is\nstopped, for protecting the unit. \nIndicates: \nPoor power supply.",
+    "Corrective Action": "Using DATA menu to evaluate the power line quality. \nRefer to the electrical specifications in the Specifications Section for correct power\nrequirements."
+  },
+  {
+    "alarm no.": "52",
+    "alarm description": "Probe Error",
+    "Description": "Occurs during pretrip (PTI) test or probe test in Chilled mode. \nTemperature difference between supply and return air is above 1,5C and the system\nis not capable of pinpointing which probe is failing. \nTemperature difference between supply and return air and evaporator coil is above\n1,5C and the system is not capable of pinpointing which probe is failing. \nIndicates: \nSensor error. \nSensor misplacement.",
+    "Corrective Action": "Using MANUAL FUNCTION TEST, ventilate with evaporator fan high speed and\nevaluate the readings. \nCheck sensor connections. \nReplace sensor. \nCheck sensor."
+  },
+  {
+    "alarm no.": "53",
+    "alarm description": "High Pressure Switch Off Error",
+    "Description": "Occurs during pretrip (PTI) test only. \nCompressor does not stop during high pressure cutout switch test. \nIndicates: \nFaulty compressor contactor or control circuit. \nLow refrigerant charge. \nDefective high pressure cutout switch. \nStrong winds causing cooling of condenser coil in low ambient conditions.",
+    "Corrective Action": "Check discharge and suction pressure gauge readings and check refrigerant\ncharge. \nEnter Manual Function Test menu. \nStart the following components together: compressor 100 percent,\ncompressor and evaporator fans (high). Discharge pressure should\nincrease and compressor should stop at 2250 kPa, 22.5 bar, 326 psig\n(high pressure cutout switch opens)."
+  },
+  {
+    "alarm no.": "54",
+    "alarm description": "High Pressure Switch On Error",
+    "Description": "Occurs during pretrip (PTI) test only. \nCompressor does not start within normal time during high pressure cutout switch\ntest. \nIndicates: \nHigh pressure cutout switch did not respond to pressure change within 5 seconds. \nAir in refrigeration system. \nDefective high pressure cutout switch.",
+    "Corrective Action": "Check discharge and suction pressure gauge readings. \nEnter Manual Function Test menu. \nStart the following components together: compressor 100 percent,\ncompressor and evaporator fans (high). Discharge pressure should\nincrease and compressor should stop at 2250 kPa, 22.5 bar, 326 psig\n(high pressure cutout switch opens). \nThen start condenser fan. Discharge pressure must drop quickly (10 to 20\nseconds) to 1550 kPa, 15.5 bar, 225 psig and compressor should start\n(switch closes)."
+  },
+  {
+    "alarm no.": "56",
+    "alarm description": "Compressor Temperature Too High",
+    "Description": "Shutdown Alarm \nCompressor discharge line temperature is above 148 C (298 F). Compressor\nstopped until discharge line temperature decreases to normal. \nIndicates: \nAir in refrigeration system. \nLow refrigerant charge. \nDefective compressor. \nDefective vapor injection.",
+    "Corrective Action": "Operate unit on Cool and check discharge and suction pressure gauge readings. \nEnter Manual Function Test menu and test (operate) Vapor Injection Valve to\ndetermine if valve opens (energizes). \nCheck compressor discharge sensor resistance. Resistance must be approx. 86,000\nohms at 25 C (77 F). \nCheck discharge line temperature with a separate electronic thermometer and\ncompare to “HIGH PR TEMP” shown in the Data menu of controller. \nNOTE: Unit will operate normally without compressor sensor. However, controller compressor\nhigh temperature protection is not active."
+  },
+  {
+    "alarm no.": "57",
+    "alarm description": "FAE Device Error",
+    "Description": "Occurs during pretrip testing if the expected door endpoints can’t be reached. \nOccurs during normal operation \nIf the AFAM+ module isn’t detected. \nDuring door position calibration the expected door endpoints feedback can’t be\nreached. \nDuring pulsing movement the expected door end points feedback can’t be reached. \nIndicates: \nStocked air vent. door motor. \nFailing or missing AFAM+ module.",
+    "Corrective Action": "Inspect AFAM+ module connection to the controller. \nUsing STATES MENU / EXPANSION MODULE to inspect the observed presence and\nreadings of the AFAM+ module. \nFrom backside left bay is bay 1 \nFrom backside right bay is bay 2 \nIf the module is not found use the tester to decide the\nproblem. \nInspect wiring from AFAM+ motor to AFAM+ module. \nUsing MANUAL FUNCTION TEST move and Inspect air vent door movement. \nInspect air vent. \nReplace AFAM+ motor."
+  },
+  {
+    "alarm no.": "58",
+    "alarm description": "Phase Sensor Error",
+    "Description": "Occurs during pretrip (PTI) or function test only. \nDuring Phase Sensor Test, while direction is reversed, the condenser fan and\ncompressor is tested.\nIf the current consumption of the condenser fan is below 0,5A on each\nphase. \nIf the current consumption of the compressor is below 2,0A on each\nphase. \nIndicates: \nDefective phase relay. \nDefective power module.",
+    "Corrective Action": "Start a Manual Function Test. With reverse phase direction selected, check the\ncondenser fan runs reversed direction and the compressor is activated and makes\nloud noise. Allow only for short time activation max. 5 sec."
+  },
+  {
+    "alarm no.": "59",
+    "alarm description": "Delta Current Error",
+    "Description": "100% ampere difference between current phases, max reading must be above\n1,5A. \nThe alarm is protected by a timer which demand the state to be present for 3\nminutes before the alarm is set. \nIndicates: \nOpen connection on one phase of power supply to a motor or heater element. \nBlown fuse.",
+    "Corrective Action": "Enter Manual Function Test menu and test (operate) each 3-phase component to\nlocate defective connection. \nCheck fuses."
+  },
+  {
+    "alarm no.": "60",
+    "alarm description": "Humidity Sensor Error",
+    "Description": "Occurs during pretrip (PTI) test. \nRelative humidity reading is less than 15%. \nIndicates: \nSensor disconnected. \nWrong controller software configuration, sensor might be disconnected or removed. \nDefective sensor",
+    "Corrective Action": "Check sensor connections. \nCheck controller configuration menu for correct humidity setting. \nReplace sensor."
+  },
+  {
+    "alarm no.": "65",
+    "alarm description": "CO2 Too High",
+    "Description": "Occurs during Normal Run with AFAM+ enabled. \nIf the CO2 level has been within 0.6% of set point for at least one hour and then\ngets 1.6% above set point. \nIndicates: \nNeed of ventilation with fresh air \nStocked air vent door. \nAir Vent. Motor defect.",
+    "Corrective Action": "Using Manual Function Test - Check air vent door functionality. \nCheck wiring."
+  },
+  {
+    "alarm no.": "66",
+    "alarm description": "CO2 Too Low",
+    "Description": "Occurs during Normal Run with AFAM+ enabled. \nIf the CO2 level has been within 0.6% of set point for one hour and then gets 1.6%\nbelow set point. \nIndicates: \nNot intended ventilation with fresh air \nStocked air vent door. \nAir Vent. Motor defect. \nContainer doors open.",
+    "Corrective Action": "Using Manual Function Test - Check air vent door functionality. \nCheck wiring. \nCheck container doors."
+  },
+  {
+    "alarm no.": "68",
+    "alarm description": "Gas Analyzer Error",
+    "Description": "Occurs during pretrip (PTI) test only. \nWith O2 ON, If Both O2 and CO2 sensor reading is not ready and valid within 10\nminutes. \nOccurs during normal run with AFAM+ enabled. \nIf the sensor is capable of producing valid reading for 10 minutes. \nIndicates: \nFailing sensor, not capable of heating up or create conditions for valid reading.",
+    "Corrective Action": "Redo AFAM+ PTI. \nReplace sensor."
+  },
+  {
+    "alarm no.": "69",
+    "alarm description": "Gas Analyzer Calibration Error",
+    "Description": "Occurs during AFAM+ PTI test. \nAfter ventilation if the CO2 reading is below 0% or above 2%. \nOccurs during normal run with AFAM+ enabled. \nWith O2 ON, if (CO2+O2) is not within 10% to 30%. \nWith O2 OFF, if CO2 is above 25%. \nIndicates: \nSensor lost the calibration. \nFailing sensor.",
+    "Corrective Action": "Redo the test. \nReplace sensor."
+  },
+  {
+    "alarm no.": "70",
+    "alarm description": "O2 Sensor Error",
+    "Description": "Occurs during pretrip (PTI) test only. \nIf the sensor reading is not ready and valid within 10 minutes. \nIndicates: \nFailing sensor, not capable of heating up or create conditions for valid reading.",
+    "Corrective Action": "Redo the test. \nReplace sensor"
+  },
+  {
+    "alarm no.": "71",
+    "alarm description": "CO2 Sensor Error",
+    "Description": "Occurs during pretrip (PTI) test only. \nIf the sensor reading is not ready and valid within 10 minutes. \nIndicates: \nFailing sensor, not capable of heating up or create conditions for valid reading.",
+    "Corrective Action": "Redo the test. \nReplace sensor."
+  },
+  {
+    "alarm no.": "97",
+    "alarm description": "Compressor Sensor Open Circuit",
+    "Description": "When the sensor circuit resistance is above 3000kΩ. \nIndicates: \nOpen circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller.",
+    "Corrective Action": "Check for damaged sensor wires.                                                                                                                             \nCheck sensor connections at controller. \nThe compressor temperature sensor is a NTC – 2 wire sensor. The sensor is\nlocated/connected to the MP-4000 at connector J3 pin 13 and 14. CM-4000 upper\nleft connector J3, 17 pin wide, pin number 1 is the right pin, seen at the backside of\nthe controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical\nresistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ) range. \nThe sensor is a NTC thermistor type - negative temperature coefficient, which in\nthis case means that the resistance of the sensor decreases with temperature.                              The sensor is defined to be 86000Ω@ 25°C. \nNormal condition measuring with disconnected sensor is - 475kΩ@-10°C, - 280kΩ@0°C, - 171kΩ@+10°C, - 135kΩ@+15°C, - 107kΩ@+20°C. \nThe valid measuring limit for this sensor is -25°C(approx 1MΩ) +185°C(approx\n550Ω). \nNOTE: OPEN circuit state is not reasonable since open indicates high electrical resistance\nwhich with this type of sensor is possible at very low temperature. Instead -30°C is shown as\ntemperature. The needed protection compressor temperature vice is at the high temperature\nend of the scale"
+  },
+  {
+    "alarm no.": "98",
+    "alarm description": "Compressor Sensor Short Circuit",
+    "Description": "When the sensor circuit resistance is below 550Ω. \nIndicates: \nShort circuit. \nDefective or wrong sensor. \nDefective wiring. \nDefective controller.",
+    "Corrective Action": "Check for damaged sensor wires. \nCheck sensor connections at controller. \nThe compressor temperature sensor is a NTC – 2 wire sensor. The sensor is\nlocated/connected to the MP-4000 at connector J3 pin 13 and 14. CM-4000 upper\nleft connector J3, 17 pin wide, pin number 1 is the right pin, seen at the backside of\nthe controller. \nThe 2 sensor wires can be switched without affecting the measurement. \nDisconnect the sensor, use an Ohm (Ω) measuring device, measure the electrical\nresistance between the two sensor wires. \nThe sensor can’t be examined without disconnecting it. \nThe electrical resistance towards chassis must be above meg ohm (MΩ) range. \nThe sensor is a NTC thermistor type - negative temperature coefficient, which in\nthis case means that the resistance of the sensor decreases with temperature.                       The sensor is defined to be 86000Ω@ 25°C. \nNormal condition measuring with disconnected sensor is - 475kΩ@-10°C, - 280kΩ@0°C, - 171kΩ@+10°C, - 135kΩ@+15°C, - 107kΩ@+20°C. \nThe valid measuring limit for this sensor is -25°C(approx 1MΩ) +185°C(approx\n550Ω). \nNOTE: OPEN circuit state is not reasonable since open indicates high electrical resistance\nwhich with this type of sensor is possible at very low temperature. Instead -30°C is shown as\ntemperature. The needed protection compressor temperature vice is at the high temperature\nend of the scale."
+  },
+  {
+    "alarm no.": "119",
+    "alarm description": "Digital Valve Error",
+    "Description": "Occurs during pretrip (PTI) test only. \nCompressor Current consumption not correct for valve position.",
+    "Corrective Action": "Using Manual Function Test, without compressor and fans active check the function\nof the valve by observing the sound or feel of the valve while\nactivating/deactivating. \nUsing Manual Function Test, with compressor and fans active check the function of\nthe valve.                                                                                                                                                                                                         The current consumption during NOT energized valve must be higher than\nduring energized position. \nWith Condenser coil temperature above 35C the expected increase is min\n0,9A and below 35C expected limit is 1,5A."
+  },
+  {
+    "alarm no.": "120",
+    "alarm description": "Suction Pressure Sensor Error",
+    "Description": "Occurs during Normal Run if the sensor is detected to be out of range, open or\nshort circuit. \nOccurs during pretrip (PTI) test if the sensor readings do not act correct during\ncompressor activity. \nExpected to decrease 0,15Bar from stopped to compressor running loaded. \nIndicates: \nWrong location of the sensor. \nSensor failure.",
+    "Corrective Action": "Using DATA menu evaluate sensor readings. \nCheck wiring to be correct and connected. \nCheck J1 plug is plugged into MRB. \nCheck voltage at J1 pin7 to be 0.5 – 4.5 volts. \nReplace sensor."
+  },
+  {
+    "alarm no.": "121",
+    "alarm description": "Discharge Pressure Sensor Error",
+    "Description": "Occurs during Normal Run if the sensor is detected to be out of range, open or\nshort circuit. \nOccurs during pretrip (PTI) test if the sensor readings do not act correct during\ncompressor activity. \nExpected to increase 0,15Bar from stopped to compressor running loaded. \nIndicates: \nWrong location of the sensor. \nSensor failure.",
+    "Corrective Action": "Using DATA menu evaluate sensor readings. \nCheck wiring to be correct and connected. \nCheck J1plug is plugged into MRB. \nCheck voltage at J1 pin4 to be 0.5 – 4.5 VDC. \nReplace sensor."
+  },
+  {
+    "alarm no.": "122",
+    "alarm description": "O2 Sensor Calibration Error",
+    "Description": "Occurs during AFAM+ PTI test. \nOccurs only if the setting O2 SENSOR USAGE is ON. \nAfter ventilation if the O2 reading is below 17% or above 25%. \nIndicates: \nSensor lost the calibration. \nFailing sensor.",
+    "Corrective Action": "Open doors and ventilate container. \nRedo the test. \nRecalibrate sensor. \nReplace the sensor."
+  },
+  {
+    "alarm no.": "123",
+    "alarm description": "Datalogger Battery Error",
+    "Description": "In cold ambient if the battery heater (battery internal) is not capable of heating up\nthe battery, ready for charging within 2 hours. \nIf the battery is not connected. \nIf the battery voltage is below 3,0VDC.",
+    "Corrective Action": "Using DATA menu to determine the state of the battery. Evaluate temperature and\nvoltage. \nCheck the battery physically, dismount and examine wires and the connection to\nthe controller. \nReplace battery."
+  },
+  {
+    "alarm no.": "124",
+    "alarm description": "Cold Treatment Restart",
+    "Description": "Occurs during Normal Run and only with cold Treatment active. \nOnly active with the surveillance active (OOCL option). \nIndicates: \nCold treatment period is restarted due to temperatures. \nProblem with cooling process, \nToo long duration of power off.",
+    "Corrective Action": "Unit will automatically restart the treatment period."
+  },
+  {
+    "alarm no.": "127",
+    "alarm description": "Alarm General Unit Error",
+    "Description": "The surveillance has determined that the unit is not capable of continue running,\nand has shut down. \nThe reason is displayed at the controller main screen, and is stated at the event\nnext to the alarm event. \nKnown reason to the shutdown state is: \n“SET POINT OUT OF RANGE” \n“VOLTAGE OUT OF RANGE” \n“POWER LINE PHASE ERROR” \n“REGULATION PROBE ERROR” \n“COMPRESSOR TEMPERATURE HIGH”",
+    "Corrective Action": "“SET POINT OUT OF RANGE”                                                                                                                                                        The temperature set point is outside valid operation range. +30°C to -40°C (+35°C\nwith extended range). \nCheck configurations and settings on the controller. \n“VOLTAGE OUT OF RANGE” \nThe measured voltage is below 330VAC. \nCheck power line voltage while loaded. \n“POWER LINE PHASE ERROR” \nThe phase detection system detects phase error or not capable of securing the\ncorrect rotation. \nCheck power line voltage and quality. \n“REGULATION PROBE ERROR” \nIf supply and return air temperature sensor and evaporator coil temperature\nsensors ALL indicate OPEN or SHORT circuit, the software is not capable of\ndetermine a reasonable action related to the cargo. \nFollow steps related to the sensor alarms. \n“COMPRESSOR TEMPERATURE HIGH” \nThe compressor temperature is measured to be above 148°C. The state will stay\nuntil compressor temperature is measured to be below 132°C. \nCheck refrigerant level and flow through the cooling circuit."
+  },
+  {
+    "alarm no.": "128",
+    "alarm description": "Supply Air Temperature Probe Error",
+    "Description": "Occurs during pretrip (PTI) test and probe test only. \nAfter ventilation with the evaporator fans. \nIf the supply and return air temperature sensor differs more than 1,5C and the\nreturn air temperature is within 1,5C of evaporator coil temperature. \nIf evaporator coil temperature sensor is failing, if the supply and return air\ntemperature sensors differs more than 1,5C. Both alarm 129 and 128 will be set. \nIndicates: \nFailing sensors. \nMisplaced sensors. \nFailing controller.",
+    "Corrective Action": "Use the DATA menu to detect the failing sensor. \nReplace sensors. \nUse the tester to determine the problem."
+  },
+  {
+    "alarm no.": "129",
+    "alarm description": "Return Air Temperature Probe Error",
+    "Description": "Occurs during pretrip (PTI) test and probe test only. \nAfter ventilation with the evaporator fans. \nIf the supply and return air temperature sensor differs more than 1,5C and the\nsupply air temperature is within 1,5C of evaporator coil temperature. \nIf evaporator coil temperature sensor is failing, if the supply and return air\ntemperature sensors differs more than 1,5C. Both alarm 129 and 128 will be set. \nIndicates: \nFailing sensors. \nMisplaced sensors. \nFailing controller.",
+    "Corrective Action": "Use the DATA menu to detect the failing sensor. \nReplace sensors. \nUse the tester to determine the problem."
+  },
+  {
+    "alarm no.": "130",
+    "alarm description": "Evaporator Coil Temperature Probe Error",
+    "Description": "Occurs during pretrip (PTI) test and probe test only. \nAfter ventilation with the evaporator fans. \nIf the evaporator coil temperature differs more than 1,5C from the mean value of\nsupply and return air temperature. \nIndicates: \nFailing sensors. \nMisplaced sensors. \nFailing controller.",
+    "Corrective Action": "Use the DATA menu to detect the failing sensor. \nReplace sensors. \nUse the tester to determine the problem."
+  },
+  {
+    "alarm no.": "131",
+    "alarm description": "Ambient Condenser Temperature Probe Error",
+    "Description": "Occurs during pretrip (PTI) test and probe test only. \nAfter ventilation with the condenser fan. \nIf the ambient air and condenser coil temperature sensor readings differs more than\n2.5C. \nIndicates: \nFailing sensors. \nMisplaced sensors. \nFailing controller.",
+    "Corrective Action": "Use the DATA menu to detect the failing sensor. \nReplace sensors. \nUse the tester to determine the problem."
+  },
+  {
+    "alarm no.": "132",
+    "alarm description": "Power Module Sensor Error",
+    "Description": "The surveillance continually evaluates the measurements reported by the power\nmodule. \nThe surveillance includes a timer with a timeout at 60 seconds before the alarm is\nset. \nIndicates: \nPower module located readings outside allowed range.",
+    "Corrective Action": "Use DATA menu to determine the failing reading. \nThe accepted limit for \nLine AC voltage is 180 to 700VAC. \nPower line current is 0mA to 32A. \nRadiator temperature is -100C to 200C. \nCheck for latest software revision. \nUse tester to determine the problem."
+  },
+  {
+    "alarm no.": "133",
+    "alarm description": "Power Module Network Error",
+    "Description": "The surveillance has not received valid status communication from the power\nmodule for 10 seconds. \nIndicates: \nCommunication problem.",
+    "Corrective Action": "Check connection between controller and power module. \nUse tester to determine the problem."
+  },
+  {
+    "alarm no.": "134",
+    "alarm description": "Controller Error",
+    "Description": "The surveillance has determined the state “controller internal error”. \nIndicates: \nThe controller is failing one way or another.",
+    "Corrective Action": "Use the tester to determine the problem."
+  },
+  {
+    "alarm no.": "135",
+    "alarm description": "Power Module Error",
+    "Description": "The surveillance has determined the state “Power module error”. \nIndicates: \nThe power module is failing one way or another.",
+    "Corrective Action": "Use the tester to determine the problem."
+  },
+  {
+    "alarm no.": "136",
+    "alarm description": "Transducer Circuit Error",
+    "Description": "The controller is not capable of generating the expected voltage for the 12V\ntransducer sensors, (suction pressure and discharge pressure, AVL and humidity\nsensor).",
+    "Corrective Action": "Replace Data logger Battery. \nUse the tester to determine the problem."
+  },
+  {
+    "alarm no.": "137",
+    "alarm description": "Sensor System Overload",
+    "Description": "The controller sensor measurement is overloaded. \nThis situation will probably introduce wrong readings at other sensors than the one\nintroducing the overload. \nIndicates: \nNot intended voltage is introduced at one of the sensor inputs. \nTransducer, connection or cabling with voltage supply for the sensor might short\ncircuit this voltage supply onto the measuring input.",
+    "Corrective Action": "Sensor input which might initiate the problem: \nAt connector J3: \nHumidity sensor (4-20mA type) pin 15-16. \nAt connector J1: \nAVL position pin 1-3. \nDischarge pressure pin 4-6. \nSuction pressure pin 7-9. \nAt least one of the sensors circuits holds a short between sensor voltage and sensor\nsignal. \nProblem might be located any were from the connection to the sensor itself. \nAction: \nDisconnect sensors and look for a non intended short between sensor\nvoltage and the sensor line. \nThe sensor with the problem might show up with its own alarm."
+  },
+  {
+    "alarm no.": "138",
+    "alarm description": "AVL Sensor Error",
+    "Description": "Occurs if the sensor is detected to be out of range, open or short circuit. \nIndicates: \nSensor failure.",
+    "Corrective Action": "Using DATA menu evaluate sensor readings. \nCheck wiring to be correct and connected. \nCheck J1 plug is plugged and connected to controller. \nCheck voltage at J1 pin 1 to be 0.5 – 4.5 VDC. \nCheck supply voltage at J1 pin 3 (GND) to pin 2 to be approximately 12.6VDC. \nReplace sensor"
+  },
+  {
+    "alarm no.": "139",
+    "alarm description": "Internal File Handling Error",
+    "Description": "Occurs if the read or write process of nonvolatile information (i.e. Configuration and\nsettings) fails. \nIndicates: \nInternal file read or write failure.",
+    "Corrective Action": "Replace controller."
+  },
+  {
+    "alarm no.": "140",
+    "alarm description": "Evaporator Section Too Hot MP4000",
+    "Description": "Occurs if supply air, return air or evaporator coil temperature reads temperature at\nor above 60C. \nIndicates: \nFailing heater circuit, hanging output. \nFailing evaporator fan.",
+    "Corrective Action": "Observe temperature readings to locate the problem. \nUse manual function test to determine the failing component. \nUse the tester to determine the problem."
+  },
+  {
+    "alarm no.": "141",
+    "alarm description": "Power Module Heat Exchanger Too Hot MP4000",
+    "Description": "Occurs if the power module heat exchanger temperature gets above 105C. \nSince activating the heating element is the far most heat applying solid state\nswitch, activating is bypassed to reduce temperature. \nIndicates: \nPoor cooling to the back side of the control box.",
+    "Corrective Action": "Check for blocked air flow to the back side of the control box. \nAmbient temperature might just be high."
+  },
+  {
+    "alarm no.": "157",
+    "alarm description": "Data Logger Battery Failure MP4000",
+    "Description": "Firmware version 3.3.0 or newer: \nOccurs if the battery is connected and the battery protection circuit is activated as a\nresult of over-current, over-charge or over-discharge. \nBattery voltage must stay below 2.5V after the battery has been charged for 3\nminutes.",
+    "Corrective Action": "Check the battery physically, dismount and examine wires and the connection to\nthe controller. \nReplace battery"
+  }
+]

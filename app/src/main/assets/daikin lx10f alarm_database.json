@@ -1,0 +1,705 @@
+
+Conversation with Gemini
+convert complete file into json format
+
+Your JSON file is ready
+JSON icon
+converted_content
+JSON
+
+It looks like the original content or file was missing from your prompt ([NO CONTENT FOUND]).
+
+To help you move forward, I have generated a template JSON file above outlining how a structured conversion will look.
+
+Please reply with the text, data, or file contents you want converted, and I will parse it into a clean, fully populated JSON structure for you right away!
+
+convert this excel to json format
+
+I have processed your Excel file (thermo king alarm code.xlsx) and converted all 69 alarm code records into a clean JSON format.
+JSON icon
+thermo_kin...larm_codes
+JSON
+
+Output File
+Your structured JSON dataset is ready for download:
+[file-tag: code-generated-file-1-1780663403813504313]
+
+Data Preview
+Here is a quick look at how the entries are structured in your new JSON file:
+
+JSON
+[
+{
+"alarm no.": "0",
+"alarm description": "Supply Air Sensor Open Circuit",
+"Description": "When the sensor circuit resistance is higher than 1300Ω. \nIndicates: \nOpen circuit...",
+"Corrective Action": "Check for damaged sensor wires. \nCheck sensor connections at controller..."
+},
+{
+"alarm no.": "1",
+"alarm description": "Supply Air Sensor Short Circuit",
+"Description": "When the sensor circuit resistance is lower than 602Ω. \nIndicates: \nShort circuit...",
+"Corrective Action": "Check for damaged sensor wires. \nCheck sensor connections at controller..."
+}
+]
+Enhancements Applied:
+Header Alignment: Removed empty formatting columns and aligned the structure with the true column headers (alarm no., alarm description, Description, and Corrective Action).
+
+Text Cleaning: Cleaned up stray whitespace and hidden line-break formatting characters from the original spreadsheet cells to ensure valid JSON strings.
+
+CONVERT COMPLETE FILE TO JSON FORMAT
+
+I have successfully converted the spreadsheet daikin LXE-10E ALARM LIST.xlsx into a cleanly structured JSON file. All 105 alarm codes along with their descriptions, structural causes, and troubleshooting procedures have been preserved.
+
+Converted Output File
+The complete JSON conversion is available for download:
+JSON icon
+daikin_lxe...alarm_list
+JSON
+
+Data Structure Preview
+The data matches the layout of the spreadsheet using the following key mapping:
+
+JSON
+[
+{
+"alarm code": "F101",
+"alarm description": "HPS activated within 30 seconds after operation start...",
+"cause": "・High pressure switch (HPS) is opened.\n・Compressor failure / Controller failure...",
+"troubleshootin": "1\nHigh temperature switch (HPS)\nReplace HPS if HPS is activated...",
+"controller action": "nan"
+}
+]
+Enhancements Applied:
+Header Optimization: Extracted and mapped rows properly using the true data labels (alarm code, alarm description, cause, troubleshootin, and controller action).
+
+Noise Reduction: Stripped away empty buffer padding rows, blank tracking columns, and trailing whitespace from cell text blocks to keep your code interactions clean and efficient.
+
+There is a file you can reference named "daikin_lxe10e_alarm_list.json". Refer to this file by its name verbatim.
+
+convert complete file into json formt
+
+I have completed the full conversion of your daikin LX10F ALARM LIST.xlsx file into a clean, normalized JSON format. All 84 entries—including their alarm codes, contents, causes, complete troubleshooting steps, and controller actions—have been extracted.
+JSON icon
+daikin_lx1...alarm_list
+JSON
+JSON icon
+daikin_lx1...alarm_list
+JSON
+
+Converted Output File
+You can download your structured JSON file here:
+
+Sample Record Preview
+JSON
+[
+{
+"alarm_code": "F101",
+"alarm_content": "HPS activates within 30 seconds after compressor starts.\n(2400 kPa or more)",
+"possible_cause": "HPS activates within 30 seconds after compressor start...\n＊HPS or HPS circuit failure...",
+"troubleshooting": "Step 1.\nCheck value of HPS activating while watching to HPT value on the LCD screen...",
+"controller_action": "Unit stop"
+}
+]
+Applied Optimization Tasks:
+Header Stabilization: Merged split spreadsheet headers across uneven layout lines to form explicit keys (alarm_code, alarm_content, possible_cause, troubleshooting, controller_action).
+
+Format Standardization: Dropped out dead buffer columns/whitespace, isolated functional codes from placeholder structural cells, and mapped line-breaks to standard escape strings (\n) for effortless parsing.
+
+
+
+
+Gemini is AI and can make mistakes.
+
+[
+{
+"alarm_code": "F101",
+"alarm_content": "HPS activates within 30 seconds after compressor starts.\n(2400 kPa or more)",
+"possible_cause": "HPS activates within 30 seconds after compressor start（. OFF≧2400kPa\n＊HPS or HPS circuit including connector X6 (inverter board) failure\n＊Condenser air restriction / Short circuiting / CFM reverse rotation / Ambient temperature is over 50 degree C\n＊DMV failure (Coil failure\n＊Discharge line of compressor is restricted ---Check valve\n＊Mixing of non-condensable gas (water\n＊Refrigerant overcharging\n＊Controller (CPU board) or inverter board failure",
+"troubleshooting": "Step 1.\nCheck value of HPS activating while watching to HPT value on the LCD screen.\nIf HPS activates at lower than HPT2400kPa, replace HPS.Step 6.\nRefrigerant overcharging\n\nStep 2.\nCheck for blocking or short circuiting of air passage on air cooled condenser, CFM reverse rotation or stopped.\nRepair as needed.\n\nStep 3.\nDMV check\n3.1\nDisconnect the connector X11A (CPU board), then check resistance of DMV coil.\nResistance of each coil: 46±3Ω\n3.2\nTouch on coil vibration corresponding to opening change when calibrating DMV at startup. (Refer to Calibration valves in paragraph 1.4.6.)\nIn case that the coil does not vibrate corresponding to opening change, check the coil or the controller.\n3.3\nFully open valve using emergency magnet. (Refer to paragraph 4.9.4.)\nThen operate the unit without coil.\n\nStep 4.\nCheck compressor discharge line\nCheck for clogging of check valve, strainer (front of check valve)\nIf there is abnormality, recover refrigerant and charge the specified amount of refrigerant.\n\nStep 5.\nCheck for non-condensable gas\nCheck for non-condensable gas\nRefer to paragraph 4.4 of Service guide",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F106",
+"alarm_content": "Abnormal compressor operation",
+"possible_cause": "Wiring connection mistake between the compressor and the inverter board (EC8)",
+"troubleshooting": "Step 1.\nCheck the colors of the wires connected to U, V, and W on the inverter board (EC8).\n(U - red, V - white, W - black)\nStep 2.\nCheck the colors of the wires connected to U, V, and W in the compressor terminal box.\n(U - red, V - white, W - black)\n(Refer to paragraph 4.8.1 Parts Replacement, Compressor .)\nStep 3.\nAfter checking the wiring in the above steps, if an alarm occurs, replace the compressor.",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F109",
+"alarm_content": "LPT drops below -72kPa within 2 seconds after compressor starts",
+"possible_cause": "LPT drops below -72 kPa within 2 seconds after compressor startup or E109 is generated 9 times\n1. LSV failure\n2. EEV failure (Coil failure\n3. Liquid line----Clogging of filter\n4. Refrigerant shortage\n5. LPT failure",
+"troubleshooting": "Step 1.\nLSV check\nStep 5.\nCheck LPT.\n(Refer to diagnosis No. 019 .)\n1.1\nCheck LSV coil resistance\nCoil resistance within 15.2±1.5Ω\n1.2\nEnergize LSV coil and listen the sliding sound (CLICK) of valve body after selected LSV ON/OFF check（ Refer to ※9 in paragraph 4.1 Manual Check.）\nIf there is no sliding sound (CLICK) of valve body, replace LSV body.Step 2.\nEEV check\n2.1\nDisconnect the connector X9A (CPU board), then check the resistance of EEV coil.\nResistance between each coil: 46±3Ω\n2.2\nTouch on EEV coil vibration corresponding to opening change when calibrating EEV at startup.\n(Refer to paragraph 1.4.6 for calibration valves.)\n2.3\nFully open the valve body using emergency magnet. (Refer to paragraph 4.9.2.)Then operate the unit without coil.\nIf the alarm is repeated, replace EEV body.Step 3.\nLiquid line check\nCheck if there is a clogging in filter (front of LSV), dryer, strainer (front of EEV).If there is a clogging, the outlet side temperature of dryer, filter or strainer is low.\nIf there is a clogging, repair as needed.Then, charge specified amount of refrigerant.Step 4.\nCheck for refrigerant shortage and/or gas leak Charge refrigerant R134a 0.5kg additionally two times. Then, check if the low pressure changes (increases) during operation.\nIt is refrigerant shortage if there is change of low pressure increasing. Stop refrigerant additional charging and recover refrigerant in system. Check refrigerant leakages and then charge specified amount of refrigerant.\nController Action",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F301",
+"alarm_content": "Temperature setting request",
+"possible_cause": "After both CPU board (EC1) and operation board (EC3) are replaced together",
+"troubleshooting": "Set configuration setting\nF301\nTemperature setting request\nSet temperature, following ＊1 Set Point Change in paragraph 2.3 (Set Point temperature Change).",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F401",
+"alarm_content": "SS, DSS, RS and DRS all failed in chilled mode",
+"possible_cause": "SS, DSS, RS and DRS all failed during chilled mode, or X16A (CPU board) is disconnected.",
+"troubleshooting": "The unit cannot perform backup operation and cannot be controlled.\nReplace each failed sensor.\nRefer to E401(SS), E402(DSS), E403(RS), E404(DRS),.",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F405",
+"alarm_content": "HPT, DCHS1 and DCHS2 all failed",
+"possible_cause": "Multiple sensor (HPT, DCHS1, DCHS2) all failure.",
+"troubleshooting": "The unit cannot perform backup operation and cannot be controlled.\nReplace each failed sensor.\nRefer to E405(DCHS1), E439(DCHS2), and E415(HPT).",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F407",
+"alarm_content": "HPT and LPT both failed",
+"possible_cause": "Multiple sensor (HPT, LPT)",
+"troubleshooting": "The unit cannot perform backup operation and cannot be controlled.\nReplace each failed sensor.\nRefer to E413(LTP) and E415(HPT).",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F409",
+"alarm_content": "LPT, DCHS1 and DCHS2 all failed",
+"possible_cause": "Multiple sensor (LPT,DCHS1,DCHS2) all failure",
+"troubleshooting": "The unit cannot perform backup operation and cannot be controlled.\nReplace each failed sensor.\nRefer to E401(SS), E402(DSS), E403(RS), E404(DRS), E405(DCHS1), E439(DCHS2), E413(LTP) and E415(HPT).",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F701",
+"alarm_content": "Abnormal power supply voltage detected",
+"possible_cause": "The power supply voltage is ＞ AC565V or ＜ AC329V.\nThe power supply voltage is high (＞ AC565V) or low (＜ AC329V).",
+"troubleshooting": "Check if the actual power supply within range (AC329V～AC565V).",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F703",
+"alarm_content": "Unbalance power supply",
+"possible_cause": "The waveform of power supply is abnormal\nAbnormal waveform of power supply",
+"troubleshooting": "Check power supply equipment or facility and provide power supply with correct phase wave form",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F705",
+"alarm_content": "Open power phase during operation",
+"possible_cause": "One of R, S, T phase is open (F701 is also generated when S phase is open.)          1. Abnormal power supply (Open phase)\n2. Broken wire (open) at power plug or power cable\n3. Wire disconnection at unit",
+"troubleshooting": "1.Check if there is open phase on power from power supply equipment side\nProvide correct power supply if there is power phase is open\n2.Check if there is Broken wire (open) at power plug or power cable (the primary side of circuit breaker)\nRepair if there is a problem at power plug or cable\n3.Check if there is broken wire (open) at the secondary side of circuit breaker＊Between C/B～X63A (PT/CT board)\nRepair as needed",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F707",
+"alarm_content": "Fuse F2U is open (I/O board)",
+"possible_cause": "＊ Fuse F2U (I/O board) is open.(E115 is also appeared when F707 is generated)\n＊ Coil of magnet contactor or solenoid valve is burned-out. Short circuited or grounded.\n＊ Circuit line for below device is short circuit.",
+"troubleshooting": "1.Replace Fuse F2U after check following circuit.\nMagnet contactor：PCC1,PCC2, CFH,CFL,EFH,EFL　\nSolenoid valve：HSV,RSV,LSV,ESV\nBuilt in thermostat in CFM：Q1M\n＜Coil resistance＞\n＊Solenoid valve：15.2±1.5Ω (20℃ )",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F809",
+"alarm_content": "E809 (shortage of refrigerant) is generated twice",
+"possible_cause": "E809 is generated twice (Refrigerant shortage)\n＊Shortage of refrigerant\n＊Liquid line (dryer) is clogging\n＊EEV failure\nThe causes of F809",
+"troubleshooting": "Step 1.\nLSV check\nStep 2.\nLiquid line check and dryer blockage check\nRefer to F109, E107, E109\nStep 3.\nEEV check\nStep 4.\nCheck refrigerant shortage\nIf there is no problem in above items, it seems to be refrigerant shortage.\nConduct refrigerant recovery and charge specified amount of refrigerant after checking location of refrigerant leakages.",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "E101",
+"alarm_content": "HPS activates during operation",
+"possible_cause": "HPS activates during operation. (OFF≧2400kPa, ON≦1900kPa ）\n・HPS or HPS circuit including connector X6 (inverter board) failure\n・Condenser air restriction / Short circuiting / CFM reverse rotation / Ambient temperature is over 50 degree C\n・DMV failure (Coil failure, Valve not opening, Valve clogging)\n・Discharge line of compressor is restricted --- Check valve, Strainer (after HPT)\n・Mixing of non-condensable gas (water, air, etc.)\n・Refrigerant overcharging\n・Controller (CPU board) or inverter board failure",
+"troubleshooting": "Step 1. Check valve of HPS\nCheck value of HPS activating while watching to HPT value on the LCD screen.\nIf HPS activates at lower than HPT2400kPa, replace the HPS.\n\nStep 2. Check air cooled condenser\nCheck blocking or short circuiting of air passage on air cooled condenser, CFM reverse rotation or stopped.\nRepair as needed.\n\nStep 3. Check DMV\n3.1\nDisconnect the connector X11A (CPU board), then check resistance of DMV coil.\nResistance of each coil: 46±3Ω\n3.2\nTouch on coil vibration corresponding to opening change when calibrating DMV at startup. (Refer to Calibration valves in paragraph 1.4.6.)\nIn case that the coil does not vibrate corresponding to opening change, check the coil or the controller.\n3.3\nFully open valve using emergency magnet. (Refer to paragraph 4.9.4.) Then operate the unit without coil.\nIf alarm is repeated, the valve body will not operate.\nReplace DMV body.\n\nStep 4. Check compressor discharge line\nCheck clogging of check valve and strainer (front of check valve)\nIf there is abnormality, recover refrigerant and charge the specified amount of refrigerant.\n\nStep 5. Check non-condensable gas\nRefer to paragraph 4.4.\n\nStep 6. Overcharging Refrigerant",
+"controller_action": "Restart after 3 minutes."
+},
+{
+"alarm_code": "E105",
+"alarm_content": "Compressor operating current is too high (over DC 51A)",
+"possible_cause": "Compressor current is too high at starting (≧DC51A)\n・Over-current due to compressor overload\n・Compressor lock\n・Inverter board failure (Current detection part)",
+"troubleshooting": "Step 1\nCheck the compressor.\n1-1\nCheck insulation and resistance of the compressor motor.\n1-2\nCheck sound of compressor at starting.\nReplace compressor if insulation, resistance is abnormal or noise is created at staring.\n\nStep 2\nReplace Inverter board if compressor sound is normal or does not start.",
+"controller_action": "Restart after 3 minutes."
+},
+{
+"alarm_code": "E106",
+"alarm_content": "Abnormal compressor operation",
+"possible_cause": "Abnormal compressor operation\nWiring connection mistake between the compressor and the inverter board (EC8)",
+"troubleshooting": "Step 1. Check the colors of the wires connected to U, V, and W on the inverter board (EC8).\n(U: Red, V: White, W: Black)\n\nStep 2. Check the colors of the wires connected to U, V, and W in the compressor terminal box.\n(U: Red, V: White, W: Black)\n(Refer to paragraph 4.8.1 Parts Replacement, Compressor.)\n\nStep 3. After checking the wiring in the above steps, replace the compressor if an alarm occurs.",
+"controller_action": "Restart after 3 minutes of standby."
+},
+{
+"alarm_code": "E107",
+"alarm_content": "DCHS1 or DCHS2 becomes 130 􀋆 or more for 10 minutes or 145\n􀋆 or more.",
+"possible_cause": "DCHS1 or DCHS2 becomes 135℃ or more for 10 minutes or 145℃ or more.\n1. LSV failure\n2. EEV failure (Coil failure, Valve not opening, Valve clogging)\n3. Liquid line ---- Clogging of filter, strainer or dryer.\n4. Refrigerant shortage\n5. LPT failure",
+"troubleshooting": "Step 1. LSV check\n1.1\nCheck LSV coil resistance\nCoil resistance within 15.2±1.5Ω\n1.2\nEnergize LSV coil and listen the sliding sound (CLICK) of valve body after selected LSV ON/OFF check（ Refer to ※9 in paragraph 4.1 Manual Check.）\nIf there is no sliding sound (CLICK) of valve body, replace LSV body.\n\nStep 2. EEV check\n2.1\nDisconnect the connector X9A (CPU board), then check the resistance of EEV coil.\nResistance between each coil: 46±3Ω\n2.2\nTouch on EEV coil vibration corresponding to opening change when calibrating EEV at startup. (Refer to paragraph 1.4.6 for calibration valves.)\nIn case that the coil does not vibrate corresponding to opening change, check the coil or the controller.\n2.3\nFully open the valve body using emergency magnet. (Refer to paragraph 4.9.2.) Then operate the unit without coil.\nIf the alarm is repeated, replace EEV body.\n\nStep 3. Liquid line check\nCheck if there is a clogging in filter (front of LSV), dryer, strainer (front of EEV). If there is a clogging, the outlet side temperature of dryer, filter or strainer is low.\nIf there is a clogging, repair as needed. Then, charge specified amount of refrigerant.\n\nStep 4. Check refrigerant shortage and/or gas leak.\nCharge refrigerant R134a 0.5kg additionally two times.\nThen, check if the suction pressure changes (increases) during operation.\nIt is refrigerant shortage if there is change of low pressure increasing.\nStop charging additional refrigerant and recover refrigerant in system.\nCheck refrigerant leakages and then charge specified amount of refrigerant.\n\nStep 5. Check LPT.\n(Refer to diagnosis No. 019.)",
+"controller_action": "Restart after 3 minutes."
+},
+{
+"alarm_code": "E109",
+"alarm_content": "LPT drops below -70kPa during operation",
+"possible_cause": "LPT drops below -70 kPa for 2 seconds during operation.\n- LSV failure\n- EEV failure (Coil failure, Valve not opening, Valve clogging)\n- Liquid line ---- Clogging of filter, Strainer or Dryer\n- Refrigerant shortage\n- LPT failure",
+"troubleshooting": "Step 1. Check LSV\n1.1\nCheck LSV coil resistance\nCoil resistance within 15.2±1.5Ω\n1.2\nEnergize LSV coil and listen the sliding sound (CLICK) of valve body after selected LSV ON/OFF check. (Refer to ※9 in paragraph 4.1 Manual Check.)\nIf there is no sliding sound (CLICK) of valve body, replace LSV body.\n\nStep 2. Check EEV\n2.1\nDisconnect the connector X9A (CPU board), then check the resistance of EEV coil.\nResistance between each coil: 46±3Ω\n2.2\nTouch on EEV coil vibration corresponding to opening change when calibrating EEV at startup. (Refer to paragraph 1.4.6 for calibration valves.)\nIn case that the coil does not vibrate corresponding to opening change, check the coil or the controller.\n2.3\nFully open the valve body using emergency magnet. (Refer to paragraph 4.9.2.) Then operate the unit without coil.\nIf the alarm is repeated, replace EEV body.\n\nStep 3. Check liquid line\nCheck if there is a clogging in filter (front of LSV), dryer, strainer (front of EEV). If there is a clogging, the outlet side temperature of dryer, filter or strainer is low.\nIf there is a clogging, repair as needed. Then, charge specified amount of refrigerant.\n\nStep 4.\nCheck for refrigerant shortage and/or gas leak.\nCharge refrigerant R134a 0.5kg additionally two times.\nThen, check if the suction pressure changes (increases) during operation.\nIt is refrigerant shortage if there is change of low pressure increasing.\nStop refrigerant additional charging and recover refrigerant in system.\nCheck refrigerant leakages and then charge specified amount of refrigerant.\n\nStep 5. Check LPT\n(Refer to diagnosis No. 019.)",
+"controller_action": "Restart after 3 minutes."
+},
+{
+"alarm_code": "E115",
+"alarm_content": "Condenser fan motor internal thermostat activated",
+"possible_cause": "1- Condenser fan motor internal thermostat is activated. (OFF≧135℃±5℃)\n(When F707 (Fuse F2U is open) is generated, E115 also appeared.)\n- Condenser fan motor lock\n- Short circuit on the motor coil",
+"troubleshooting": "1. Check if condenser fan motor generates heat.\nCheck if motor shaft rotates smoothly by hand. (Check if it is locked.)\n\n2. Check if motor coil resistance is normal.\nHigh speed 30.1 Ω±5% (20℃) / Low speed 214 Ω±5% (20℃)",
+"controller_action": "Restart after 3 minutes."
+},
+{
+"alarm_code": "E201",
+"alarm_content": "Pumpdown control is not completed within rated time",
+"possible_cause": "Pump down is not completed in the fixed time.\n< Pump down before defrosting (EEV close) >\nLPT < -40kPa or EOS-LP(T) > 30℃ do not reach less than 3 times within 300 seconds.\n< Auto pump down (LSV close) >\nDoes not drop to LPT < -27kP within 210 seconds.\n\n1. EEV failure (Valve cannot close or clogged) ----- in case of pump down before defrosting\nLSV failure (Valve cannot close or clogged) ----- in case of auto pump down\n2. LPT failure\n3. Compressor failure",
+"troubleshooting": "Step 1. Check EEV or LSV (Refer to F109, E107, E109.)\n\nStep 2. In case that EEV or LSV is normal.\n2-1. Check the LPT.\n(Refer to E413(LPT), E415(HPT))\nCarry out automatic pump down and compare with gauge pressure.\n2-2. If the Low pressure does not reach to completed pressure, the compressor may be abnormal condition.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E202",
+"alarm_content": "Automatic pumpdown failure",
+"possible_cause": "Automatic pump down failure\nHPT≧2300kPa or DCHS1 or DCHS2≧120℃ during automatic pump down\nRefrigerant overcharged",
+"troubleshooting": "Recover refrigerant and charge the specified amount of refrigerant shown on unit name plate.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E203",
+"alarm_content": "Overcooling prevention",
+"possible_cause": "SS≦SP-3.0℃ & 5 minutes elapsed during modulated control in chilled mode.\n(Over cooling prevention)\nCooling load changes rapidly. (Small heat load)",
+"troubleshooting": "Check the cause of sudden reduction of the heat load.\n- Example 1: Set the ventilation outlet from OPEN to CLOSE.\n- Example 2: The door is opened at the low ambient temperature. (＜SP).",
+"controller_action": "Restart after 3 minutes."
+},
+{
+"alarm_code": "E207",
+"alarm_content": "Defrost is not completed in 90 min",
+"possible_cause": "Defrosting cannot be completed within 90 minutes.\n(The condition of EOS≧10℃ was not satisfied at five times defrosting continuously during 90-minute counting.)\n- Excessive frost on the evaporator coil\n- Setting time of defrosting interval is too long.",
+"troubleshooting": "Remove a remaining frost by manual defrost.\nCheck if the defrosting completion condition (EOS≧25℃ & RS ≧15℃) reaches within 90 minutes on the LCD screen (※3 Sensor Information in paragraph 2.3).\n- In case that defrosting is completed by above complete condition, consider as normal.\nMonitor the unit operation for a while.\n- In case that defrosting does not complete due to not reach to complete condition, there may be low hot-gas temperature, insufficient hot-gas circulation.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E303",
+"alarm_content": "Humidity setting request (during dehumidification operation)",
+"possible_cause": "The initial setup was not performed when the CPU board and operation board were replaced simultaneously.",
+"troubleshooting": "Set configuration setting\n\n< Humidity setting request >\nSet humidity Setpoint. (Service Manual: 2.3 Operation Procedure / Data Information / Humidity Setpoint).",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E304",
+"alarm_content": "Incorrect configuration set (Reheat coil)",
+"possible_cause": "Dehumidification operation is selected when reheat coil is set to \"OFF\" in Configuration Set.",
+"troubleshooting": "Change the Reheat Coil setting from \"OFF\" to \"ON\" on the configuration setting\n(*12 Configuration Set in paragraph 2.3).",
+"controller_action": "Alarm display only (Alarm LED is blinking.)"
+},
+{
+"alarm_code": "E305",
+"alarm_content": "Defrost interval setting request",
+"possible_cause": "Setting of Defrost Interval is requested after both CPU board (EC1) and operation board (EC3) are replaced.",
+"troubleshooting": "Set configuration setting\n\n< Defrost Interval setting request >\nSet defrost interval. (Service manual: *2.3 Operation Procedure / Data Information / Defrost Interval)",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E307",
+"alarm_content": "Calendar setting request",
+"possible_cause": "1. Setting of Defrost Interval is requested after both CPU board (EC1) and operation board (EC3) are replaced.\n2. No initial setting is done after CPU board (EC1) is replaced.\n3. No power supply to S-RAM (CPU board) during power off due to CPU onboard battery (CPU board) failure. (E801 is also generated.)",
+"troubleshooting": "For 1. & 2.\nSet configuration setting\n< Calendar setting request >\nSet *12-11 Controller date (year/month/day) and *12-12 Controller time (time), referring *12 Configuration Set in paragraph 2.3.\n\nFor 3.\nPermanent measures\n- If E801 is also generated, replace CPU board.\nEmergency measures\n- The unit runs; However, controller time starts from incorrect time whenever power OFF/ON.\nTherefore, trip data may be not shown correctly.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E311",
+"alarm_content": "Trip start setting request",
+"possible_cause": "1. After both CPU board (EC1) and operation board (EC3) are replaced together\n2. After CPU board (EC1) is replaced\n3. No power supply to S-RAM (CPU board) during power off due to CPU onboard battery (CPU board) failure. (E801 is also generated.)",
+"troubleshooting": "For 1. & 2.\nSet configuration setting\nE311\nTrip start setting requirement\nSet *20 Trip Start Time to 0 (press ENTER key for three seconds.), referring Manual Check in paragraph 4.1.\n\nFor 3.\nPermanent measures\n- If E801 is also generated, replace CPU board.\nEmergency measures\n- The unit will operate, However, controller time starts from incorrect time whenever power OFF/ON. therefore, trip data may not shown correctly.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E401",
+"alarm_content": "Supply air temperature sensor (SS) failure",
+"possible_cause": "Supply air temperature sensor (SS)≦-40℃ (54kΩ) with 3 minute elapse or ≧100℃ (0.22 kΩ) with 3 minute elapse\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n＊Open contact of connector X16A（CPU board）\n＊Temperature sensor failure\n＊Controller（ CPU board） failure",
+"troubleshooting": "Step 1.\nCheck connector X16A and make sure it is properly installed.\nStep 2.\nDisconnect X16A, and check the resistance of sensor\npic_e401_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X16A)\n* Contact to the connector pins correctly.\npic_e401_2\nStep 3.\nCheck the controller (CPU board).",
+"controller_action": "Backup by DSS\nBackup by RS=SP+2℃\nBackup by DRS=SP+2℃\n<Frozen mode>\nBackup by DSS=SP-5℃\nWhen All sensors are failure (RS, DRS, SS, DSS), the unit will operate as Full cool continuously"
+},
+{
+"alarm_code": "E402",
+"alarm_content": "Data recorder supply air temperature sensor (DSS) failure",
+"possible_cause": "Supply air temperature sensor for data recorder (DSS)≦-40℃ (54kΩ) with 3 minute elapse or ≧100℃ (0.22 kΩ) with 3 minute elapse\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n＊Open contact of connector X16A（CPU board）\n＊Temperature sensor failure\n＊Controller（ CPU board） failure",
+"troubleshooting": "Step 1.\nCheck connector X16A and make sure it is properly installed.\nStep 2.\nDisconnect X16A, and check the resistance of sensor\npic_e402_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X16A)\n* Contact to the connector pins correctly.\npic_e402_2\nStep 3.\nCheck the controller (CPU board).",
+"controller_action": "Backup by RS=SP+2℃\nBackup by DRS=SP+2℃\n<Frozen mode>\nWhen All sensors are failure (RS, DRS, SS, DSS), the unit will operate as Full cool continuously"
+},
+{
+"alarm_code": "E403",
+"alarm_content": "Return air temperature sensor (RS) failure",
+"possible_cause": "Return air temperature sensor (RS)≦-40℃ (54kΩ) with 3 minute elapse or ≧100℃ (0.22 kΩ) with 3 minute elapse\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n＊Open contact of connector X16A（CPU board）\n＊Temperature sensor failure\n＊Controller（ CPU board） failure",
+"troubleshooting": "Step 1.\nCheck connector X16A and make sure it is properly installed.\nStep 2.\nDisconnect X16A, and check the resistance of sensor\npic_e403_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X16A)\n* Contact to the connector pins correctly.\npic_e403_2\nStep 3.\nCheck the controller (CPU board).",
+"controller_action": "Backup by DRS=SP+2℃\n<Frozen mode>\nBackup by DRS\nBackup by SS=SP-5℃\nBackup by DSS=SP-5℃\nWhen All sensors are failure (RS, DRS, SS, DSS), the unit will operate as Full cool continuously"
+},
+{
+"alarm_code": "E404",
+"alarm_content": "Data recorder return air temperature sensor (DRS) failure",
+"possible_cause": "Return air temperature sensor for data recorder (DSS) ≦-40℃ (54kΩ) with 3 minute elapse or ≧100℃ (0.22 kΩ) with 3 minute elapse\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n＊Open contact of connector X16A（CPU board）\n＊Temperature sensor failure\n＊Controller（ CPU board） failure",
+"troubleshooting": "Step 1.\nCheck connector X16A and make sure it is properly installed.\nStep 2.\nDisconnect X16A, and check the resistance of sensor\npic_e404_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X16A)\n* Contact to the connector pins correctly.\npic_e404_2\nStep 3.\nCheck the controller (CPU board).",
+"controller_action": "Backup by SS=SP-5℃\nBackup by DSS=SP-5℃\nWhen All sensors are failure (RS, DRS, SS, DSS), the unit will operate as Full cool continuously"
+},
+{
+"alarm_code": "E405",
+"alarm_content": "Discharge gas temperature sensor (DCHS1) failure",
+"possible_cause": "DCHS1\nDCHS2≦AMBS & compressor speed is 53 rps or more\nDCHS1\nNote 1: If the outside air temperature is -15℃ or lower\n2: The alarm is activated when sensor or the circuit is disconnected (open) or shortcircuited.\n＊Faulty contact of connector X16A\n＊Temperature sensor failure\n＊Controller (CPU board) failure",
+"troubleshooting": "Step 1.\nCheck connector X16A / X20A and make sure it is properly installed.\nStep 2.\nDisconnect X16 and X20A and check the sensor resistance values.\npic_e405_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X20A)\n* Contact to the connector pins correctly.\npic_e405_2\nStep 3.\nCheck that DCHS2 is correctly installed on the compressor.\nStep 4.\nCheck the controller (CPU board).",
+"controller_action": "When E405 (DCHS1 failure), Backup by DCHS2\nWhen E439 (DCHS2 failure), Backup by DCHS1"
+},
+{
+"alarm_code": "E406",
+"alarm_content": "Suction gas temperature sensor (SGS) failure",
+"possible_cause": "SGS sensor≦-57℃ (100 kΩ) with 3 minute elapse or ≧100℃ (0.221 kΩ) with 3 minute elapse\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n＊Faulty contact of connector X16A and X20A (CPU board)\n＊Temperature sensor failure\n＊Controller failure",
+"troubleshooting": "Step 1.\nCheck connector X16A / X20A and make sure it is properly installed.\nStep 2.\nDisconnect the connectors X16A and X20A, then check the resistance of sensor\npic_e406_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X16A)\n* Contact to the connector pins correctly.\npic_e406_2\nStep 3.\nCheck the controller (CPU board).",
+"controller_action": "Backup by LPT"
+},
+{
+"alarm_code": "E407",
+"alarm_content": "Evaporator inlet temperature sensor (EIS) failure",
+"possible_cause": "Evaporator Inlet temperature sensor (EIS)≦-57℃ (100 kΩ) with 3 minute elapse or ≧100℃ (0.221 kΩ) with 3 minute elapse\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n＊Faulty contact of connector X16A and X20A (CPU board)\n＊Temperature sensor failure\n＊Controller failure",
+"troubleshooting": "Step 1.\nCheck connector X16A / X20A and make sure it is properly installed.\nStep 2.\nDisconnect the connectors X16A and X20A, then check the resistance of sensor\npic_e407_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X16A)\n* Contact to the connector pins correctly.\npic_e407_2\nStep 3.\nCheck the controller (CPU board).",
+"controller_action": "Backup by LPT"
+},
+{
+"alarm_code": "E409",
+"alarm_content": "Evaporator outlet temperature sensor (EOS) failure",
+"possible_cause": "Evaporator Outlet temperature sensor (EOS) sensor≦-57℃ (100 kΩ) with 3 minute elapse or ≧100℃ (0.221 kΩ) with 3 minute elapse\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n＊Faulty contact of connector X16A and X20A (CPU board)\n＊Temperature sensor failure\n＊Controller failure",
+"troubleshooting": "Step 1.\nCheck connector X16A / X20A and make sure it is properly installed.\nStep 2.\nDisconnect the connectors X16A and X20A, then check the resistance of sensor\npic_e409_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X16A)\n* Contact to the connector pins correctly.\npic_e409_2\nStep 3.\nCheck the controller (CPU board).",
+"controller_action": "Backup by SGS"
+},
+{
+"alarm_code": "E411",
+"alarm_content": "Ambient temperature sensor (AMBS) failure",
+"possible_cause": "AMBS sensor≦-57℃ (100 kΩ) with 3 minute elapse or ≧100℃ (0.221 kΩ) with 3 minute elapse\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n＊Faulty contact of connector X16A and X20A (CPU board)\n＊Temperature sensor failure\n＊Controller failure",
+"troubleshooting": "Step 1.\nCheck connector X16A / X20A and make sure it is properly installed.\nStep 2.\nDisconnect the connectors X16A and X20A, then check the resistance of sensor\npic_e411_1\nExample of sensor resistance value measurement (Connector X16A)\n* Contact to the connector pins correctly.\npic_e411_2\nStep 3.\nCheck the controller (CPU board).",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E413",
+"alarm_content": "Low pressure transducer (LPT) failure",
+"possible_cause": "LPT≦-110 kPa with 3 minutes elapse or LPT≧1420 kPa with 3 minutes elapse\n1. Faulty contact of connector X7A (CPU board)\n2. Pressure transducer failure\n3. Controller failure",
+"troubleshooting": "Step 1.\nCheck connector X7A and make sure it is properly installed.\nIf input DC 5V is not present, check the controller.\nIf input DC 5V is present, replace the pressure transducer.\nStep 2-1.\nConnect manifold gauges and compare the value of pressure gauge and HPT value in LCD display.\nReplace HPT if the difference is greater than 50 kPa.\nStep 2-2.\nConnect manifold gauges and compare the value of pressure gauge and LPT value in LCD display.\nReplace LPT if the difference is greater than 10 kPa.\nStep 3.\nTurn on the circuit breaker and check if there is DC5V input from the controller.\n\nIf input DC 5V is not present, check the controller.\nIf input DC 5V is present, replace the pressure transducer.",
+"controller_action": "Backup operation"
+},
+{
+"alarm_code": "E415",
+"alarm_content": "High pressure transducer (HPT) failure",
+"possible_cause": "High pressure transducer (HPT) is not functioning correctly.\nDevice malfunction\n・Sensor failure / Controller failure / Broken wire / Connector disconnected / short circuit\n・Pressure transducer faulty\n・Controller faulty",
+"troubleshooting": "Step 1. Check connector X7A and make sure it is properly installed.\nStep 2-1. Connect manifold gauges and compare the value of pressure gauge and HPT value\nin LCD display.\nReplace HPT if the difference is greater than 50 kPa.\nStep 2-2. Connect manifold gauges and compare the value of pressure gauge and LPT value\nin LCD display.\nReplace LPT if the difference is greater than 10 kPa.",
+"controller_action": "Backup operation"
+},
+{
+"alarm_code": "E417",
+"alarm_content": "Power voltage sensor (PT) failure",
+"possible_cause": "Power voltage sensor PT failure\n1. Open circuit between connector X61A (PT/CT board)～ X4A (CPU board)\n2. Power supply circuit failure to PT/CT board on the CPU board\n3. Fuse F11U is open (on PT/CT board)\n4. Voltage sensor PT failure (on PT/CT board)",
+"troubleshooting": "Step 1.\nCheck connector X61A (PT/CT board) and X4A (CPU board).\nMake sure it is properly connected.\nStep 2.\nCheck the Pin No.1, 2 on X61A connector (PT/CT board), and replace CPU board if DC12.5V is not output.\nStep 3.\nCheck if there is short circuit in secondary side of fuse F11U (ZNR, primary side of Tr).\npic_e417_1\nIf shorted, replace the PT/CT board.\nStep 4.\nIf repeat the alarm with no short circuit, replace the PT/CT board.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E419",
+"alarm_content": "Current sensor (CT) failure",
+"possible_cause": "1. Open circuit between connector X61A (PT/CT board)～ X4A (CPU board)\n2. Power supply circuit failure to PT/CT board on the CPU board\n3. Current sensor CT failure（in PT/CT board）",
+"troubleshooting": "Step 1.\nCheck connector X61A(PT/CT board) / X4A(CPU board) and make sure it is properly installed.\nStep 2.\nCheck the Pin No.1, 2 on X61A connector (PT/CT board), and replace CPU board if DC12.5V is not output.\nStep 3.\nReplace PT/CT board.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E425",
+"alarm_content": "USDA #1 sensor failure",
+"possible_cause": "When USDA sensor type 2 is set on ※12 Configuration set in paragraph 2.3\n* Controller failure\n≦-39℃ (320kΩ)\nUSDA sensor / CTS or\n≧96℃ (0.79kΩ)\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n1. Incorrect setting (Setting number of USDA sensor is not match)\n2. Circuit <line> malfunction\nConnector disconnected / open wire / short circuit / USDA receptacle failure\n3. USDA sensor failure",
+"troubleshooting": "Step 1.\nIf USDA is set to 3 or 4 in ＊2 mode setting of paragraph 2.3, check whether all of three or four sensors are connected.\nCaution:\nRegarding USDA sensor, type 1 and 2 have different characteristics.\nIdentify the type by referring ＊4 Configuration Information in paragraph 2.3 (configuration setting information).\nStep 4.\nIf the sensor is normal, replace the controller.\nStep 2.\nCheck whether cable or receptacle between X6A and USDA receptacle is open or short-circuited.\nAfter make jumper between pins A?B on USDA/CTS receptacle, check the continuity on socket X6A (CPU board).\npic_e425_1\npic_e425_2\nRepair or replace if there is disconnection or short circuit.\nStep 3.\nCheck the resistance value for each sensor of USDA and CTS sensor\npic_e425_3\nReplace sensor, if does not matches the resistance and USDA sensor characteristic table.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E427",
+"alarm_content": "USDA #2 sensor failure",
+"possible_cause": "When USDA sensor type 2 is set on ※12 Configuration set in paragraph 2.3\n* Controller failure\n≦-39℃ (320kΩ)\nUSDA sensor / CTS or\n≧96℃ (0.79kΩ)\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n1. Incorrect setting (Setting number of USDA sensor is not match)\n2. Circuit <line> malfunction\nConnector disconnected / open wire / short circuit / USDA receptacle failure\n3. USDA sensor failure",
+"troubleshooting": "Step 1.\nIf USDA is set to 3 or 4 in ＊2 mode setting of paragraph 2.3, check whether all of three or four sensors are connected.\nCaution:\nRegarding USDA sensor, type 1 and 2 have different characteristics.\nIdentify the type by referring ＊4 Configuration Information in paragraph 2.3 (configuration setting information).\nStep 4.\nIf the sensor is normal, replace the controller.\nStep 2.\nCheck whether cable or receptacle between X6A and USDA receptacle is open or short-circuited.\nAfter make jumper between pins A?B on USDA/CTS receptacle, check the continuity on socket X6A (CPU board).\npic_e427_1\npic_e427_2\nRepair or replace if there is disconnection or short circuit.\nStep 3.\nCheck the resistance value for each sensor of USDA and CTS sensor\npic_e427_3\nReplace sensor, if does not matches the resistance and USDA sensor characteristic table.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E429",
+"alarm_content": "USDA #3 sensor failure",
+"possible_cause": "When USDA sensor type 2 is set on ※12 Configuration set in paragraph 2.3\n* Controller failure\n≦-39℃ (320kΩ)\nUSDA sensor / CTS or\n≧96℃ (0.79kΩ)\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n1. Incorrect setting (Setting number of USDA sensor is not match)\n2. Circuit <line> malfunction\nConnector disconnected / open wire / short circuit / USDA receptacle failure\n3. USDA sensor failure",
+"troubleshooting": "Step 1.\nIf USDA is set to 3 or 4 in ＊2 mode setting of paragraph 2.3, check whether all of three or four sensors are connected.\nCaution:\nRegarding USDA sensor, type 1 and 2 have different characteristics.\nIdentify the type by referring ＊4 Configuration Information in paragraph 2.3 (configuration setting information).\nStep 4.\nIf the sensor is normal, replace the controller.\nStep 2.\nCheck whether cable or receptacle between X6A and USDA receptacle is open or short-circuited.\nAfter make jumper between pins A?B on USDA/CTS receptacle, check the continuity on socket X6A (CPU board).\npic_e429_1\npic_e429_2\nRepair or replace if there is disconnection or short circuit.\nStep 3.\nCheck the resistance value for each sensor of USDA and CTS sensor\npic_e429_3\nReplace sensor, if does not matches the resistance and USDA sensor characteristic table.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E431",
+"alarm_content": "Humidity sensor (HuS) failure",
+"possible_cause": "Humidity sensor (HuS) failure (Detect RH>120% or RH<20%)\n＊Humidity sensor (HuS) deteriorated\n＊Contact failure of connector X20A (CPU board)\n＊Controller failure",
+"troubleshooting": "Step 1.\nReplace the humidity sensor.\nStep 2.\nCheck connector X20A (CPU board) and connector on the Humidity sensor cable located below fan deck.\nMake sure it is properly connected.\nStep 3.\nTurn on the circuit breaker and check if there is DC5V input from the controller.\n\nReplace the CPU board.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E433",
+"alarm_content": "Cargo temperature sensor (CTS) failure",
+"possible_cause": "When USDA sensor type 2 is set on ※12 Configuration set in paragraph 2.3\n* Controller failure\n≦-39℃ (320kΩ)\nUSDA sensor / CTS or\n≧96℃ (0.79kΩ)\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n1. Incorrect setting (Setting number of USDA sensor is not match)\n2. Circuit <line> malfunction\nConnector disconnected / open wire / short circuit / USDA receptacle failure\n3. USDA sensor failure",
+"troubleshooting": "Step 1.\nIf USDA is set to 3 or 4 in ＊2 mode setting of paragraph 2.3, check whether all of three or four sensors are connected.\nCaution:\nRegarding USDA sensor, type 1 and 2 have different characteristics.\nIdentify the type by referring ＊4 Configuration Information in paragraph 2.3 (configuration setting information).\nStep 4.\nIf the sensor is normal, replace the controller.\nStep 2.\nCheck whether cable or receptacle between X6A and USDA receptacle is open or short-circuited.\nAfter make jumper between pins A?B on USDA/CTS receptacle, check the continuity on socket X6A (CPU board).\npic_e433_1\npic_e433_2\nRepair or replace if there is disconnection or short circuit.\nStep 3.\nCheck the resistance value for each sensor of USDA and CTS sensor\npic_e433_3\nReplace sensor, if does not matches the resistance and USDA sensor characteristic table.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E435",
+"alarm_content": "Economizer inlet temperature sensor (ECO IN) failure",
+"possible_cause": "ECO-IN sensor≦-57℃ (100 kΩ) with 3 minute elapse or ≧100℃ (0.221 kΩ) with 3 minute elapse\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n＊Faulty contact of connector X16A and X20A (CPU board)\n＊Temperature sensor failure\n＊Controller failure",
+"troubleshooting": "Step 1.\nCheck connector X16A / X20A and make sure it is properly installed.\nStep 2.\nDisconnect the connectors X16A and X20A, then check the resistance of sensor\npic_e435_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X16A)\n* Contact to the connector pins correctly.\npic_e435_2\nStep 3.\nCheck the controller (CPU board).",
+"controller_action": "Backup with economizer system stop"
+},
+{
+"alarm_code": "E437",
+"alarm_content": "Economizer outlet temperature sensor (ECO OUT) failure",
+"possible_cause": "ECO-OUT sensor≦-57℃ (100 kΩ) with 3 minute elapse or ≧100℃ (0.221 kΩ) with 3 minute elapse\nNote: The alarm is activated when sensor or the circuit is disconnected (open) or short-circuited.\n＊Faulty contact of connector X16A and X20A (CPU board)\n＊Temperature sensor failure\n＊Controller failure",
+"troubleshooting": "Step 1.\nCheck connector X16A / X20A and make sure it is properly installed.\nStep 2.\nDisconnect the connectors X16A and X20A, then check the resistance of sensor\npic_e437_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X16A)\n* Contact to the connector pins correctly.\npic_e437_2\nStep 3.\nCheck the controller (CPU board).",
+"controller_action": "Backup with economizer system stop"
+},
+{
+"alarm_code": "E439",
+"alarm_content": "Discharge gas temperature sensor (DCHS2) failure",
+"possible_cause": "DCHS1\nDCHS2≦AMBS & compressor speed is 53 rps or more\nDCHS1\nNote 1: If the outside air temperature is -15℃ or lower\n2: The alarm is activated when sensor or the circuit is disconnected (open) or shortcircuited.\n＊Faulty contact of connector X16A\n＊Temperature sensor failure\n＊Controller (CPU board) failure",
+"troubleshooting": "Step 1.\nCheck connector X16A / X20A and make sure it is properly installed.\nStep 2.\nDisconnect X16 and X20A and check the sensor resistance values.\npic_e439_1\nIf the resistance value matches the temperature sensor characteristic table (refer to 5.2 temperature sensor characteristics), the sensor is normal.\nExample of sensor resistance value measurement (Connector X20A)\n* Contact to the connector pins correctly.\npic_e439_2\nStep 3.\nCheck that DCHS2 is correctly installed on the compressor.\nStep 4.\nCheck the controller (CPU board).",
+"controller_action": "Backup by DCHS1"
+},
+{
+"alarm_code": "E441",
+"alarm_content": "CPU board temperature sensor failure",
+"possible_cause": "CPU board (EC1) temperature sensor failure\nThe internal temperature sensor of the CPU board (EC1) is malfunctioning.",
+"troubleshooting": "Replace the CPU board (EC1).",
+"controller_action": "Backup operation"
+},
+{
+"alarm_code": "E607",
+"alarm_content": "Sheet key failure",
+"possible_cause": "＊Sheet key failure\n＊Sheet key (EC6) failure\n＊Faulty cable or connection between Sheet key (EC6) ～Relay board (EC5) ～Operation board (EC3)",
+"troubleshooting": "1\nDisconnect cable connectors of sheet key, relay board, and operation board, and check connector pins visually, and secure insert correctly.\n2\nReplace the sheet key if the alarm is repeated.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E701",
+"alarm_content": "Abnormal power supply voltage detected",
+"possible_cause": "Standard setting : Power supply voltage ＞ AC535V, or ＜ AC329V\nOption 1 setting : Power supply voltage ＞ AC565V, or ＜ AC329V",
+"troubleshooting": "Check if the actual power supply voltage between R-S phase is within the allowable range.\nStandard setting : AC329V ~ 535V\nOption 1 setting : AC329V ~ 565V",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E707",
+"alarm_content": "Temporary power supply shut down during operation",
+"possible_cause": "The volatge waveform of supplied power has lost.\nThe power phase determination has an error when POWER ON.",
+"troubleshooting": "Check the connected power conditions incl. power plug, measure power volatge at each phase by tester.\nPT has error; Compare the voltage indication between PT1 (PT2) on sensor infroamtion with mesured by tester.\n*Refer to service buitten \"No.SB-20-013\" for supplied power diagnosis.\nNOTE; Require to disconnect the power at once, and wait for 30 sec. before POWER ON to check the volatge indication on the display.",
+"controller_action": "In the case of an abnormal power supply phase waveform) E707 is generated 2 times → F703 unit stop."
+},
+{
+"alarm_code": "E801",
+"alarm_content": "CPU onboard battery failure",
+"possible_cause": "CPU onboard battery failure (E307 and E311 are also generated.)\nCPU onboard battery is drained due to salt water or moisture",
+"troubleshooting": "〈Permanent measures〉\nReplace CPU board (Lithium battery installed).\n〈Emergency measures〉\nThe unit will operate. However, controller time starts from incorrect time whenever power OFF/ON. therefore, trip data may not shown correctly.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E805",
+"alarm_content": "FA sensor failure",
+"possible_cause": "1. Incorrect setting\n2. FA wiring is installed incorrectly.\nFA sensor failure\n3. Controller (CPU board) failure",
+"troubleshooting": "1-1.\nCheck FA sensor setting.\nChange setting as correct ：※12 Configuration Set in paragraph 2.3.3\nMake sure that the FA wire is properly attached to the ventilator outlet.\nOperate the ventilator outlet lever to fully open and fully close. If an alarm is detected, replace the FA s\nHIGH-FLY: With FA sensor (Ventilator with insect screen)\nHIGH: With FA sensor (Ventilator without insect screen)\nOFF: Without FA sensor\n＊ Confirmation of setting: 2.3 ※4 Configuration Set Information\n1-2.\nCheck if FA setting made HIGH-FLY or HIGH for unit without FA sensor.\nSet to OFF if FA setting made HIGH-FLY or HIGH.2\nTurn on the circuit breaker and check if there is DC5V input from the controller.\nIf there is no input DC5V, then check the controller.\nFAS：X8A No.4-6（Red-Black）\nIf there is input DC5V, then proceed to next step.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E807",
+"alarm_content": "Ventilator open warning: Ventilator is open during frozen operation",
+"possible_cause": "Ventilator is open during frozen operation.\nVentilator is still open when the unit is in frozen mode",
+"troubleshooting": "Make sure to fully close ventilator in frozen operation\nIf the ventilation volume is displayed regardless of the valve being fully closed, perform the FA Calibration under 4.1 Manual Check.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E809",
+"alarm_content": "Refrigerant shortage",
+"possible_cause": "＊EEV failure\nThe causes of F809\nChilled mode\n＜Full Cool＞ EEV Opening≧400 pls\n＜Modulation＞ EEV Opening≧400 pls continuously for 5 minutes\nFrozen\n＜RS≧0℃＞ EEV Opening≧400 pls\n＜RS＜0℃＞ EEV Opening≧400 pls continuously for 5 minutes\n＊Shortage of refrigerant\n＊Liquid line (dryer) is clogging",
+"troubleshooting": "Step 1.\nLSV check\nStep 2.\nLiquid line check and dryer blockage check\nRefer to F109, E107, E109\nStep 3.\nEEV check\nStep 4.\nCheck refrigerant shortage\nIf there is no problem in above items, it seems to be refrigerant shortage.\nConduct refrigerant recovery and charge specified amount of refrigerant after checking location of refrigerant leakages.",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E903",
+"alarm_content": "A communication error between CPU board (EC1) and operation\nboard (EC3)",
+"possible_cause": "1. Open circuit between operation board (EC3) and CPU board (EC1)\n2. Operation board failure\n3. CPU board failure",
+"troubleshooting": "Step 1.\nCheck if the connector of cable between operation board（ EC3) and CPU board（ EC1) is inserted securely.\nStep 2.\nIf there is no connection error between both boards, it seems to be operation board or CPU board failure.\nReplace in order starting from the CPU board.",
+"controller_action": "Alarm display only\n（Communication Interrupted is displayed on LCD and E903 is recorded on trip report.)"
+},
+{
+"alarm_code": "F528",
+"alarm_content": "E528 (Compressor does not startup) is generated 5 times.",
+"possible_cause": "Compressor is not started\n②Compressor is lock at starting.\n③ Inverter board failure (detection part of wave form)",
+"troubleshooting": "Step 1.\nCheck the compressor\n1-1.\nCheck insulation and resistance of the compressor motor.\n1-2.\nCheck sound of compressor at starting.\nReplace compressor if insulation, resistance is abnormal or noise is created at staring.\nStep 2.\nReplace Inverter board if compressor sound is normal or does not start.",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F52E",
+"alarm_content": "E52E (Temporary compressor overcurrent ) is generated 4 times.",
+"possible_cause": "Over current failure\nInverter board failure（IPM part）\nIPM：Intelligent Power Module",
+"troubleshooting": "Replace Inverter board",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F52F",
+"alarm_content": "E52F (Compressor current sensor failure) is generated 4 times.",
+"possible_cause": "E52F is generated 4 times.\nCompressor current sensor failure                                                                                       Inverter board failure（Current detection part",
+"troubleshooting": "Replace Inverter board",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F536",
+"alarm_content": "E536 (Current sensor offset error) is generated 4 times",
+"possible_cause": "E536 is generated 4 times.\nInverter board failure\n(Current sensor)",
+"troubleshooting": "Replace Inverter board",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F538",
+"alarm_content": "Inverter board failure (Microcomputer I/O port logic judgment\nfailure when unit is on)",
+"possible_cause": "Power module failure\n\nPossible causes\nInverter board failure (IGBT)\nIGBT: Insulated Gate Bipolar Transistor",
+"troubleshooting": "Replace Inverter board",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F53A",
+"alarm_content": "Incorrect setting (Controller model)",
+"possible_cause": "Incorrect setting (Controller, or compressor model)\nDoes not match controller model setting and compressor model",
+"troubleshooting": "Check controller model setting according to Configuration Set (Item 2.3 *12).\nModel name / Compressor model / Controller model\nLX10F11B or later / JT80GSDNYR@S or @SF / DECOSVa\nLX10F15A / JT80GJDNYR@S or @SF / DECOSV",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F53B",
+"alarm_content": "Inverter board failure (EEPROM fault when unit is on􀊣",
+"possible_cause": "EEPROM failure when unit is on\nInverter board failure (EEPROM part)\nEEPROM : Electrically Erasable Program ROM",
+"troubleshooting": "Replace Inverter board",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F53C",
+"alarm_content": "E53C (Main circuit condenser recharging error) is generated 4 times.",
+"possible_cause": "E53C is generated 4 times.\nInverter board failure\n（Capacitor short-circuited）",
+"troubleshooting": "Replace Inverter board",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "F53D",
+"alarm_content": "E53D (Compressor lock) is generated 4 times.",
+"possible_cause": "E53D is generated 4 times.\n② Compressor is lock during operation\n③ Inverter board failure (detection part of lock)",
+"troubleshooting": "Step 1.\nCheck the compressor\n1-1.\nCheck insulation and resistance of the compressor motor.\n1-2.\nCheck sound of compressor at starting.\nReplace compressor if insulation, resistance is abnormal or noise is created at staring.\nStep 2.\nReplace Inverter board if compressor sound is normal or does not start.",
+"controller_action": "Unit stop"
+},
+{
+"alarm_code": "E523",
+"alarm_content": "Compressor over current (>16.1A) is detected during operation.",
+"possible_cause": "Compressor overload during operation（≧DC16.1A）\n① Over-current due to compressor overload\n③ Inverter board failure（Current detection part）",
+"troubleshooting": "Step 1.\nCheck the compressor\n1-1.\nCheck insulation and resistance of the compressor motor.\n1-2.\nCheck sound of compressor at starting.\nReplace compressor if insulation, resistance is abnormal or noise is created at staring.\nStep 2.\nReplace Inverter board if compressor sound is normal or does not start.",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E524",
+"alarm_content": "Compressor over current (>19A) is detected during operation.",
+"possible_cause": "Compressor overload during operation（≧DC19A）\n① Over-current due to compressor overload\n③ Inverter board failure（Current detection part）",
+"troubleshooting": "Step 1.\nCheck the compressor\n1-1.\nCheck insulation and resistance of the compressor motor.\n1-2.\nCheck sound of compressor at starting.\nReplace compressor if insulation, resistance is abnormal or noise is created at staring.\nStep 2.\nReplace Inverter board if compressor sound is normal or does not start.",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E525",
+"alarm_content": "Actual frequency much lower than command frequency due to\ncompressor over load",
+"possible_cause": "Compressor speed is down (detection of stepping out) because actual frequency is low against command frequency to compressor\n① Speed down due to compressor overload\n③ Inverter board failure (Frequency detection part)",
+"troubleshooting": "Step 1.\nCheck the compressor\n1-1.\nCheck insulation and resistance of the compressor motor.\n1-2.\nCheck sound of compressor at starting.\nReplace compressor if insulation, resistance is abnormal or noise is created at staring.\nStep 2.\nReplace Inverter board if compressor sound is normal or does not start.",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E526",
+"alarm_content": "Actual frequency much higher than command frequency due to\nexternal factors",
+"possible_cause": "Actual frequency is higher than command frequency from the controller continues for 5 seconds.\nLightning surge sometimes shifts the detected rotation speed significantly",
+"troubleshooting": "Operation continues if the external factor (such as lightning) is improved.",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E528",
+"alarm_content": "Compressor does not operate after startup.",
+"possible_cause": "Compressor is not started\n・Compressor is lock at starting.\n・ Inverter board failure (detection part of wave form)",
+"troubleshooting": "Step 1.\nCheck the compressor\n1-1.\nCheck insulation and resistance of the compressor motor.\n1-2.\nCheck sound of compressor at starting.\nReplace compressor if insulation, resistance is abnormal or noise is created at staring.\nStep 2.\nReplace Inverter board if compressor sound is normal or does not start.",
+"controller_action": "Restart after 3 minutes (Retry 5 times, F528, F53D is generated at 4 times.）"
+},
+{
+"alarm_code": "E52C",
+"alarm_content": "Inverter board temperature higher than 99 􀋆",
+"possible_cause": "Inverter board temperature is over-heated (≧90℃ with 260 sec elapse or ≧99℃ with 5 sec elapse)\n①Ambient temperature is high（>50℃）\n②Inverter board failure（ fin temperature detection part）\n③Inverter box is heat up due to less air circulation.",
+"troubleshooting": "①\nThe unit can operate with an ambient temperature of up to 50℃ .\nCheck for a short circuit at the discharge air of the air cooling condenser coil and also check the surrounding environment.Operation continues if the environment is improved.\n②\nIf no external factors are present, the inverter board may have failed. Replace the inverter board.\n③\nClean the fin on the rear of the inverter box and the base of the inverter box to ensure that the air can circulate.",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E52D",
+"alarm_content": "Inverter board temperature abnormal (> 150 􀋆 or < -45 􀋆 is\ndetected.)",
+"possible_cause": "Fin temperature sensor failure\nInverter board failure（Fin temperature sensor）\n（Fin temperature≧150℃ or -45≦℃）",
+"troubleshooting": "Replace Inverter board",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E52E",
+"alarm_content": "Current is too high temporary during startup (over DC51A)",
+"possible_cause": "Inverter board failure（IPM part）\nIPM：Intelligent Power Module",
+"troubleshooting": "Replace Inverter board",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E52F",
+"alarm_content": "Compressor current sensor failure at startup",
+"possible_cause": "Compressor current sensor failure\nInverter board failure（Current detection part）",
+"troubleshooting": "Replace Inverter board",
+"controller_action": "Restart after 3 minutes (F52E, F52F is generated at 4 times retry.）"
+},
+{
+"alarm_code": "E531",
+"alarm_content": "Power supply voltage is unbalance",
+"possible_cause": "Unbalanced power phase is supplied\nAbnormal power supply",
+"troubleshooting": "Regardless alarm is generated, restart after 3 minutes standby.\nOperation continues if the external factor is improved.",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E532",
+"alarm_content": "Power supply voltage error (too high, too low at abnormally)",
+"possible_cause": "Voltage in inverter becomes ≧DC790V or ≦DC320V due to power supply voltage≧AC530V or ≦AC300V.\n①Power supply voltage is at high voltage (≧AC535V)\n②Inverter board failure (Voltage detection part)",
+"troubleshooting": "①\nCheck if the actual power voltage is within range (300V～535V）.\n＊ Provide the power supply within range if it is out of range.\nRestart after 3 minutes standby.\nOperation continues if the power supply condition is improved.\n②\nIf the power voltage is within range, it seems to be inverter board failure. Replace inverter board.",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E533",
+"alarm_content": "Power supply voltage error (open phase)",
+"possible_cause": "・Power supply voltage ≧AC530V or ≦AC300V.\n・One of phase is open at power supply to inverter.\n・ Check if there is broken wire (open) or open phase at the power supply for inverter (secondary side of circuit breaker).",
+"troubleshooting": "①\nPower supply check\nProvide the power supply voltage within range.\nCheck if the power supply voltage is within range （AC300V～AC530V).\nElectrical parts may have damages.\n②\nCheck if there is a broken wire (open) between L1B, L2B and L3B (INV board) at the secondary side of the circuit breaker.\nRepaire as needed",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E536",
+"alarm_content": "Current sensor offset fault when compressor starts",
+"possible_cause": "・Power supply voltage ≧AC530V or ≦AC300V.\n・One of phase is open at power supply to inverter.\n・ Check if there is broken wire (open) or open phase at the power supply for inverter (secondary side of circuit breaker).",
+"troubleshooting": "①\nPower supply check\nProvide the power supply voltage within range.\nCheck if the power supply voltage is within range （AC300V～AC530V).\nElectrical parts may have damages.\n②\nCheck if there is a broken wire (open) between L1B, L2B and L3B (INV board) at the secondary side of the circuit breaker.\nRepaire as needed",
+"controller_action": "Restart after 3 minutes"
+},
+{
+"alarm_code": "E53C",
+"alarm_content": "Main circuit charge failure when compressor starts",
+"possible_cause": "Charging failure of main circuit capacitor at starting\nInverter board failure\n（Capacitor short-circuited）",
+"troubleshooting": "Replace Inverter board",
+"controller_action": "Restart after 3 minutes (F536 at 4 times retry）"
+},
+{
+"alarm_code": "E53D",
+"alarm_content": "Compressor lock when compressor starts",
+"possible_cause": "Compressor does not operate during operation.\n② Compressor is lock during operation\n③ Inverter board failure (detection part of lock)",
+"troubleshooting": "Step 1.\nCheck the compressor\n1-1.\nCheck insulation and resistance of the compressor motor.\n1-2.\nCheck sound of compressor at starting.\nReplace compressor if insulation, resistance is abnormal or noise is created at staring.\nStep 2.\nReplace Inverter board if compressor sound is normal or does not start.",
+"controller_action": "Restart after 3 minutes (Retry 5 times, F528, F53D is generated at 4 times.）"
+},
+{
+"alarm_code": "E542",
+"alarm_content": "Cooling fan lock during operation (LX10F15A only)",
+"possible_cause": "DC fan motor failure\n①Fan motor for cooling is lock or faulty cable connection\n②Inverter failure",
+"troubleshooting": "①\nCheck if fan motor for cooling is lock or faulty cable connection (open or short circuit)\n②\nReplace Inverter board if DC fan motor and wiring of DC fan are no failure.",
+"controller_action": "Alarm display only"
+},
+{
+"alarm_code": "E5FF",
+"alarm_content": "A communication error between CPU board (EC1) and Inverter\nboard (EC8)",
+"possible_cause": "E5FF: Communication error between CPU board and inverter board during operation\n①Cable fault or connection error between inverter board and CPU board\n②Inverter board failure (Communication part to CPU board)\n③CPU board failure (Communication part to inverter board)\n④Noise filter board failure",
+"troubleshooting": "Step 1.\nSet the circuit breaker to ON (UNIT OFF), and then measure the voltage at the inverter board (terminals L1B, L2B and L3B).\n1.1\nIf there is no power voltage, check the power supply line including the noise filter board.\n1.2\nIf there is power voltage but the LED (green) on the inverter board is not flashing, replace the inverter board.\nStep 2.\nDisconnect the connectors between the CPU board (connector X19A) and the inverter board (connector X4A), and visually check the connector pins. After checking if any cables are open or short circuited, securely insert the sockets.\nStep 3.\nReplace the inverter board or CPU board.",
+"controller_action": "Restart after 3 minutes\n（Communication Interrupted is displayed on LCD and E903 is recorded on trip report."
+}
+]
+daikin_lx10f_alarm_list.json
+Displaying daikin_lx10f_alarm_list.json.

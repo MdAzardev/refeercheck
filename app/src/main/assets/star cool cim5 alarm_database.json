@@ -1,0 +1,1290 @@
+[
+  {
+    "Code": 100,
+    "Name": "Tret open",
+    "Type": "Warning",
+    "Description": "Return Air Temperature Sensor Open Circuit",
+    "Indication": "Indication of loose connection, defective or lack of return air temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tret or its cable defective.\n•\tX1 cable is defect.\n•\tController PCB defect.\nAccompanied alarms:\n•\tAL 102.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tret from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is more than 1.5 MΩ, the cable or the sensor is defect, \nreplace sensor and cable.\nb) If the resistance matches the resistance and temperature in Tables \nstarting starting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tret. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure \nthe voltage over the sensor and check voltage/temperature according to \nTables starting starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 101,
+    "Name": "Tret short",
+    "Type": "Warning",
+    "Description": "Return Air Temperature Sensor Short Circuit",
+    "Indication": "Indication of short-circuited return air temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tret or its cable defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 102.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tret from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is less than (<) 230 Ω, the cable or the sensor is defect, \nreplace sensor cable.\nb) If the resistance matches the resistance and temperature in Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tret, it should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure \nthe voltage over the sensor and check voltage/temperature according to \nTables starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. \nCheck other alarms and see Trouble shooting for Star Cool Controller \np.56 before replacing controller door."
+  },
+  {
+    "Code": 102,
+    "Name": "Tret invalid",
+    "Type": "Warning",
+    "Description": "Return Air Temperature Sensor Invalid",
+    "Indication": "Indication of defective return air temperature sensor or its measuring circuitry",
+    "Details": "Possible causes:\n•\tActive alarms AL 100, AL 101 or AL 901\n•\tTemperature sensor reading is out of valid range:  -60°C (-76°F) or above +140°C (284°F).\nAccompanied alarms:\n•\tAL 100 or AL 101 may also be active.\nTrouble shooting:\n1) If alarms AL 100 or AL 101 are active, check their trouble shooting \nsection first.\n2) Disconnect the sensor cable for sensor Tret from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n3) If AL 901 is active, see trouble shooting for AL 901\n4) Measure the resistance between the two wires.\na) If the resistance is out of range of the resistance and temperature table \nin Tables starting p.204, the temperature sensor and cable are defect \nand should be replaced.\nb) If the resistance is within range, perform controller door check Trouble \nshooting for Star Cool Controller p.56 before replacing controller \ndoor."
+  },
+  {
+    "Code": 103,
+    "Name": "Tsup 1 open",
+    "Type": "Warning",
+    "Description": "Supply Air Temperature Sensor 1 Open Circuit",
+    "Indication": "Indication of loose connection, defective or lack of supply air temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tsup1 or its cable defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 105.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tsup1 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is more than 1.5 MΩ, the cable or the sensor is defect, \nreplace sensor and cable.\nb) If the resistance matches the resistance and temperature in Tables starting \np.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tsup1, it should be between 4.80 \nand 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to Tables \nstarting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 104,
+    "Name": "Tsup 1 short",
+    "Type": "Warning",
+    "Description": "Supply Air Temperature Sensor 1 Short Circuit",
+    "Indication": "Indication of short-circuited supply air temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tsup1 or its cable defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 105.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tsup1 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is less than (<) 230 Ω, the cable or the sensor is defect, \nreplace the sensor and cable.\nb) If the resistance matches the resistance and temperature Tables starting \np.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tsup1, it should be between 4.80 \nand 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to Tables \nstarting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 105,
+    "Name": "Tsup 1 invalid",
+    "Type": "Warning",
+    "Description": "Supply Air Temperature Sensor 1 Invalid",
+    "Indication": "Indication of defective supply air temperature sensor, its measuring circuitry or sensor not mounted correctly in unit",
+    "Details": "Possible causes:\n•\tActive alarms AL 103, AL 104 or AL 901\n•\tTemperature sensor reading is out of valid range:  -60°C (-76°F) or above +140°C (284°F).\n•\tDifference between Tsup1 and Tsup2 is larger than 1°C:  \n1°C difference for more than 30 min. up to 10°C difference in more than \n3 min.\nAccompanied alarms:\n•\tAL 103 or AL 104 may also be active.\nTrouble shooting:\n1) If alarms AL 103 or AL 104 are active, check their trouble shooting \nsection first.\n2) Check that both sensors, Tsup1 and Tsup2 are mounted correct by their \nmounting holes.\n3) If AL 901 is active, see trouble shooting for AL 901\n4) Disconnect the sensor cable for sensor Tsup1 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n5) Measure the resistance between the two wires.\na) If the resistance is out of range of the resistance and temperature table, \nTables starting p.204, the temperature sensor and cable are defect and \nshould be replaced.\nb) If the resistance is within range, perform controller door check Trouble \nshooting for Star Cool Controller p.56 before replacing controller \ndoor."
+  },
+  {
+    "Code": 106,
+    "Name": "Tsup 2 open",
+    "Type": "Warning",
+    "Description": "Supply Air Temperature Sensor 2 Open Circuit",
+    "Indication": "Indication of loose connection, defective or lack of supply air temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tsup2 or its cable defective.\n•\tX1 cable is defective.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 108.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tsup2 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is more than 1.5 MΩ, the cable or the sensor is defect, \nreplace the sensor and cable.\nb) If the resistance matches the resistance and temperature in Tables starting \np.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tsup2. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to Tables \nstarting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 107,
+    "Name": "Tsup 2 short",
+    "Type": "Warning",
+    "Description": "Supply Air Temperature Sensor 2 Short Circuit",
+    "Indication": "Indication of short-circuited supply air temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tsup2 or its cable defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 108.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tsup2 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is less than (<) 230 Ω, the cable or the sensor is defect, \nreplace sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tsup2. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to Tables \nstarting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door"
+  },
+  {
+    "Code": 108,
+    "Name": "Tsup 2 invalid",
+    "Type": "Warning",
+    "Description": "Supply Air Temperature Sensor 2 Invalid",
+    "Indication": "Indication of defective supply air temperature sensor or its measuring circuitry or sensor not mounted correctly in unit",
+    "Details": "Possible causes:\n•\tActive alarms AL 106, AL 107 or AL 901\n•\tTemperature sensor reading is out of valid range:  -60°C (-76°F) or above +140°C (284°F).\n•\tDifference between Tsup1 and Tsup2 is larger than 1°C: \n1°C difference for more than 30 min. or up to 10°C difference in more \nthan 3 min.\nAccompanied alarms:\n•\tAL 106 or AL 107 may also be active.\nTrouble shooting:\n1) If alarms AL 106 or AL 107 are active, check their trouble shooting \nsection first.\n2) Check that both sensors, Tsup1 and Tsup2 are mounted correct by their \nmounting holes.\n3) If AL 901 is active, see trouble shooting for AL 901\n4) Disconnect the sensor cable for sensor Tsup2 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n5) Measure the resistance between the two wires.\na) If the resistance is out of range of the resistance and temperature table, \nTables starting p.204, the temperature sensor and cable are defect and \nshould be replaced.\nb) If the resistance is within range, perform controller door check Trouble \nshooting for Star Cool Controller p.56 before replacing controller \ndoor."
+  },
+  {
+    "Code": 109,
+    "Name": "Tusda 1 open",
+    "Type": "Warning",
+    "Description": "USDA 1 Temperature Sensor Open Circuit",
+    "Indication": "Indication of loose connection, defective or lack of USDA 1 temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tusda1 or its cable defective.\n•\tX1 cable is defect.\n•\tDefective plug inside or cable on the unit backside.\n•\tController PCB defective.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tusda1 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is more than 1.5 MΩ, the cable or the plug on the \nbackside of the unit or the sensor is defect. Check plug before replacing \nthe sensor and cable.\nb) If the resistance matches the resistance and temperature in Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tusda1. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure \nthe voltage over the sensor and check voltage/temperature according to \ntable Tables starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 110,
+    "Name": "Tusda 1 short",
+    "Type": "Warning",
+    "Description": "USDA 1 Temperature Sensor Short Circuit",
+    "Indication": "Indication of short-circuited USDA 1 temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tusda1 or its cable defective.\n•\tX1 cable is defect.\n•\tDefective plug inside or cable on the unit backside.\n•\tController PCB defective.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tusda1 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is less than (<) 230 Ω, the cable, the plug inside in the \nunit or the sensor is defect. Check the plug before replacing sensor and \ncable.\nb) If the resistance matches the resistance and temperature in table, see \nTables starting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tusda1. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure \nthe voltage over the sensor and check voltage/temperature according to \ntable in Tables starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 111,
+    "Name": "Tusda 1 invalid",
+    "Type": "Warning",
+    "Description": "USDA 1 Temperature Sensor Invalid",
+    "Indication": "Indication of defective supply air temperature sensor or its measuring circuitry or sensor not mounted correctly in unit",
+    "Details": "Possible causes:\n•\tActive alarms AL 110, AL 109 or AL 901\n•\tTemperature sensor reading is out of valid range:  -60°C (-76°F) or above +70°C (284°F).\n• Difference between Tsup1 and Tsup2 is larger than 1°C:\n• 1°C difference for more than 30 min or up to 10°C difference in more \nthan 3 min.\nAccompanied alarms:\n•\tAL 110, AL 109 or AL 901 may also be active.\nTrouble shooting:\n1) If alarms AL 110 or AL 109 are active, check their trouble shooting \nsection first.\n2) Check that sensor Tusda1 is mounted correct by its mounting hole.\n3) If AL 901 is active, see trouble shooting for AL 901\n4) Disconnect the sensor cable for sensor Tusda1 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n5) Measure the resistance between the two wires.\na) If the resistance is out of range of the resistance and temperature table, \nTables starting p.204, the temperature sensor and cable are defect and \nshould be replaced.\nb) If the resistance is within range, perform controller door check Trouble \nshooting for Star Cool Controller p.56 before replacing controller \ndoor."
+  },
+  {
+    "Code": 113,
+    "Name": "Tusda 2 short",
+    "Type": "Warning",
+    "Description": "USDA 2 Temperature Sensor Short Circuit",
+    "Indication": "Indication of short-circuited USDA 2 temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tusda2 or its cable defective.\n•\tX1 cable is defect.\n•\tDefective plug inside or cable on the unit backside.\n•\tController PCB defective.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tusda2 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is less than (<) 230 Ω, the cable, the plug inside in the unit \nor the sensor is defect. Check the plug before replacing sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tusda2. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nTables starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 114,
+    "Name": "Tusda 2 invalid",
+    "Type": "Warning",
+    "Description": "USDA 2 Temperature Sensor Invalid",
+    "Indication": "Indication of defective supply air temperature sensor or its measuring circuitry or sensor not mounted correctly in unit",
+    "Details": "Possible causes:\n•\tActive alarms AL 112, AL 113 or AL 901\n•\tTemperature sensor reading is out of valid range:  -60°C (-76°F) or above +140°C (284°F).\n• Difference between Tsup1 and Tsup2 is larger than 1°C: 1°C difference \nfor more than 30 min up to 10°C difference in more than 3 min.\nAccompanied alarms:\n•\tAL 112, AL 113 or AL 901 may also be active.\nTrouble shooting:\n1) If alarms AL 112 or AL 113 are active, check their trouble shooting \nsection first.\n2) Check that sensor Tusda1 is mounted correct by its mounting hole.\n3) If AL 901 is active, see trouble shooting for AL 901\n4) Disconnect the sensor cable for sensor Tusda1 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n5) Measure the resistance between the two wires.\na) If the resistance is out of range of the resistance and temperature table, \nTables starting p.204, the temperature sensor and cable are defect and \nshould be replaced.\nb) If the resistance is within range, perform controller door check Trouble \nshooting for Star Cool Controller p.56 before replacing controller \ndoor"
+  },
+  {
+    "Code": 115,
+    "Name": "Tusda 3 open",
+    "Type": "Warning",
+    "Description": "USDA 3 Temperature Sensor Open Circuit",
+    "Indication": "Indication of loose connection, defective or lack of USDA 3 temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tusda3 or its cable defective.\n•\tX1 cable is defective.\n•\tDefective plug inside or cable on the unit backside.\n•\tController PCB defective.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tusda3 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is more than 1.5 MΩ, the cable, the plug inside in the unit \nor the sensor is defect. Check plug before replacing sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tusda3. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nTables starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 116,
+    "Name": "Tusda 3 short",
+    "Type": "Warning",
+    "Description": "USDA 3 Temperature Sensor Short Circuit",
+    "Indication": "Indication of short-circuited USDA 3 temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tusda3 or its cable defective.\n•\tX1 cable is defective.\n•\tDefective plug inside or cable on the unit backside.\n•\tController PCB defective.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tusda3 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is less than (<) 230 Ω, the cable, the plug inside in the unit \nor the sensor is defect. Check the plug before replacing sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tusda3. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nTables starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door. "
+  },
+  {
+    "Code": 117,
+    "Name": "Tusda 3 invalid",
+    "Type": "Warning",
+    "Description": "USDA 3 Temperature Sensor Invalid",
+    "Indication": "Indication of defective supply air temperature sensor or its measuring circuitry or sensor not mounted correctly in unit",
+    "Details": "Possible causes:\n•\tActive alarms AL 115, AL 116 or AL 901\n•\tTemperature sensor reading is out of valid range:  -60°C (-76°F) or above +140°C (284°F).\n• Difference between Tsup1 and Tsup2 is larger than 1°C: 1°C difference \nfor more than 30 min up to 10°C difference in more than 3 min.\nAccompanied alarms:\n•\tAL 115, AL 116 or AL 901 may also be active.\nTrouble shooting:\n1) If alarms AL 115 or AL 116 are active, check their trouble shooting \nsection first.\n2) Check that sensor Tusda1 is mounted correct by its mounting hole.\n3) If AL 901 is active, see trouble shooting for AL 901\n4) Disconnect the sensor cable for sensor Tusda1 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n5) Measure the resistance between the two wires.\na) If the resistance is out of range of the resistance and temperature table, \nTables starting p.204, the temperature sensor and cable are defect and \nshould be replaced.\nb) If the resistance is within range, perform controller door check Trouble \nshooting for Star Cool Controller p.56 before replacing controller \ndoor."
+  },
+  {
+    "Code": 118,
+    "Name": "Tcargo open",
+    "Type": "Warning",
+    "Description": "Cargo Temperature Sensor Open Circuit",
+    "Indication": "Indication of loose connection, defective or lack of cargo temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tcargo or its cable defective.\n•\tX1 cable is defect.\n•\tDefective plug inside or cable on the unit backside.\n•\tController PCB defective.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tcargo from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is more than 1.5 MΩ, the cable, the plug inside in the unit \nor the sensor is defect. Check plug before replacing sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tcargo. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nTables starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 119,
+    "Name": "Tcargo short",
+    "Type": "Warning",
+    "Description": "Cargo Temperature Sensor Short Circuit",
+    "Indication": "Indication of short-circuited cargo temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tcargo or its cable defective.\n•\tX1 cable is defect.\n•\tDefective plug inside or cable on the unit backside.\n•\tController PCB defective.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tcargo from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is less than (<) 230 Ω, the cable, the plug inside in the unit \nor the sensor is defect. Check the plug before replacing sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tcargo. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nTables starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 120,
+    "Name": "Tcargo invalid",
+    "Type": "Warning",
+    "Description": "USDA 1 Temperature Sensor Invalid",
+    "Indication": "Indication of defective supply air temperature sensor or its measuring circuitry or sensor not mounted correctly in unit",
+    "Details": "Possible causes:\n•\tActive alarms AL 118, AL 119 or AL 901\n•\tTemperature sensor reading is out of valid range:  -60°C (-76°F) or above +140°C (284°F).\n• Difference between Tsup1 and Tsup2 is larger than 1°C: 1°C difference \nfor more than 30 min up to 10°C difference in more than 3 min.\nAccompanied alarms:\n•\tAL 118, AL 119 or AL 901 may also be active.\nTrouble shooting:\n1) If alarms AL 118 or AL 119 are active, check their trouble shooting \nsection first.\n2) Check that sensor Tusda1 is mounted correct by its mounting hole.\n3) If AL 901 is active, see trouble shooting for AL 901\n4) Disconnect the sensor cable for sensor Tusda1 from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n5) Measure the resistance between the two wires.\na) If the resistance is out of range of the resistance and temperature table, \nTables starting p.204, the temperature sensor and cable are defect and \nshould be replaced.\nb) If the resistance is within range, perform controller door check Trouble \nshooting for Star Cool Controller p.56 before replacing controller \ndoor."
+  },
+  {
+    "Code": 121,
+    "Name": "Tevap open",
+    "Type": "Warning",
+    "Description": "Evaporator Temperature Sensor Open Circuit",
+    "Indication": "Indication of loose connection, defective or lack of evaporator temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tevap or its cable defective.\n•\tX1 cable is defective.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 123.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tevap from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is more than 1.5 MΩ, the cable or the sensor is defect, \nreplace sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tevap. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nTables starting p.204.\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 122,
+    "Name": "Tevap short",
+    "Type": "Warning",
+    "Description": "Evaporator Temperature Sensor Short Circuit",
+    "Indication": "Indication of short-circuited evaporator temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tevap or its cable defective.\n•\tX1 cable is defective.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 123.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tevap from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is less than (<) 230 Ω, the cable or the sensor is defect, \nreplace the sensor and cable.\nb) If the resistance matches the resistance and temperature in table in Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tevap. It should be between \n4.80 and 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nTables starting p.204.\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 123,
+    "Name": "Tevap invalid",
+    "Type": "Warning",
+    "Description": "Evaporator Temperature Sensor Invalid",
+    "Indication": "Indication of defective evaporator temperature sensor or its measuring circuitry",
+    "Details": "Possible causes:\n•\tActive alarms AL 121, AL 122 or AL 901\n•\tTemperature sensor reading is out of valid range:  -60°C (-76°F) or above +140°C (284°F).\nAccompanied alarms:\n•\tAL 121 or AL 22 may also be active.\nTrouble shooting:\n1) If alarms AL 121 or AL 122 are active, check their trouble shooting \nsection first.\n2) Disconnect the sensor cable for sensor Tevap from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n3) If AL 901 is active, see trouble shooting for AL 901\n4) Measure the resistance between the two wires.\na) If the resistance is out of range of the resistance and temperature table, \nTables starting p.204, the temperature sensor and cable are defect and \nshould be replaced.\nb) If the resistance is within range, perform controller door check (Trouble \nshooting for Star Cool Controller p.56) before replacing controller \ndoor."
+  },
+  {
+    "Code": 124,
+    "Name": "Tsuc open",
+    "Type": "Warning",
+    "Description": "Suction Temperature Sensor Open Circuit",
+    "Indication": "Indication of loose connection, defective or complete lack of suction temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tsuc or its cable defective.\n•\tX1 cable is defective.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 126.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tsuc from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is more than 1.5 MΩ, the cable or the sensor is defect, \nreplace sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tsuc. It should be between 4.80 \nand 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nTables starting p.204.\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door"
+  },
+  {
+    "Code": 125,
+    "Name": "Tsuc short",
+    "Type": "Warning",
+    "Description": "Suction Temperature Sensor Short Circuit",
+    "Indication": "Indication of short-circuited suction temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tsuc or its cable defective.\n•\tX1 cable is defective.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 126.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tsuc from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is less than (<) 230 Ω, the cable or the sensor is defect, \nreplace sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204 the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tsuc. It should be between 4.80 \nand 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nsection Tables starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 126,
+    "Name": "Tsuc invalid",
+    "Type": "Warning",
+    "Description": "Suction Temperature Sensor Invalid",
+    "Indication": "Indication of defective suction temperature sensor or its measuring circuitry",
+    "Details": "Possible causes:\n•\tActive alarms AL 124, AL 125 or AL 901\n•\tTemperature sensor reading is out of valid range:  -60°C (-76°F) or above +140°C (+284°F).\nAccompanied alarms:\n•\tAL 124, AL 125 or AL 901 may also be active.\nTrouble shooting:\n1) If alarms AL 124 or AL 125 are active, check their trouble shooting \nsection first.\n2) Disconnect the sensor cable for sensor Tsuc from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n3) If AL 901 is active, see trouble shooting for AL 901\n4) Measure the resistance between the two wires.\na) If the resistance is out of range of the resistance and temperature table, \nTables starting p.204, the temperature sensor and cable are defect and \nshould be replaced.\nb) If the resistance is within range, perform controller door check, see \nTrouble shooting for Star Cool Controller p.56 before replacing \ncontroller door."
+  },
+  {
+    "Code": 127,
+    "Name": "Tamb open",
+    "Type": "Warning",
+    "Description": "Ambient Temperature Sensor Open Circuit",
+    "Indication": "Indication of loose connection, defective or lack of ambient temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tamb or its cable defective.\n•\tX1 cable is defective.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 129.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tamb from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is more than 1.5 MΩ, the cable or the sensor is defect, \nreplace sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tamb. It should be between 4.80 \nand 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nTables starting p.204.\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 128,
+    "Name": "Tamb short",
+    "Type": "Warning",
+    "Description": "Ambient Temperature Sensor Short Circuit",
+    "Indication": "Indication of short-circuited ambient temperature sensor",
+    "Details": "Possible causes:\n•\tTemperature sensor Tamb or its cable defective.\n•\tX1 cable is defective.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 129.\nTrouble shooting:\n1) Disconnect the sensor cable for sensor Tamb from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n2) Measure the resistance between the two wires.\na) If the resistance is less than (<) 230 Ω, the cable or the sensor is defect, \nreplace sensor and cable.\nb) If the resistance matches the resistance and temperature in table, Tables \nstarting p.204, the temperature sensor and cable are ok.\n3) Measure the voltage over the connector for Tamb. It should be between 4.80 \nand 5.05V DC\na) If the voltage is inside the above range, connect sensor again. Measure the \nvoltage over the sensor and check voltage/temperature according to table in \nTables starting p.204\nb) If the voltage is outside the above range, the controller PCB is defect or \nother sensors may be defect and pulling the voltage down. Check other \nalarms and see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 129,
+    "Name": "Tamb invalid",
+    "Type": "Warning",
+    "Description": "Ambient Temperature Sensor Invalid",
+    "Indication": "Indication of defective supply ambient sensor or its measuring circuitry",
+    "Details": "Possible causes:\n•\tActive alarms AL 127, AL 128 or AL 901\n•\tTemperature sensor reading is out of valid range:  -60°C (-76°F) or above +140°C (+284°F).\nAccompanied alarms:\n•\tAL 127, AL 128 or AL 901 may also be active.\nTrouble shooting:\n1) If alarms AL 127 or AL 128 are active, check their trouble shooting \nsection first.\n2) Disconnect the sensor cable for sensor Tamb from the connector on the \ninterface/terminal block PCB, according to the wiring schematics inside in \nthe control cabinet.\n3) If AL 901 is active, see trouble shooting for AL 901\n4) Measure the resistance between the two wires.\na) If the resistance is out of range of the resistance and temperature table, \nTable starting p.204, the temperature sensor and cable are defect and \nshould be replaced.\nb) If the resistance is within range, perform controller door check Trouble \nshooting for Star Cool Controller p.56 before replacing controller \ndoor."
+  },
+  {
+    "Code": 200,
+    "Name": "Pdis open",
+    "Type": "Warning",
+    "Description": "Compressor Discharge Pressure Sensor Open Circuit",
+    "Indication": "Indication of loose connection, defect or lack of compressor discharge pressure sensor.",
+    "Details": "Possible causes:\n•\tConnector Pdis not correctly mounted.\n•\tHigh pressure sensor Pdis defective.\n•\tCable for high pressure sensor Pdis defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 203.\nTrouble shooting:\nDisconnect the cable for Pdis from the connector PCB according to the wiring schematics\ninside the control cabinet and from the high pressure sensor.\n1) Check that the connector is mounted correctly according to the drawing for pressure \ntransmitter AKS or NSK respectively. \nThe earth stud must be on the opposite side of the cable (AKS): \n \n \n2) Check the cable (measure the resistance in the cable). \nIf the cable is defective, replace cable.\n3) Mount the cable for Pdis in controller cabinet and on the sensor. Disconnect signal \nwire on interface/terminal block PCB. Measure voltage between wire and GND on \ninterface/terminal block PCB. \nAKS: If voltage is below 0.5V DC, sensor or connection between sensor and cable is     \ndefect. If voltage is between 0.5V DC and 4.5V DC, continue to 4). \nNSK: If voltage is below 0.37V DC, sensor or connection between sensor and cable is \ndefect. If voltage is between 0.37V DC and 4.0V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND.\nAKS: If voltage is between 0.5V DC and 4.5V DC and this alarm is still active, replace \ncontroller door.\nNSK: If the voltage is between 0.37V DC and 4.0V DC and this alarm is still active, \nreplace controller door. \nBefore replacing controller door see Trouble shooting for Star Cool Controller \np.56"
+  },
+  {
+    "Code": 201,
+    "Name": "Pdis short",
+    "Type": "Warning",
+    "Description": "Compressor Discharge Pressure Sensor Short Circuit",
+    "Indication": "Indication of short-circuited compressor discharge pressure sensor",
+    "Details": "Possible causes:\n•\tConnector for high pressure sensor Pdis not correctly mounted.\n•\tHigh pressure sensor Pdis defective.\n•\tCable for high pressure sensor Pdis defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 203.\nTrouble shooting:\nDisconnect the cable for Pdis from the connector PCB according to the wiring schematics\ninside the control cabinet and from the high pressure sensor.\n1) Check that the connector is mounted correctly according to the drawing for pressure \ntransmitter AKS or NSK respectively. \nThe earth stud must be on the opposite side of the cable (AKS): \n                                                                    \n2) Check the cable (measure the resistance in the cable). \nIf the cable is defect, replace cable.\n3) Mount the cable for Pdis in controller cabinet and on the sensor. Disconnect signal \nwire on interface/terminal block PCB. Measure voltage between wire and GND on \ninterface/terminal block PCB. \nAKS: If voltage is below 0.5V DC, sensor or connection between sensor and cable is     \ndefect. If voltage is between 0.5V DC and 4.5V DC, continue to 4). \nNSK: If voltage is below 0.37V DC, sensor or connection between sensor and cable is \ndefect. If voltage is between 0.37V DC and 4.0V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND.\nAKS: If voltage is between 0.5V DC and 4.5V DC and this alarm is still active, replace \ncontroller door.\nNSK: If the voltage is between 0.37V DC and 4.0V DC and this alarm is still active, \nreplace controller door. \nBefore replacing controller door see Trouble shooting for Star Cool Controller \np.56"
+  },
+  {
+    "Code": 203,
+    "Name": "Pdis invalid",
+    "Type": "Warning",
+    "Description": "Compressor Discharge Pressure Sensor Invalid",
+    "Indication": "Indication of defective compressor discharge pressure sensor or its measuring circuitry",
+    "Details": "Possible causes:\n•\tConnector for high pressure sensor Pdis not correctly mounted.\n•\tHigh pressure sensor Pdis defective.\n•\tCable for high pressure sensor Pdis defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 200 or AL 201 may also be active.\nTrouble shooting:\nDisconnect the cable for Pdis from the interface/terminal block PCB according to the \nwiring schematics inside the control cabinet and from the high pressure sensor.\n1) Check that the connector is mounted correctly according to the drawing      for \npressure transmitter AKS or NSK respectively. The earth stud must be on the opposite \nside of the cable (AKS):\nFigure for AKS                        Figure for NSK\n2) Check the cable (measure the resistance in the cable).                            \nIf the cable is defect, replace cable.\n3) Mount the cable for Pdis in controller cabinet and on the sensor.\nDisconnect signal wire on interface/terminal block PCB.\nMeasure voltage between wire and GND on interface/terminal block PCB.\nAKS: If voltage is below 0.5V DC, sensor or connection between sensor and cable is \ndefect.\nIf voltage is between 0.5V DC and 4.5V DC, continue to 4). \nNSK: If voltage is below 0.37V DC, sensor or connection between sensor and cable is \ndefect.\nIf voltage is between 0.37V DC and 4.0V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND.\nAKS: If voltage is between 0.5V DC and 4.5V DC and this alarm is still active, replace \ncontroller door.\nNSK: If the voltage is between 0.37V DC and 4.0V DC and this alarm is still active, \nreplace controller door.\nBefore replacing controller door see Trouble shooting for Star Cool Controller \np.56"
+  },
+  {
+    "Code": 204,
+    "Name": "Psuc open",
+    "Type": "Warning",
+    "Description": "Compressor Suction Pressure Open Circuit",
+    "Indication": "Indication of loose connection, defect or complete lack of compressor suction pressure sensor",
+    "Details": "Possible causes:\n•\tConnector for Psuc not correctly mounted.\n•\tHigh pressure sensor Psuc defective.\n•\tCable for high pressure sensor Pdis defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 200 or AL 201 may also be active.\nTrouble shooting:\nDisconnect the cable for Pdis from the connector PCB according to the wiring schematics \ninside the control cabinet and from the high pressure sensor.\n1) Check that the connector is mounted correctly according to the drawing      for \npressure transmitter AKS or NSK respectively. The earth stud must be on the opposite \nside of the cable (AKS):\nFigure for AKS                        Figure for NSK\n2) Check the cable (measure the resistance in the cable).                            \nIf the cable is defect, replace cable.\n3) Mount the cable for Pdis in controller cabinet and on the sensor.\nDisconnect signal wire on interface/terminal block PCB.\nMeasure voltage between wire and GND on interface/terminal block PCB.\nAKS: If voltage is below 0.5V DC, sensor or connection between sensor and cable is \ndefect.\nIf voltage is between 0.5V DC and 4.5V DC, continue to 4). \nNSK: If voltage is below 0.37V DC, sensor or connection between sensor and cable is \ndefect.\nIf voltage is between 0.37V DC and 4.0V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND.\nAKS: If voltage is between 0.5V DC and 4.5V DC and this alarm is still active, replace \ncontroller door.\nNSK: If the voltage is between 0.37V DC and 4.0V DC and this alarm is still active, \nreplace controller door.\nBefore replacing controller door see Trouble shooting for Star Cool Controller \np.56"
+  },
+  {
+    "Code": 205,
+    "Name": "Psuc short",
+    "Type": "Warning",
+    "Description": "Compressor Suction Pressure Short Circuit",
+    "Indication": "Indication of short-circuited compressor suction pressure sensor",
+    "Details": "Possible causes:\n•\tConnector for suction pressure sensor Psuc not correctly mounted.\n•\tHigh pressure sensor Psuc defective.\n•\tCable for high pressure sensor Pdis defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 207.\nTrouble shooting:\nDisconnect the cable for Psuc from the connector PCB according to the wiring schematics \ninside the control cabinet and from the suction pressure sensor.\n1) Check that the connector is mounted correctly according to the drawing      for \npressure transmitter AKS or NSK respectively. The earth stud must be on the opposite \nside of the cable (AKS):\nFigure for AKS                        Figure for NSK\n2) Check the cable (measure the resistance in the cable).                            \nIf the cable is defect, replace cable.\n3) Mount the cable for Pdis in controller cabinet and on the sensor.\nDisconnect signal wire on interface/terminal block PCB.\nMeasure voltage between wire and GND on interface/terminal block PCB.\nAKS: If voltage is below 0.5V DC, sensor or connection between sensor and cable is \ndefect.\nIf voltage is between 0.5V DC and 4.5V DC, continue to 4). \nNSK: If voltage is below 0.37V DC, sensor or connection between sensor and cable is \ndefect.\nIf voltage is between 0.37V DC and 4.0V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND.\nAKS: If voltage is between 0.5V DC and 4.5V DC and this alarm is still active, replace \ncontroller door.\nNSK: If the voltage is between 0.37V DC and 4.0V DC and this alarm is still active, \nreplace controller door.\nBefore replacing controller door see Trouble shooting for Star Cool Controller \np.56"
+  },
+  {
+    "Code": 207,
+    "Name": "Psuc invalid",
+    "Type": "Warning",
+    "Description": "Compressor Suction Pressure transmitter Invalid",
+    "Indication": "Indication of defective compressor suction pressure transmitter or its measuring circuitry",
+    "Details": "Possible causes:\n•\tConnector for suction pressure transmitter Psuc not correctly mounted.\n•\tSuction pressure transmitter Psuc defective.\n•\tCable for suction pressure transmitter Psuc defective.\n•\tX1 cable is defective.\n•\tController PCB defective.\nAccompanied alarms: \n•\tAL 204, AL 205, AL 206 or 250 may also be active.\nTrouble shooting:\nDisconnect the cable for Psuc from the connector PCB according to the wiring schematics \ninside the control cabinet and from the suction pressure sensor.\n1) Check that the connector is mounted correctly according to the drawing for \npressure transmitter AKS or NSK respectively. The earth stud must be on the opposite \nside of the cable (AKS):\nFigure for AKS               Figure for NSK\n1) Check the cable (measure the resistance in the cable). If the cable is defect, \nreplace cable.\n2) Mount the cable for Psuc in controller cabinet and on the sensor. Disconnect \nsignal wire on interface/terminal block PCB. Measure voltage between wire and GND on \ninterface/terminal block PCB.\nAKS: If voltage is below 0.5V DC, sensor or connection between sensor and cable is \ndefect. If voltage is between 0.5V DC and 4.5V DC, continue to 4).\nNSK: If voltage is below 0.37V DC, sensor or connection between sensor and cable is \ndefect. If voltage is between 0.37V DC and 4.0V DC, continue to 4).\n3) Mount signal wire. Measure voltage between SIGNAL and GND.\nAKS: If voltage is between 0.5V DC and 4.5V DC and this alarm is still active, replace \ncontroller door.\nNSK: If the voltage is between 0.37V DC and 4.0V DC and this alarm is still active, \nreplace controller door.\nBefore replacing controller door see Trouble shooting for Star Cool Controller \np.56"
+  },
+  {
+    "Code": 250,
+    "Name": "Press sensor type",
+    "Type": "Alarm",
+    "Description": "Saved FC ID does not match the current FC ID",
+    "Indication": "Replaced Frequency Converter or controller door",
+    "Details": "Possible causes:\nAccompanied alarms:\n•\tAL 207 and AL 611\nTrouble shooting:\n1. Manually select the type of pressure transmitters in the configuration on \nmenu F07 and F08."
+  },
+  {
+    "Code": 300,
+    "Name": "RH open",
+    "Type": "Warning",
+    "Description": "Relative Humidity Sensor Open Circuit",
+    "Indication": "Indication of loose connection, defect or lack of relative humidity sensor",
+    "Details": "Possible causes:\n•\tRelative humidity sensor RH or cable defective.\n• X1 cable is defect.\n• Controller PCB defective.\nAccompanied alarms:\n•\tAL 302.\nTrouble shooting:\nDisconnect the cable for RH from the connector PCB according to the wiring \nschematics inside the control cabinet and from the RH sensor.\n1) If the cable by inspection is defective, replace cable.\n2) Dismount the sensor from the cable. Dismount the cable terminals from the \ncontroller. Measure the resistance between the terminals at the controller \nend. If the resistance is less than (<) 230 Ω, the cable is defect and must be \nreplaced.\n3) Mount the cable for RH in controller cabinet and on the sensor. Disconnect \nsignal wire on interface/terminal block PCB. Measure voltage between wire \nand GND on the interface/terminal block PCB. If voltage is below 0.5V \nDC, sensor or connection between sensor and cable is defect. If voltage is \nbetween 0.5V DC and 10V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND. If voltage is \nbetween 0.5V DC and 10V DC and this alarm is still active, replace controller \ndoor.\nBefore replacing controller door see Trouble shooting for Star Cool \nController p.56"
+  },
+  {
+    "Code": 301,
+    "Name": "RH short",
+    "Type": "Warning",
+    "Description": "Relative Humidity Sensor Short Circuit",
+    "Indication": "Indication of short-circuited relative humidity sensor",
+    "Details": "Possible causes:\n•\tRelative humidity sensor RH or cable defective.\n• X1 cable is defect.\n• Controller PCB defective.\nAccompanied alarms:\n•\tAL 302.\nTrouble shooting:\nDisconnect the cable for RH from the connector PCB according to the wiring \nschematics inside the control cabinet and from the RH sensor.\n1) If the cable by inspection is defect, replace cable.\n2) Dismount the sensor from the cable. Dismount the cable from terminal 22 \nin X35 on the interface/terminal block. Measure the resistance between the \nsignal wire coming from the sensor and terminal 21 and terminal 23 at the \ninterface/terminal block. If the resistance is less than (<) 230 Ω, the cable is \ndefect and must be replaced.\n3) Mount the cable for RH in controller cabinet and on the sensor. Disconnect \nsignal wire on interface/terminal block PCB. Measure voltage between wire \nand GND on the interface/terminal block PCB. If voltage is below 0.5V \nDC, sensor or connection between sensor and cable is defect. If voltage is \nbetween 0.5V DC and 10V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND. If voltage is \nbetween 0.5V DC and 10V DC and this alarm is still active, replace controller \ndoor.\nBefore replacing controller door see Trouble shooting for Star Cool \nController p.56"
+  },
+  {
+    "Code": 302,
+    "Name": "RH invalid",
+    "Type": "Warning",
+    "Description": "Relative Humidity Sensor Invalid",
+    "Indication": "Indication of defective relative humidity sensor or its measuring circuitry",
+    "Details": "Possible causes:\n•\tRelative humidity sensor RH or cable defective.\n• X1 cable is defect.\n• Controller PCB defective.\nAccompanied alarms:\n•\tAL 300 or AL 301 may also be active.\nTrouble shooting:\nDisconnect the cable for RH from the connector PCB according to the wiring \nschematics inside the control cabinet and from the RH sensor.\n1) If the cable by inspection is defect, replace cable.\n2) Dismount the sensor from the cable. Dismount the cable terminals from \nthe controller. Measure the resistance between the terminals at the controller \nend. If the resistance is less than (<) 230 Ω, the cable is defect and must be \nreplaced.\n3) Mount the cable for RH in controller cabinet and on the sensor. \nDisconnect signal wire on interface/terminal block PCB. Measure voltage \nbetween wire and GND on the interface/terminal block PCB. If voltage is below \n0.5V DC, sensor or connection between sensor and cable is defect. If voltage is \nbetween 0.5V DC and 10V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND. If voltage \nis between 0.5V DC and 10V DC and this alarm is still active, replace controller \ndoor.\nBefore replacing controller door see Trouble shooting for Star Cool \nController p.56"
+  },
+  {
+    "Code": 303,
+    "Name": "AirEx No connection",
+    "Type": "Warning",
+    "Description": "Air Exchange Sensor Short Circuit",
+    "Indication": "Indication of a loose connection, defect or lack of air exchange sensor",
+    "Details": "Possible causes:\n•\tAirEx is out of calibration\n•\tAir exchange sensor AirEx or cable defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 305.\nTrouble shooting:\n1) If the cable by inspection is defect, replace cable.\n2) Calibrate AirEx see p.188\nIf the value shown in controller is wrong or alarm still active then disconnect the \ncable for AirEx from the connector PCB according to the wiring schematics \ninside the control cabinet and from the AirEx sensor.\n3) Mount the cable for AirEx in controller cabinet and on the sensor. Disconnect \nsignal wire on interface/terminal block PCB. Measure voltage between wire \nand GND on the interface/terminal block PCB. If the voltage is over 4.0 V \nDC, sensor or connection between sensor and cable is defect. If the voltage \nis between 0.2 V DC and 4.0 V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND. If the voltage \nis between 0.2V DC and 4.0V DC and this alarm is still active continue to 5).\n5) Check controller, see Trouble shooting for Star Cool Controller p.56 \nbefore replacing controller door."
+  },
+  {
+    "Code": 304,
+    "Name": "AirEx short",
+    "Type": "Warning",
+    "Description": "Air Exchange Sensor Short Circuit. Not implemented yet",
+    "Indication": "Indication of short-circuited air exchange sensor",
+    "Details": "Possible causes:\n•\tAirEx is out of calibration\n•\tAir exchange sensor AirEx or cable defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 305.\nTrouble shooting:\n1) If the cable by inspection is defect, replace cable.\n2) Calibrate AirEx see p.188. If the value shown in controller is wrong or alarm \nstill active, then disconnect the cable for AirEx from the connector PCB \naccording to the wiring schematics inside the control cabinet and from the \nAirEx sensor.\n3) Mount the cable for AirEx in controller cabinet and on the sensor. Disconnect \nsignal wire on interface/terminal block PCB. Measure voltage between wire \nand GND on the interface/terminal block PCB. If the voltage is below 0.2V \nDC, sensor or connection between sensor and cable is defect. If the voltage \nis between 0.2V DC and 4.0V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND. If the voltage \nis between 0.2V DC and 4.0V DC and this alarm is still active, continue to 5)\n5) Check controller, see Trouble shooting for Star Cool Controller before \nreplacing controller door."
+  },
+  {
+    "Code": 305,
+    "Name": "AirEx invalid",
+    "Type": "Warning",
+    "Description": "Air Exchange Sensor Invalid. Alarm not implemented yet!",
+    "Indication": "Indication of defective air exchange sensor or its measuring circuitry",
+    "Details": "Possible causes:\n•\tAirEx is out of calibration \n•\tAir exchange sensor AirEx or cable defective.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 303 or AL 304 may also be active.\nTrouble shooting:\n1) If the cable by inspection is defect, replace cable. \n2) Calibrate AirEx see p.188. If the value shown in controller is wrong or alarm \nstill active then. Disconnect the cable for AirEx from the connector PCB \naccording to the wiring schematics inside the control cabinet and from the \nAirEx sensor.\n3) Mount the cable for AirEx in controller cabinet and on the sensor. Disconnect \nsignal wire on interface/terminal block PCB. Measure voltage between wire \nand GND on the interface/terminal block PCB. If the voltage is below 0.2V \nDC, sensor or connection between sensor and cable is defect. If the voltage \nis between 0.0V DC and 4.0V DC, continue to 4).\n4) Mount signal wire. Measure voltage between SIGNAL and GND. If the voltage \nis between 0.2V DC and 4.0V DC and this alarm is still active, continue to 5)\n5) Check controller, see Trouble shooting for Star Cool Controller p.56 before \nreplacing controller door."
+  },
+  {
+    "Code": 306,
+    "Name": "High press switch",
+    "Type": "Warning",
+    "Description": "High pressure switch is active",
+    "Indication": "Discharge pressure is too high and the high pressure switch off",
+    "Details": "Possible causes:\n•\tHigh pressure due to\n−\tAmbient temperature is over spec. limit +50°C (+122°F)\n−\tManual valve after compressor closed\n−\tHP pipe damaged\n−\tCondenser fan motor is not running\n−\tCondenser blocked\n•\tFuse F6 blown\n•\tHigh pressure switch or cable is defective\n•\tWrong pressure transmitter in relation to controller settings\n•\tPressure transmitter defect\n•\tX1 cable is defect\n•\tController PCB defective\nAccompanied alarms:\n•\tAL 500 may be active alarm AL 604 may be or get active.\nTrouble shooting:\n1) The unit uses cooling refrigerant R134A and it is very difficult to operate at \ntemperatures above specification. The unit needs cooler surroundings, better \nventilation or water cooling.\n2) If the pressure rises very quickly after start of the compressor, check that the valve \nafter the compressor (discharge side) is not closed or only partially open. Make sure \nvalve is fully open.\n3) Check that there are no damages to the pipes after the compressor. Repair if they \nare damaged and check cooling liquid level (R134A).\n4) Check that there are no alarm for the condenser fan motor, AL 402, AL 426 and that, \nthe fan is rotating and that the condenser is not blocked for airflow.\n5) If condenser is blocked, clean the condenser to secure cludding and dirt are \nremoved.\n6) If alarm AL 500 ‘FC missing’ is also active, the fuse F6 inside in the control cabinet is \nmost likely blown. Replace the fuse. \nDisconnect the cable for high pressure switch from the connector PCB according to the \nwiring schematics inside the control cabinet.\n7) Measure the voltage between the two connectors for the high pressure switch on the \nconnector PCB. If the voltage is below 15V AC, replace the controller door.\n8) Check the cable (measure the resistance in the cable). If the cable is defect, replace \ncable and high pressure switch.\n9) Mount the cable for the high pressure switch again. If this alarm is still active on the \ndisplay, replace the controller door.\n10) Look in display to see if pressure transmitter is according to settings (see \nConfiguration p.48 (F08)) and set controller according to transmitter.\n11) If pressure transmitter type is correct, perform troubleshooting for AL 203."
+  },
+  {
+    "Code": 400,
+    "Name": "Mevap 1 overheat",
+    "Type": "Warning",
+    "Description": "Evaporator Motor 1 Overheat",
+    "Indication": "Indication of an overheated motor or a loose thermistor cable connection",
+    "Details": "Possible causes:\n•\tEvaporator motor 1 defect.\n•\tDefect resistances on the interface/terminal block PCB.\n•\tCable for measuring evaporator motor 1 overheat defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Turn off unit! Open inspection hatch and see if the evaporator fan can \nturn freely. If it cannot turn, remove ice or replace the motor. If the \nmotor is hot, it may be overloaded and jammed or defect.\n2) If the cable for Mevap1OH by inspection is defect, replace cable.\n3) Disconnect the cable for Mevap1OH  from the connector PCB according to \nthe wiring schematics inside the control cabinet.\n4) Measure the resistance in the cable. If the resistance is more than 1 MΩ, \nthe cable or the motor is defect and should be replaced. If the resistance \nis less than (<) 5 kΩ, the cable and motor should be ok.\n5) Check resistances on the interface/terminal block PCB above X33 and \nX34. They must be 220 kΩ\n6) Turn unit on again. Measure the voltage over the connector for \nMevap1OH. It should be between 4.80V DC and 5.05V DC.\na) If the voltage is inside the above range, connect sensor again. Measure \nthe voltage over the sensor and check the voltage. If the voltage is less \nthan (<) 2.5V DC, the measurement is ok. If the alarm after 30 sec. is \nstill active on the display, the controller PCB is defect - replace controller \ndoor.\nb) If the voltage is outside the range, controller PCB is defect or another \nerror might affect the voltage. Check other alarms before replacing \ncontroller door."
+  },
+  {
+    "Code": 401,
+    "Name": "Mevap 2 overheat",
+    "Type": "Warning",
+    "Description": "Evaporator Motor 2 Overheat",
+    "Indication": "Indication of an overheated motor or a loose thermistor cable connection",
+    "Details": "Possible causes:\n•\tEvaporator motor 1 defect.\n•\tDefect resistances on the interface/terminal block PCB.\n•\tCable for measuring evaporator motor 1 overheat defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Turn off unit! Open inspection hatch and see if the evaporator fan can \nturn freely. If it cannot turn, remove ice or replace the motor. If the \nmotor is hot, it may be overloaded and jammed or defect.\n2) If the cable for Mevap2OH by inspection is defect, replace cable.\n3) Disconnect the cable for Mevap2OH from the connector PCB according to \nthe wiring schematics inside the control cabinet.\n4) Measure the resistance in the cable. If the resistance is more than 1 MΩ, \nthe cable or the motor is defect and should be replaced. If the resistance \nis less than (<) 5 kΩ, the cable and motor should be ok.\n5) Check resistances on the interface/terminal block PCB above X33 and \nX34. They must be 220 kΩ\n6) Turn unit on again. Measure the voltage over the connector for \nMevap2OH. It should be between 4.80V DC and 5.05V DC.\na) If the voltage is inside the above range, connect sensor again. Measure \nthe voltage over the sensor and check the voltage. If the voltage is less \nthan (<) 2.5V DC, the measurement is ok. If the alarm after 30 sec. is \nstill active on the display, the controller PCB is defect - replace controller \ndoor.\nb) If the voltage is outside the range, controller PCB is defect or another \nerror might affect the voltage. Check other alarms before replacing \ncontroller door."
+  },
+  {
+    "Code": 402,
+    "Name": "Mcond overheat",
+    "Type": "Warning",
+    "Description": "Condenser Motor Overheat",
+    "Indication": "Indication of an overheated motor or a loose thermistor cable connection",
+    "Details": "Possible causes:\n• Condenser motor defect.\n• Defect resistances on the interface/terminal block PCB.\n• Cable for measuring condenser motor overheat defect.\n• Controller PCB defective.\nAccompanied alarms:\n• N/A.\nTrouble shooting:\n1) Turn off unit! See if the condenser fan can turn freely. If it cannot turn, \nreplace the motor. If the motor is hot, it may be overloaded and jammed \nor defect.\n2) If the cable for McondOH by inspection is defect, replace cable.\n3) Disconnect the cable for McondOH  from the connector PCB according to \nthe wiring schematics inside the control cabinet.\n4) Measure the resistance in the cable. If the resistance is more than 1 MΩ, \nthe cable or the motor is defect and should be replaced. If the resistance \nis less than (<) 5 kΩ, the cable and motor should be ok.\n5) Check resistances on the interface/terminal block PCB above X33 and \nX34. They must be 220 kΩ\n6) Turn unit on again. Measure the voltage over the connector for McondOH. \nIt should be between 4.80V DC and 5.05V DC.\na) If the voltage is inside the above range, connect sensor again. Measure \nthe voltage over the sensor and check the voltage. If the voltage is less \nthan (<) 2.5V DC, the measurement is ok. If the alarm after 30 sec. \nis still active on the display, the controller PCB is defect - replace the \ncontroller door.\nb) If the voltage is outside the range, controller PCB is defect or another \nerror might affect the voltage. Check other alarms before replacing \ncontroller door."
+  },
+  {
+    "Code": 411,
+    "Name": "Unit over current",
+    "Type": "Log",
+    "Description": "Unit Over current",
+    "Indication": "Indication of short circuit",
+    "Details": "Possible causes:\n•\tThe unit is using too much power.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) The voltage may have been too low for too long.\n2) Check for loose connections.\n3) When cargo is unloaded, run a PTI test and see if one of the motors or \nheater is using too much power.\n4) Check power cables for short circuits and damages.\n5) Check cables for heaters and motors for short circuits and damages."
+  },
+  {
+    "Code": 414,
+    "Name": "U1-2 over voltage",
+    "Type": "Fatal Alarm",
+    "Description": "U1-2 over voltage",
+    "Indication": "Indication of error in container supply voltage between phases 1 and 2",
+    "Details": "Possible causes:\n•\tThe unit is supplied with a voltage above specified level.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Measure the voltage applied to the unit.\n2) Apply correct voltage to the unit.\nThe FC will be destroyed if it is running at a too high voltage.\n3) Measure the actual voltage and compare with the value in the display. If \nthe measurement differs the power module PCB may be defective. Replace \nor bypass power module PCB by pressing  selecting configuration then \nphase direction and then cw. If condenser fan rotates in the wrong direction, \nchoose ccw. This action is to be performed at every unit start up"
+  },
+  {
+    "Code": 415,
+    "Name": "U2-3 over voltage",
+    "Type": "Fatal Alarm",
+    "Description": "U2-3 over voltage",
+    "Indication": "Indication of error in container supply voltage between phases 2 and 3",
+    "Details": "For trouble shooting see AL 414"
+  },
+  {
+    "Code": 416,
+    "Name": "U1-3 over voltage",
+    "Type": "Fatal Alarm",
+    "Description": "U1-3 over voltage",
+    "Indication": "Indication of error in container supply voltage between phases 1 and 3",
+    "Details": "See AL 414"
+  },
+  {
+    "Code": 417,
+    "Name": "U1-2 under voltage",
+    "Type": "Warning",
+    "Description": "U1-2 under voltage",
+    "Indication": "Indication of error in container supply voltage between phases 1 and 2",
+    "Details": "Possible causes:\n•\tThe unit is supplied with a voltage below specified level.\n•\tDefect Power Meas PCB\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Measure the voltage applied to the unit.\n2) Apply correct voltage to the unit.\nThe FC will not be able to maintain stable speed of the compressor motor due to \na too low voltage and therefore the unit will make a restart.\n3) Measure the actual voltage and compare with the value in the display. If \nthe measurement differs the power module PCB may be defect. Replace \nor bypass power module PCB by pressing  selecting configuration then \nphase direction and then cw. If condenser fan rotates in the wrong direction, \nchoose ccw. This action is to be performed at every unit start up."
+  },
+  {
+    "Code": 418,
+    "Name": "U2-3 under voltage",
+    "Type": "Warning",
+    "Description": "U2-3 under voltage",
+    "Indication": "Indication of error in container supply voltage between phases 2 and 3",
+    "Details": "See trouble shooting for AL 417"
+  },
+  {
+    "Code": 419,
+    "Name": "U1-3 under voltage",
+    "Type": "Warning",
+    "Description": "U1-3 under voltage",
+    "Indication": "Indication of error in container supply voltage between phases 1 and 3",
+    "Details": "See trouble shooting for AL 417"
+  },
+  {
+    "Code": 420,
+    "Name": "I1 over current",
+    "Type": "Log",
+    "Description": "I1 over current",
+    "Indication": "Indication of short circuit in electric installations of Star Cool unit",
+    "Details": "Possible causes:\n•\tThe unit is using too much power on one phase.\n•\tDefect Power Meas PCB\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) The voltage may have been too low for too long.\n2) When cargo is unloaded, run a PTI test and see if one of the motors or \nheater is using too much power.\n3) Check power cables for short circuits and damages.\n4) Check cables for heaters and motors for short circuits and damages.\n5) Measure the actual current and compare with the value in the display. If \nthe measurement differs, the power meas PCB may be defect. Replace \nor bypass power meas PCB by pressing    selecting configuration then \nphase direction and then cw. If condenser fan rotates in the wrong direction, \nchoose ccw. This action is to be performed at every unit start up"
+  },
+  {
+    "Code": 421,
+    "Name": "I2 over current",
+    "Type": "Log",
+    "Description": "I2 over current",
+    "Indication": "Indication of short circuit in electric installations of Star Cool unit",
+    "Details": "See trouble shooting for AL 420"
+  },
+  {
+    "Code": 422,
+    "Name": "I3 over current",
+    "Type": "Log",
+    "Description": "I3 Over current",
+    "Indication": "Indication of short circuit in electric installations of Star Cool unit",
+    "Details": "See trouble shooting for AL 420"
+  },
+  {
+    "Code": 423,
+    "Name": "No phase direction",
+    "Type": "Fatal Alarm",
+    "Description": "Phase direction not detectable",
+    "Indication": "Phases may be lacking or there may be extremely high noise in one or more phases in the detection moment",
+    "Details": "Possible causes:\n• The unit is supplied with an unstable voltage.\n• The voltage is unstable/unmeasurable.\n• The power frequency is out of specified range.\n• Loose flat cable between power meas PCB and terminal PCB\n• Defect Power Meas PCB\nAccompanied alarms:\n• AL 424 may also be active.\nTrouble shooting:\n1) Check or/and replace flat power cable between power meas PCB and \nterminal PCB.\n2) Check if voltage on all 3 phases is within specified range.\n3) Verify that all 3 phases are applied to the unit.\n4) Verify that power frequency is within specified range.\n5) Verify that correct voltage is applied to the unit\n6) Check/replace power meas PCB.\n7) If 1) to 6) are ok, then replace the controller door or set the correct phase \ndirection on the Configuration menu F05 to clockwise or counterclockwise."
+  },
+  {
+    "Code": 425,
+    "Name": "Frequency too high",
+    "Type": "Warning",
+    "Description": "Power Frequency Too High Warning",
+    "Indication": "Power generator adjusted to too high frequency",
+    "Details": "Possible causes:\n•\tThe power frequency is out of specified range.\nAccompanied alarms:\n•\tAL 423 may also be active.\nTrouble shooting:\n1) Adjust the frequency of the power generator to a lower frequency.\n2) Verify that power frequency is within specified range.\n3) Apply correct voltage to the unit"
+  },
+  {
+    "Code": 426,
+    "Name": "Frequency too high",
+    "Type": "Alarm",
+    "Description": "Power Frequency Too High Alarm",
+    "Indication": "Power generator adjusted to too high frequency",
+    "Details": "Possible causes:\n•\tThe power frequency is out of specified range.\nAccompanied alarms:\n•\tAL 423 or AL 425 may also be active.\nTrouble shooting:\n1) Adjust the frequency of the power generator to a lower frequency.\n2) Verify that power frequency is within specified range.\n3) Apply correct voltage to the unit."
+  },
+  {
+    "Code": 427,
+    "Name": "(Voltage/freq.) U/f ratio low",
+    "Type": "Alarm",
+    "Description": "Bad power supply - over loaded / under supplied",
+    "Indication": "Power generator adjusted to too high frequency compared to supply voltage",
+    "Details": "Possible causes:\n•\tOverload of power supply\n•\tBad connection in plug\nAccompanied alarms:\n•\tAL 429\nTrouble shooting:\n1) Find better cable and or plug\n2) Find failure in the supply system\n3) If no AL 429, watch the unit more often"
+  },
+  {
+    "Code": 428,
+    "Name": "(Voltage/freq.) U/f ratio high",
+    "Type": "Alarm",
+    "Description": "Bad power supply - voltage regulation out of order.",
+    "Indication": "Power generator adjusted to too high voltage",
+    "Details": "Possible causes:\n•\tFailure in generator voltage control\nAccompanied alarms:\n•\tAL 429\nTrouble shooting:\n1) Find a better supply\n2) If no AL 429, watch the unit more often"
+  },
+  {
+    "Code": 429,
+    "Name": "(Voltage/freq.) U/f ratio",
+    "Type": "Fatal alarm",
+    "Description": "Bad power supply",
+    "Indication": "See AL 427 and AL 428",
+    "Details": "Possible causes:\n• See AL 427 and AL 428\nAccompanied alarms:\n• AL 427 and AL 428\nTrouble shooting:\n1) See AL 427 and AL 428"
+  },
+  {
+    "Code": 430,
+    "Name": "Cpr connection",
+    "Type": "Alarm",
+    "Description": "Power Cable From FC to Compressor is Faulty",
+    "Indication": "Indication of error with power cable between FC and compressor. The compressor is not using any power",
+    "Details": "Possible causes:\n•\tThe power cable between the FC and the compressor motor is defect.\n•\tThe current measuring circuit in the FC is faulty.\n•\tThe compressor motor is damaged.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Check if voltage on all 3 phases is within specified range.\n2) Check that the power cable between the FC and the compressor motor is \nnot damaged.\n3) Measure that the compressor motor is not damaged.\n4) The FC may be defect."
+  },
+  {
+    "Code": 500,
+    "Name": "FC missing",
+    "Type": "Fatal Alarm",
+    "Description": "Frequency Communication Missing",
+    "Indication": "Indication of defect FC, lack of or improper connection",
+    "Details": "Possible causes:\n• Communication with FC broken.\n• Power voltage to the FC not applied (wired for emergency operation?).\n• Defect FC.\n• X1 cable is defect.\n• Controller PCB defective.\nAccompanied alarms: \n• AL 306 or one or more AL 5XX may also be active.\nTrouble shooting:\n1. If alarm AL 306 ‘High press switch’ is also active, the fuse F6 inside in the \ncontrol cabinet is most likely blown. Replace the fuse.\n2. Verify that cable FC-com is mounted correctly according to wiring diagram \ninside the controller cabinet and not being damaged.\n3. Check that power to the FC is not wired for emergency operation.\n4. Verify that there are correct voltages on all 3 phases for the FC.\n5. Measure with a multimeter that there is a small DC signal on the connector \nPCB for cable FC-com.\na) If there is no signal: The controller PCB is defective. Replace the      \ncontroller door.\nb) If there is signal: The FC is defect and must be replaced. If there is no \nFC replacement available, the unit can be rewired for emergency operation: \nSee Emergency Operations p.50"
+  },
+  {
+    "Code": 501,
+    "Name": "FC local control",
+    "Type": "Alarm",
+    "Description": "FC setting in Local Mode",
+    "Indication": "Indication of FC set in the local control mode",
+    "Details": "Possible causes:\n•\tCable FC-com periodically defective.\n•\tInternal fault in the FC.\n•\tDefect FC.\nAccompanied alarms:\n•\tOne or more AL 5XX may also be active.\nTrouble shooting:\n1. Check that the cable FC-com is connected and not damaged.\n2. Switch off the unit and wait 10 min. before switching on the unit again.\n3. If the alarm is then still active, the FC is defective and must be replaced. If \nthere is no FC replacement available, the unit can be rewired for emergency \noperation: See Emergency Operations p.50"
+  },
+  {
+    "Code": 508,
+    "Name": "FC short circ",
+    "Type": "Alarm",
+    "Description": "FC Short Circuit Alarm",
+    "Indication": "Indication of defective “cable”, compressor motor or FC",
+    "Details": "Possible causes:\n•\tShort-circuit on the FC power output.\n•\tDamaged cable and/or plugs.\nAccompanied alarms:\n•\tOne or more AL 5XX may also be active.\nTrouble shooting:\n1) There is a short-circuit on the compressor motor (Mcpr) terminals or in the \nmotor. Check the cable and replace if it is defect.\n2) The FC is defective and must be replaced. If there is no FC replacement \navailable, the unit can be rewired for emergency operation: See “Emergency \nOperation” p. 50"
+  },
+  {
+    "Code": 509,
+    "Name": "FC 24 V fault",
+    "Type": "Alarm",
+    "Description": "FC Internal 24 V Supply Fault Alarm",
+    "Indication": "Indication of problems with FC",
+    "Details": "Possible causes:\n•\tInternal fault in the FC. \nAccompanied alarms:\n•\tOne or more AL 5XX may also be active.\nTrouble shooting:\n1) Switch off the unit and wait 10 min. before switching on the unit again.\n2) If the alarm is then still active, the FC is defective and must be replaced.\nIf there is no FC replacement available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 510,
+    "Name": "FC earth fault",
+    "Type": "Alarm",
+    "Description": "FC Earth Fault Alarm",
+    "Indication": "Indication of problems with cable, compressor or FC",
+    "Details": "Possible causes:\n•\tIsolation damaged on the FC power output to the compressor.\n•\tDefect FC.\n•\tDamaged cable and/or plugs.\nAccompanied alarms:\n•\tOne or more AL 5XX may also be active.\nTrouble shooting:\n1) The power cable for the compressor motor (Mcpr) may have defect isolation. \nCheck the cable and replace if it is defect.\n2) Measure resistance fase to ground (must be above 2 MW).\n3) The FC is defective and must be replaced.\nIf there is no FC replacement available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 511,
+    "Name": "FC over cur",
+    "Type": "Alarm",
+    "Description": "FC Overcurrent Alarm",
+    "Indication": "Indication of problems with compressor",
+    "Details": "Possible causes:\n•\tThe compressor motor draws too much current.\n•\tDefect FC.\n•\tCondenser blocked due to dirt and residue.\nAccompanied alarms:\n•\tOne or more AL 5XX may also be active. Check also these alarms before \nreplacing anything.\nTrouble shooting:\n1) The compressor motor draws too much current from the FC. The motor may \nbe jammed or defect.\n2) Turn off unit and wait 10 min. before turning on the unit again.\n3) When the unit starts up again, verify that the compressor starts again and is \nrunning. \n4) If the compressor cannot run or runs very short time before this alarm \ncomes again, the compressor is defective and must be replaced.\n5) If the compressor can run several min. without alarm, the FC may be \ndefective and must be replaced if the alarm comes again. If there is no FC \nreplacement available, the unit can be rewired for emergency operation: See \nEmergency Operations p.50\n6) Clean condenser."
+  },
+  {
+    "Code": 512,
+    "Name": "FC motor therm",
+    "Type": "Alarm",
+    "Description": "FC- Compressor Motor Overtemperature",
+    "Indication": "Indication of defective compressor or lack of oil",
+    "Details": "This alarm is not used at the moment"
+  },
+  {
+    "Code": 513,
+    "Name": "FC overload",
+    "Type": "Alarm",
+    "Description": "FC Overload Alarm",
+    "Indication": "Indication of problems with compressor",
+    "Details": "Possible causes:\n•\tThe FC cannot deliver enough power to the compressor.\n•\tInsufficient cooling for the FC.\n•\tDefect FC.\nAccompanied alarms:\n•\tAL 522 or AL 525 may also be active and should be checked first.\nTrouble shooting:\nAt very high ambient temperatures and very low setpoint temperatures, the FC \nmay get too hot to generate enough power. Therefore it can be cooled by the \nrefrigerant in the compressor.\n1) Check that all bolts fixing the FC to the compressor are properly fastened \nand nothing is jammed between the FC and the compressor.\n2) The power cable for the compressor motor (Mcpr) may have been mounted \nincorrectly and therefore the cooling contact between the FC and the \ncompressor is not good enough. Check the motor cable and replace it if it is \ndefect. Fasten bolts properly for better cooling.\n3) The compressor is wearing down and drawing increasingly power from the \nFC. Check other alarms if there have been more alarms from the FC.\na. If the ambient temperature is not high, the compressor must be replaced.\nb. If the ambient temperature is high, the compressor and FC should be ok but \nclose to operating limit. Monitor unit and see if problem continues.\n4) The FC is defective and must be replaced.\nIf there is no FC replacement available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 514,
+    "Name": "FC under volt",
+    "Type": "Alarm",
+    "Description": "FC Undervoltage Fault Alarm",
+    "Indication": "Indication of problems with supply voltage",
+    "Details": "Possible causes:\n•\tThe FC is supplied with too low voltage for continuous operation.\n•\tDefect FC.\nAccompanied alarms:\n•\tAL 417, AL 418 or AL 419 may be active.\nTrouble shooting:\n1) Supply unit with correct power voltage according to specification.\n2) If voltage is within specification and not unstable, the FC may be defective \nand must be replaced.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 515,
+    "Name": "FC over volt",
+    "Type": "Alarm",
+    "Description": "FC Overvoltage Fault Alarm",
+    "Indication": "Indication of problems with supply voltage",
+    "Details": "Possible causes:\n•\tThe FC is supplied with too high voltage for continuous operation.\n•\tDefect FC.\nAccompanied alarms:\n•\tAL 414, AL 415, AL 416 or AL 521 may be active.\nTrouble shooting:\n1) Supply unit with correct power voltage according to specification. The FC will \nbe destroyed at too high voltages and is therefore being shut down.\n2) If voltage is within specification and not unstable, the FC may be defective \nand must be replaced.\nIf there is no FC replacement available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 516,
+    "Name": "FC phase loss",
+    "Type": "Alarm",
+    "Description": "FC Phase Loss Fault Alarm",
+    "Indication": "Indication of lack of phase or defective FC",
+    "Details": "Possible causes:\n•\tOne or more phases are not applied to the FC.\n•\tUnstable power supply (generator).\n•\tDefect FC.\nAccompanied alarms:\n•\tAL 523 \n•\tAL 417, AL 418, AL 419 may be active.\nTrouble shooting:\n1. Verify that all 3 phases are present and voltage is correct. \n2. Verify that voltage difference between the 3 phases is less than (<) 20V AC.\n3. Supply unit with correct voltage according to specification.\n4. If supply from the generator is unstable, adjust supply frequency to 50-55 \nHz (see Info Menu Viewing p.36 (I22)) to avoid self-oscillation.\n5. If 1) to 4) do not solve the problem, then replace the FC.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation.\nRemind to use oscilloscope for determination of unstable supply from generator \ncaused by uneven torque on generator cylinders."
+  },
+  {
+    "Code": 517,
+    "Name": "FC over temp",
+    "Type": "Alarm",
+    "Description": "FC Overtemperature Fault Alarm",
+    "Indication": "Indication of problems with compressor or FC",
+    "Details": "Possible causes:\n•\tFC operates at operating limits.\n•\tInsufficient cooling for the FC.\n•\tDefect FC.\nAccompanied alarms:\n•\tAL 522.\nTrouble shooting:\n1. The FC is getting too hot. Verify that supply voltage is not too high.\n2. Check that the FC is mounted and tightened correctly to the compressor. If \nthe FC is mounted correctly, it should not be possible to insert an air gap \ngauge between FC and compressor.\n3. Motor cable between FC and compressor may be jammed between FC and \ncompressor. Cooling of FC is unsufficient. If this alarm appears more than \nonce: Dismount FC and check motor cable before mounting the FC again. \nFasten bolts properly for better cooling.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 518,
+    "Name": "FC inrush",
+    "Type": "Alarm",
+    "Description": "FC Inrush Fault Alarm",
+    "Indication": "Indication of problems with supply voltage",
+    "Details": "Possible causes:\n• The FC has had too many restarts within short time.\n• CIM5: Manual activation of contactor (K8) on/off too many times.\n• CIM6: Manual activation of contactor (K1) on/off too many times.\n• Loose power connection for the FC.\n• Loose FC-com cable for communication with the FC.\n• Defective FC.\nTrouble shooting:\n1. Try to correct the error by uploading the latest software version to the \ncontroller.\n2. Verify that supply power for the unit is stable and within specification.\n3. Check the FC-com cable for damages and loose connection.\n4. Check supply power cables for the FC.\n5. The FC may be defective and should be replaced.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation: See “Emergency Operation” "
+  },
+  {
+    "Code": 521,
+    "Name": "FC high volt",
+    "Type": "Warning",
+    "Description": "FC High Voltage Fault Warning",
+    "Indication": "Indication of problems with supply voltage",
+    "Details": "Possible causes:\n•\tThe unit is supplied with voltage above specification.\n•\tDefective FC.\nAccompanied alarms:\n•\tAL 515.\nTrouble shooting:\n1) Measure if the power voltage to the unit is within specification. \nApply correct voltage.\n2) Turn the unit off for 10 min. and then start it again. \nIf this alarm becomes active again, the FC has an internal fault and must be \nreplaced.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 522,
+    "Name": "FC high temp",
+    "Type": "Log",
+    "Description": "FC Overtemperature Warning",
+    "Indication": "Indication of problems with compressor or FC",
+    "Details": "Possible causes:\n•\tFC operates at operating limits.\n•\tInsufficient cooling for the FC.\n•\tDefect FC.\nAccompanied alarms:\n•\tNone\nTrouble shooting:\n1. The FC is getting too hot. Verify that supply voltage is not too high.\n2. Check that the FC is mounted and tightened correctly to the compressor. If \nthe FC is mounted correctly, it should not be possible to insert an air gap \ngauge between FC and compressor.\n3. Motor cable between FC and compressor may be jammed between FC and \ncompressor. Cooling of FC is unsufficient. If this alarm comes more than \nonce: Dismount FC and check motor cable before mounting the FC again. \nFasten bolts properly for better cooling.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 523,
+    "Name": "FC phase loss",
+    "Type": "Warning",
+    "Description": "FC Phase Loss Fault Warning",
+    "Indication": "Indication of defective FC or missing phase",
+    "Details": "Possible causes:\n•\tOne or more phases are not applied to the FC.\n•\tUnstable power supply (generator).\n•\tDefect FC.\nAccompanied alarms:\n•\tAL 417, AL 418, AL 419, AL 516 may be active.\nTrouble shooting:\n1. Verify that all 3 phases are present and voltage is correct.\n2. Verify that voltage levels are the same for all 3 phases (diffence in voltage \nbelow 14V AC).\n3. Supply unit with correct power voltage according to specification.\n4. Replace the FC.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation."
+  },
+  {
+    "Code": 524,
+    "Name": "FC current limit",
+    "Type": "Warning",
+    "Description": "FC Current Limit Fault Warning",
+    "Indication": "Indication of problems with compressor. Error may be seen during pull-down",
+    "Details": "Possible causes:\n•\tThe compressor motor draws too much current.\n•\tDefect FC.\nAccompanied alarms:\n•\tOne or more AL 5XX may also be active. Check these alarms also before \nreplacing anything.\nTrouble shooting:\n1. The compressor motor draws too much current from the FC. The motor may \nbe jammed or defect.\n2. Turn off unit and wait 10 min. before turning the unit on again.\n3. When the unit starts up again, verify that the compressor starts again and is \nrunning. \n4. If the compressor cannot run or runs very shortly before this alarm appears \nagain, the compressor is defective and must be replaced.\n5. If the compressor can run several min. without alarm, the FC may be \ndefective and must be replaced if the alarm appears again.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 525,
+    "Name": "FC overload",
+    "Type": "Warning",
+    "Description": "FC Overload Warning",
+    "Indication": "Indication of problems with compressor",
+    "Details": "Possible causes:\n•\tThe FC cannot supply enough power to the compressor.\n•\tInsufficient cooling for the FC.\n•\tDefect FC.\nAccompanied alarms:\n•\tAL 522 or AL 525 may also be active and should be checked first.\nTrouble shooting:\nAt very high ambient temperatures and very low setpoint temperatures, the FC \nmay get too hot to generate enough power. It can therefore be cooled by the \nrefrigerant in the compressor.\n1. Check that all bolts fixing the FC to the compressor are fastened and nothing \nis jammed between the FC and the compressor.\n2. The power cable for the compressor motor (Mcpr) may have been mounted \nincorrectly and therefore the cooling contact between the FC and the \ncompressor is not good enough. Check the motor cable and replace it if it is \ndefect. Fasten bolts properly for better cooling.\n3. The compressor is wearing down and drawing increasingly power from the \nFC. Check other alarms if there have been more alarms from the FC. \na. If the ambient temperature is not high, the compressor must be replaced. \nb. If the ambient temperature is high, the compressor and FC should be ok \nbut close to operating limit. Monitor unit and see if problem continues.\n4. The FC is defective and must be replaced.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 529,
+    "Name": "FC setup error",
+    "Type": "Warning",
+    "Description": "FC Setup Warning",
+    "Indication": "The setup of the FC is rejected by the FC. Either communication problems or phase fault",
+    "Details": "Possible causes:\n•\tDefect FC.\nAccompanied alarms:\n•\tThere may be other AL 5XX alarms.\nTrouble shooting:\n1) The FC reports a failure in its factory setup data. See if there should be \nother FC alarms (AL 5XX) and if they can be removed first.\n2) Turn the unit off for 10 min. and then start it again. If this alarm becomes \nactive again, the FC has a permanent internal fault and must be replaced.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50 "
+  },
+  {
+    "Code": 566,
+    "Name": "FC undefined alarm",
+    "Type": "Warning",
+    "Description": "FC undefined alarm",
+    "Indication": "the FC undefined alarm",
+    "Details": "Possible causes:\n•\tDefect FC.\n•\tDefect power cable from FC to compressor motor.\nAccompanied alarms:\n•\tThere may be other AL 5XX alarms.\nTrouble shooting:\n1. The FC reports an undefined alarm/warning. See if there should be other FC \nalarms (AL 5XX) and if they can be removed first.\n2. Turn the unit off for 10 min. and then start it again. If this alarm/warning \nbecomes active again, the FC has a permanent internal fault and must be \nreplaced.\nIf no FC replacement is available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 599,
+    "Name": "FC Trip Lock",
+    "Type": "Log",
+    "Description": "The FC has tripped and stopped",
+    "Indication": "Alarm indicates problem with compressor or frequency controller",
+    "Details": "Possible causes:\n•\tOther alarms have tripped (stopped) the FC.\n•\tDefect FC.\nAccompanied alarms:\n•\tThere is another alarm(s), especially AL 5XX alarms.\nTrouble shooting:\n1) The FC has tripped due to another AL 5XX alarm and then stopped. See if \nthere should be other FC alarms (AL 5XX) and act accordingly to these. \n2) Turn the unit off for 10 min. and then start it again. If this alarm becomes \nactive again, the FC may have an internal fault and must be replaced. \nIf no FC replacement is available, the unit can be rewired for emergency \noperation: See “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 600,
+    "Name": "No control sensors",
+    "Type": "Fatal Alarm",
+    "Description": "Supply Air Sensor 1, Supply Air Sensor 2, Return Air Sensor and Evaporator Sensor are all malfunctioning.",
+    "Indication": "Alarm indicates that all control-relevant sensors are defective or unreliable. See also Temperature control and Expansion valve control p.18",
+    "Details": "Possible causes:\n•\tSupply Air Sensor 1, Supply Air Sensor 2, Return Air Sensor and \nEvaporator Sensor are all malfunctioning.\n•\tX1 cable is defect.\n•\tController PCB defective.\nAccompanied alarms:\n•\tAL 100 to AL 108.\nTrouble shooting:\n1) Verify all other sensor alarms AL 100 to AL 3XX and try to remove these \nalarms.\n2) If this alarm remains active, replace main controller."
+  },
+  {
+    "Code": 601,
+    "Name": "No water cooling",
+    "Type": "Warning",
+    "Description": "Water-cooling fault",
+    "Indication": "Lack of water-cooling",
+    "Details": "Possible causes:\n•\tWater cooling selected and no water cooling active.\n•\tInsufficient water cooling capacity.\n•\tIf program is chosen, warning can occur in units without water cooling.\nAccompanied alarms:\n•\tAL 100 and AL 108.\nTrouble shooting:\n1) Verify that water cooling pipes are applied and water is running when \nselecting water cooling.\n2) Verify that the water is not too hot and not able to be used for cooling the \nunit."
+  },
+  {
+    "Code": 602,
+    "Name": "Tset unreachable",
+    "Type": "Alarm",
+    "Description": "Tset Unreachable. (Not implemented yet)",
+    "Indication": "indication of insuffcient yield",
+    "Details": "Possible causes:\n•\tContainer doors are open or gasket defect.\n•\tNot enough refrigerant for the compressor.\n•\tInsufficient airflow though evaporator.\n•\tInsufficient airflow though condenser. \n•\tDefective hot gas valve (leaking).\n•\tCommodities are producing more heat than the cooling system can \nremove.\nAccompanied alarms:\n•\tOther alarms may be active.\nTrouble shooting:\nThe unit will continue the cooling but the next steps could be checked anyway.\n1) If other alarms – follow troubleshooting for these alarms.\n2) Check container doors and gaskets.\n3) Check if there is enough refrigerant in the unit. Check if the evaporator is \nfilled with ice or dirt blocking air circulation. Check if evaporator motors can \nrotate. Watch fingers – turn unit off first!\n4) Check if the condenser is filled with dirt and blocking air circulation. Check if \ncondenser motor can rotate. Watch fingers – turn unit off first!\n5) Check hot gas valve for leaking. Let the compressor run in manual for some \ntime. Stop compressor and see if the suction pressure rises more than \nnormal. If valve is defective, replace valve."
+  },
+  {
+    "Code": 603,
+    "Name": "In range fault",
+    "Type": "Fatal Alarm",
+    "Description": "In-range fault",
+    "Indication": "indication of insuffcient yield or defective controller",
+    "Details": "Possible causes:\n•\tContainer doors are open or gasket defect.\n•\tNot enough refrigerant for the compressor.\n•\tInsufficient airflow though evaporator.\n•\tInsufficient airflow though condenser. \n•\tDefect hot gas valve (leaking).\nAccompanied alarms:\n•\tOther alarms may be active.\nTrouble shooting:\nThe unit will continue the cooling but the next steps could be checked anyway.\n1) If other alarms – follow troubleshooting for these alarms.\n2) Check container doors and gaskets.\n3) Check if there is enough refrigerant in the unit. Check if the evaporator is \nfilled with ice or dirt blocking air circulation. Check if evaporator motors can \nrotate. Watch fingers – turn unit off first!\n4) Check if the condenser is filled with dirt and blocking air circulation. Check if \ncondenser motor can rotate. Watch fingers – turn unit off first!\n5) Check hot gas valve for leaking. Let the compressor run in manual for some \ntime. Stop compressor and see if the suction pressure rises more than \nnormal. If valve defect, replace valve or top part of the valve."
+  },
+  {
+    "Code": 604,
+    "Name": "High press trouble",
+    "Type": "Fatal Alarm",
+    "Description": "High Pressure Switch is active",
+    "Indication": "Hot gas valve, expansion valve and economizer valves are all closed and compressor is running",
+    "Details": "Possible causes:\n•\tRepeated high pressure alarms.\nAccompanied alarms:\n•\tAL 306.\nTrouble shooting:\n1) See and clear error for alarm AL 306"
+  },
+  {
+    "Code": 607,
+    "Name": "AirEx open freeze",
+    "Type": "Fatal Alarm",
+    "Description": "Air exchange valve open in conflict with settings",
+    "Indication": "Indication of user having left air exchange open",
+    "Details": "Possible causes:\n•\tAirExchange valve open in freeze mode.\n•\tAirExchange open in 50% - 60% RH. \n•\tCable or airexchange sensor defect\nAccompanied alarms:\n•\tPossibly AL 305.\nTrouble shooting:\n1) See and clear error for alarm AL 305.\n2) Close air exchange. If air exchange is closed, cable for air exchange sensor \nor sensor is defect see AL 305 for trouble shooting.\nCalibrate the air exchange (see Controller System Menu decal for AirEx \ncalibration)"
+  },
+  {
+    "Code": 609,
+    "Name": "Defrost Trouble",
+    "Type": "Warning",
+    "Description": "Defrost is running",
+    "Indication": "Defrost terminated on Tsuc",
+    "Details": "Possible causes:\n•\tHot gas valve not working probably.\n•\tDefective Psuc.\n•\tDefective Tevap.\nAccompanied alarms:\n•\tMaybe AL 207\n•\tMaybe AL 123\n•\tMaybe AL 610\nTrouble shooting:\n1) If companied alarms AL 207 or AL 123 run troubleshooting for these alarms \nfirst.\n2) Hot gas valve is not working probably. Let the compressor run by 35 Hz \nin manual. Open hot gas valve 50% and control the valve function. Is \nthe sound as usual? If not control with a permanent magnet and test coil \nfunction.\n3) If it looks like the hot gas valve is working as usual run function test step \ncompressor. If alarms, look for troubleshooting for these alarms.\n4) If no alarms, run a manual activated defrost and follow the behavior of \nTevap, Tsuc, Tret, and Psuc\n5) If  Tevap or Tsuc behavior looks mysterious, control function for Tevap follow \ntroubleshooting for warning for Tevap AL 123 and Psuc AL 207"
+  },
+  {
+    "Code": 610,
+    "Name": "Defrost time exceed",
+    "Type": "Warning",
+    "Description": "Max. defrost time exceeded",
+    "Indication": "Defrost terminated on time > 45 minutes",
+    "Details": "Possible causes:\n• There has been too much ice in the evaporator.\n• The heaters are not working/defect.\n• Defect Pdis pressure sensor.\n• Defect Tevap evaporator temperature sensor.\nAccompanied alarms:\n• Maybe alarm AL 203 is active.\nTrouble shooting:\n1. Check and clear other alarms first. Condenser temperature is used and is \ncalculated from Pdis.\n2. Start a manual defrost time to remove remaining ice now. See if there has \nbeen used current for the heaters on the information menu - Current phase \n1, 2 and 3 should be above 6 A when the heater symbol, , is shown on the \ndisplay. If current is lower, check if there is power for the heaters.\n3. Run a PTI test after the cargo is unloaded."
+  },
+  {
+    "Code": 611,
+    "Name": "Too many sensor errors",
+    "Type": "Alarm",
+    "Description": "Too many (controlling) sensors have errors",
+    "Indication": "If too many (controlling) sensors have errors, the controller cannot maintain correct temperature. See also “Temperature control” p. 18 and “Expansion valve control” p. 18",
+    "Details": "Possible causes:\n•\tOne or more temperature sensors are defect.\n•\tOne or more pressure transmitters are defect.\nAccompanied alarms:\n•\tAlarms AL 1XX or AL 2XX are active.\nTrouble shooting:\nThis alarm only appears when one or more controlling sensors have failure and \nthere are no substitute sensors.\n1) See alarm list for the specific sensors"
+  },
+  {
+    "Code": 612,
+    "Name": "FC trouble",
+    "Type": "Alarm",
+    "Description": "There have been several FC alarms within short time",
+    "Indication": "The FC reports unstable operation within 30 min. or a permanent FC error within the last 15 min.",
+    "Details": "Possible causes:\n•\tRepeated FC errors.\nAccompanied alarms:\n•\tAlarms AL 5XX are/have been active.\nTrouble shooting:\n1) Check and clear other FC alarms first – AL 5XX. Then this alarm should \ndisappear. Turn unit off and turn it on again to make a quicker start up after \nalarms have been removed.\nIf this alarm continues, the FC must be replaced and the unit can meanwhile \nrun in emergency mode,  “Emergency Operation” p. 50"
+  },
+  {
+    "Code": 613,
+    "Name": "Motor trouble",
+    "Type": "Alarm",
+    "Description": "Evaporator fan motor 1 or 2 or condenser fan motor overheated several times",
+    "Indication": "One or both evaporator fan motors or the condenser fan motor are overheating either permanently or repeatedly generated overheat alarm within the last 30 min.",
+    "Details": "Possible causes:\n•\tRepeated evaporator fan motor trouble\n•\tRepeated condenser fan motor trouble\nAccompanied alarms:\n•\tAlarms AL 400, AL 401 or AL 402 are/have been active\nTrouble shooting:\n1) Check and clear AL 400, AL 401 or AL 402 first\n2) Check that the condenser fan can rotate freely\n3) Check that the evaporator fans can rotate freely\n4) Change the defect motor"
+  },
+  {
+    "Code": 614,
+    "Name": "Humidity deactivated",
+    "Type": "Alarm",
+    "Description": "Humidity control deactivated",
+    "Indication": "Indication of defective relative humidity sensor or its measuring circuitry",
+    "Details": "Possible causes:\n•\tDefective humidity sensor.\nAccompanied alarms:\n•\tAlarms AL 302 are/have been active.\nTrouble shooting:\n1) Check and clear AL 400 or AL 401 first."
+  },
+  {
+    "Code": 620,
+    "Name": "Cpr start failed",
+    "Type": "Fatal Alarm",
+    "Description": "Not implemented yet",
+    "Indication": "",
+    "Details": ""
+  },
+  {
+    "Code": 621,
+    "Name": "Cpr restarted",
+    "Type": "Warning",
+    "Description": "The compressor has been restarted",
+    "Indication": "No signal from FC that motor is running",
+    "Details": "Possible causes:\n•\tToo high discharge pressure at start up, unit will restart after a delay.\n•\tUnit in emergency mode, but cables not rewired for emergency mode.\n•\tCompressor defect.\nAccompanied alarms:\n•\tThere may be other alarms, ex. AL 306.\nTrouble shooting:\n1) Check and clear AL 306 first (high pressure alarm).\n2) The discharge pressure is too high at start up, unit will restart after a delay.\n3) Check and clear AL 5XX (FC) alarms first.\n4) Check wiring for the compressor motor, especially if unit is in emergency \nmode.\n5) If this alarm remains active after several restarts, the compressor is \ndefective and should be replaced."
+  },
+  {
+    "Code": 625,
+    "Name": "CT outrange",
+    "Type": "Alarm",
+    "Description": "Cold Treatment out of range",
+    "Indication": "indication of insuffcient yield or defective controller",
+    "Details": "Possible causes:\n•\tDifference between treatment setpoint and maximum USDA temperature \ntoo small.\n•\tContainer doors are open.\n•\tOther alarms active.\n•\tNot enough refrigerant for the compressor.\n•\tDefect or jammed evaporator motors.\n•\tDefect or jammed condenser motor.\nAccompanied alarms:\n•\tOther alarms may be active, especially USDA sensor alarms AL 109 to AL \n120.\nTrouble shooting:\nThe unit will continue the cooling but the next steps could be checked anyway.\n1. Larger difference between treatment setpoint and maximum USDA \ntemperature: - Treatment setpoint must be cooler. - Maximum USDA temperature must be warmer. Attention: Will require a \nlonger duration!!\n2. Close container doors.\n3. Check and clear other alarms first.\n4. Check if there is enough refrigerant in the unit.\n5. Check if the condenser is filled with dirt and blocking air circulation.\n6. Check if evaporator motors can rotate. Watch fingers – turn unit off first!\n7. Check if condenser motor can rotate. Watch fingers – turn unit off first!"
+  },
+  {
+    "Code": 630,
+    "Name": "Manual phase dir",
+    "Type": "Warning",
+    "Description": "Manually Selected Phase Direction",
+    "Indication": "indication of insuffcient yield or defective controller",
+    "Details": "Possible causes:\n•\tThe user has selected a manual phase direction.\nAccompanied alarms:\n•\tAL 423 should have been active before using manual phase direction has \nbeen used.\nTrouble shooting:\n1) The quality of the power frequency is so poor that the user must decide \nphase direction. Apply valid power supply to the unit. Ensure condenser fan \nis running the right direction if no better power supply is available.\n2) There is a failure in the power wiring for the unit. Check that there are 3 \nvalid phases for the unit.\n3) There is a fault in the phase direction detection circuit. Turn unit off and \non again and see if the phase can be detected now. If phases still can’t be \ndetected, replace the power module PCB.\n4) The main controller is defect. Replace controller door."
+  },
+  {
+    "Code": 631,
+    "Name": "Fuse blown",
+    "Type": "Warning",
+    "Description": "Blown Fuse for fan motors and heaters",
+    "Indication": "Indication of blown fuse",
+    "Details": "Possible causes:\n•\tA 10 A fuse is blown.\n•\tUnit has used too much power.\n•\tThere is a short-circuit in the power cables used in the unit.\nAccompanied alarms:\n•\tThere may be other alarms.\nTrouble shooting:\n1) Check the defective fuse in the control cabinet. Replace a defective fuse but \nonly once! If it blows again, there is a short circuit!\n2) Remove short circuits in the power supply or cables before applying power \nagain."
+  },
+  {
+    "Code": 800,
+    "Name": "Func test failed",
+    "Type": "Alarm",
+    "Description": "Function Test Fault",
+    "Indication": "",
+    "Details": "Possible causes:\n•\tOne or more of the individual test steps have failed.\nAccompanied alarms:\n•\tAL 8XX.\nTrouble shooting:\n1) See individual AL 8XX alarms for cause"
+  },
+  {
+    "Code": 801,
+    "Name": "Controller",
+    "Type": "Alarm",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "",
+    "Details": "Possible causes:\n• Power supply for controller PCB defect.\n• Controller PCB defect.\nAccompanied alarms:\n• Check for AL 951 up to AL 996\n• There may be other accompanied alarms.\nTrouble shooting:\n1) See trouble shooting for accompanied alarms. If none appears, then \nproceed with 3).\n2) Clear other active alarms with sensors.\n3) The power supply or power-cable for controller PCB defect. Measure \nvoltage for the controller PCB.\na. If voltage is ok, the controller PCB is defect and controller door must be \nreplaced.\nb. Measure voltage for all sensors. Should be between 4.80V DC and 5.20V \nDC for temperature and pressure sensors. Humidity sensor must be \nbetween 12.00V DC and 34.00V DC. If not ok, the sensor or cable is \ndefect. Replace sensor.\nc. Measure outlet on transformer between T3 and T4. Correct range 15.30V \nAC – 24.30V AC. Measure between T5 and T6. Correct range 18.86V AC – 30.00V AC. If within range transformer is ok.\nd. Replace controller door."
+  },
+  {
+    "Code": 805,
+    "Name": "Idle current",
+    "Type": "Alarm",
+    "Description": "Unit idle overcurrent fault",
+    "Indication": "",
+    "Details": "Possible causes:\n• There is a short-circuit in the controller PCB.\n• The power meas PCB is defect.\nAccompanied alarms:\n• N/A.\nTrouble shooting:\n1) Check cables for sensors for damages.\n2) The controller PCB is defect. Replace the controller door."
+  },
+  {
+    "Code": 810,
+    "Name": "Mevap cur LO speed",
+    "Type": "Alarm",
+    "Description": "Evaporator motor low speed current fault",
+    "Indication": "Indication of defective motor or defective supply cables to motor",
+    "Details": "Possible causes:\n•\tEvaporator motor jammed or defect.\n•\tEvaporator motor cables defect.\n•\tBad connection in plug\n•\tEvaporator motor cables wired wrong in controller cabinet.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Check the evaporator motor fans can rotate freely. Turn off power first! \nReplace motor or make it turn freely again.\n2) Check evaporator motor cables for damages.\n3) Check that the evaporator motor cables are mounted correctly"
+  },
+  {
+    "Code": 811,
+    "Name": "Mevap cur HI speed",
+    "Type": "Alarm",
+    "Description": "Evaporator motor high speed current fault",
+    "Indication": "Indication of defective motor or defective supply cables to motor",
+    "Details": "Possible causes:\n•\tEvaporator motor jammed or defect.\n•\tEvaporator motor cables defect.\n•\tBad connection in plug\n•\tEvaporator motor cables wired wrong in controller cabinet.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Check the evaporator motor fans can rotate freely. Turn off power first! \nReplace motor(s) or make it turn freely again.\n2) Check evaporator motor cables for damages.\n3) Check that the evaporator motor cables are mounted correct"
+  },
+  {
+    "Code": 812,
+    "Name": "Mevap current OFF",
+    "Type": "Alarm",
+    "Description": "Evaporator Motor Off Current Fault",
+    "Indication": "Indication of defective motor contactor or contactor driver circuitry",
+    "Details": "Possible causes:\n•\tDefective evaporator motor contactor.\n•\tDefective contactor driver circuit.\nAccompanied alarms:\n•\tN/A\nTrouble shooting:\n1) Check the evaporator motor contactor for defects. Replace the contactor.\n2) Check that the evaporator motor cables are mounted correctly"
+  },
+  {
+    "Code": 813,
+    "Name": "Mevap direction",
+    "Type": "Alarm",
+    "Description": "Not implemented yet",
+    "Indication": "",
+    "Details": ""
+  },
+  {
+    "Code": 815,
+    "Name": "Mcond cur LO speed",
+    "Type": "Alarm",
+    "Description": "Condenser Motor Low Speed Current Fault",
+    "Indication": "Indication of defective motor or defective supply cables to motor",
+    "Details": "Possible causes:\n•\tCondenser motor jammed or defect.\n•\tCondenser motor cable defect.\n•\tBad connection in plug\n•\tCondenser motor cable wired wrongly in controller cabinet or motor.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Check the condenser motor fan can rotate freely. Turn off power first! \nReplace motor or make it turn freely again.\n2) Check motor cable for damages.\n3) Check that the condenser motor cable is mounted correctly."
+  },
+  {
+    "Code": 816,
+    "Name": "Mcond cur HI speed",
+    "Type": "Alarm",
+    "Description": "Condenser Motor High Speed Current Fault",
+    "Indication": "Indication of defective motor or defective supply cable to motor",
+    "Details": "Possible causes:\n•\tCondenser motor jammed or defect.\n•\tCondenser motor cable defect.\n•\tCondenser motor cable wired wrongly in controller cabinet.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Check the Condenser motor fan can rotate freely. Turn off power first! \nReplace motor or make it turn freely again.\n2) Check motor cable for damages.\n3) Check that the condenser motor cables are mounted correctly"
+  },
+  {
+    "Code": 817,
+    "Name": "Mcond current OFF",
+    "Type": "Alarm",
+    "Description": "Condenser Motor Off Current Fault",
+    "Indication": "Indication of defective motor contactor or defective contactor driver circuitry",
+    "Details": "Possible causes:\n•\tDefect condenser motor contactor.\n•\tDefect contactor driver circuit.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Check the condenser motor contactor for defects. Replace the contactor.\n2) Check that the condenser motor cable is mounted correctly"
+  },
+  {
+    "Code": 820,
+    "Name": "Hevap current ON",
+    "Type": "Alarm",
+    "Description": "Evaporator Heater On Current Fault",
+    "Indication": "Indication of defective heater or defective supply cables to heater",
+    "Details": "Possible causes:\n•\tHeaters defect.\n•\tHeater power cable defect.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Check the power cable for the heaters for defects. Replace cables if they are \ndefect.\n2) The heater(s) are defect. Dismount the power for the heaters one by one to \nfind the defect heater, see wiring schematics inside in the controller cabinet. \nReplace the defect heater."
+  },
+  {
+    "Code": 821,
+    "Name": "Hevap current OFF",
+    "Type": "Alarm",
+    "Description": "Evaporator Heater Off Current Fault",
+    "Indication": "Indication of defective heater contactor or defective contactor driver circuitry",
+    "Details": "Possible causes:\n•\tDefect heater contactor.\n•\tDefect contactor driver circuit.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Check the heater contactor for defects. Replace the contactor.\n2) Check that the heater power cable are mounted correctly"
+  },
+  {
+    "Code": 840,
+    "Name": "Valve leaks",
+    "Type": "Alarm",
+    "Description": "Valve Leak Fault",
+    "Indication": "Indication of leakage of one or more of the valves or problems with the compressor",
+    "Details": "Possible causes:\n•\tOne or more valves have leaks (defect)\nAccompanied alarms:\n•\tSee other AL 84X alarms for valve failures.\nTrouble shooting:\n1) Check and clear other valve alarms, AL 84X"
+  },
+  {
+    "Code": 842,
+    "Name": "Expansion valve",
+    "Type": "Alarm",
+    "Description": "Expansion Valve Fault",
+    "Indication": "Indication of non-operating electronic expansion valve",
+    "Details": "Possible causes:\n•\tCable for expansion valve mounted on wrong valve.\n•\tCable for expansion valve defect.\n•\tExpansion valve defect.\n•\tDriver circuit for expansion valve defect.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) If there is more than one valve failure, the cables for the valves are \npresumably switched. Mount cables for valves on the correct valve.\n2) Listen if the expansion valve is opening and closing. If not, then go to 4) \nIf the valve is opening and closing, close service valve (pos. 14 P-I diagr.) \nRun FT again. If the test now is a pass, the expansion valve is defective and \nshould be replaced.\n3) Check that the cable for the expansion valve is not defect. Replace cable if it \nis damaged.\n4) Disconnect the cable for valve and measure that there is voltage on the \noutput for the expansion valve when it should open.\na. If there is no voltage, the controller PCB is defect. Replace the controller \ndoor."
+  },
+  {
+    "Code": 843,
+    "Name": "Economizer valve",
+    "Type": "Alarm",
+    "Description": "Economizer Valve Fault",
+    "Indication": "Indication of non-operating economizer valve",
+    "Details": "Possible causes:\n•\tCable for economizer valve mounted on wrong valve.\n•\tCable for economizer valve defect.\n•\tEconomizer valve defect.\n•\tDriver circuit for economizer valve defect.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) If there is more than one valve failure, the cables for the valves are \npresumably switched. \nMount cables for valves on the correct valve.\n2) Listen if the economizer valve is opening and closing. If not, then go to 4). \nIf the valve is opening and closing, close service valve (pos. 30 P-I \ndiagr. intermediate line). Run the FT again, it the test now is a pass the \neconomizer valve is defect and should be replaced.\n3) Check that the cable for the expansion valve is not defect. \nReplace cable if it is damaged.\n4) Disconnect the cable for valve and measure that there is voltage on the \noutput for the expansion valve when it should open.\na. If there is no voltage, the controller PCB is defect. Replace the controller \ndoor."
+  },
+  {
+    "Code": 844,
+    "Name": "Hot gas valve",
+    "Type": "Alarm",
+    "Description": "Hot gas Valve Fault",
+    "Indication": "Indication of non-operating hot gas valve",
+    "Details": "Possible causes:\n•\tCable for hot gas valve mounted on wrong valve.\n•\tCable for hot gas valve defect.\n•\tHot gas valve defect.\n•\tDriver circuit for hot gas valve defect.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) If there is more than one valve failure, the cables for the valves are \npresumably switched. Mount cables for valves on the correct valve.\n2) Listen if the hot gas valve is opening and closing, if not go to step 4). If the \nvalve is opening and closing disconnect power to the solenoid coil, when the \nvalve is closed and there is hot temperature after the valve (pos. 32 in the \nP – I diagram), the hot gas valve has a leak and should be replaced. Internal \nparts of the hot gas valve can be replaced separately.\n3) Check that the cable for the hot gas valve is not defect. Replace cable if it is \ndamaged.\n4) Disconnect the cable for valve and measure that there is voltage on the \noutput for the hot gas valve when it should open.\na. If there is no voltage, the controller PCB is defect. Replace the controller \ndoor."
+  },
+  {
+    "Code": 845,
+    "Name": "Cpr pump down",
+    "Type": "Alarm",
+    "Description": "Compressor pump down fault",
+    "Indication": "indication of insufficient performance in the compressor",
+    "Details": "Possible causes:\n•\tSensor defect (high pressure transmitter and or high pressure switch)\n•\tOne or more valves defect.\n•\tCompressor needs repair.\nAccompanied alarms:\n•\tAL 250\nTrouble shooting:\n1) If alarm 250 is displayed check the high pressure transmitter settings and \nthe high pressure switch.\n2) If only alarm 845 is displayed, check that there is sufficient refrigerant on \nthe unit.\n3) If only alarm 845 is displayed, replace compressor valve plates."
+  },
+  {
+    "Code": 846,
+    "Name": "FC Check",
+    "Type": "Alarm",
+    "Description": "Internal fault in FC",
+    "Indication": "Indication of internal failure in the FC",
+    "Details": "Possible causes:\n•\tInternal failure in the FC\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Check and clear other alarms first.\n2) Check that FC cover is mounted correctly with all screws.\n3) Check motor cable (Connection cable between FC and compressor).\n4) The FC needs repair and should be replaced"
+  },
+  {
+    "Code": 850,
+    "Name": "PTI test failed",
+    "Type": "Alarm",
+    "Description": "PTI Test Fault",
+    "Indication": "Normal function will be affected",
+    "Details": "Possible causes:\n•\tThere is one or more alarms.\nAccompanied alarms:\n•\tAL 8XX and maybe other alarms.\nTrouble shooting:\n1) There are other AL 8XX alarms. \nCheck and clear the other alarms first. Then a new PTI test can be run"
+  },
+  {
+    "Code": 855,
+    "Name": "PTI Tset 5",
+    "Type": "Alarm",
+    "Description": "PTI 5°C Set Fault",
+    "Indication": "indication of insufficient performance",
+    "Details": "Possible causes:\n•\tDoors are open.\n•\tThe heaters do not operate correctly.\n•\tThe cooling capacity is too limited. \n•\tThere may not be enough refrigerant in the unit.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Verify that the doors are closed.\n2) If start temperature was below +5°C, the heaters may be defective. \nStart the heaters in manual mode and see if the current consumption is \nhigher than 5 A each phase.\n3) The unit may be lacking refrigerant. Check if the small red balls in the sight \nglass in the receiver (water cooling unit) are not at the bottom when the \nunit is turned off. Refill with refregerant."
+  },
+  {
+    "Code": 860,
+    "Name": "PTI Tset 0",
+    "Type": "Alarm",
+    "Description": "PTI 0°C Set Fault",
+    "Indication": "indication of insufficient performance",
+    "Details": "Possible causes:\n•\tDoors are open.\n•\tThe heaters do not operate normally.\n•\tThe cooling capacity is too limited.\n•\tThere may not be enough refrigerant in the unit.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Verify that the doors are closed.\n2) If start temperature was below 0°C, the heaters may be defect. Start the \nheaters in manual mode and see if the current consumption is higher than 5 \nA each phase.\n3) The unit may need refrigerant. Check if the small red balls in the sight glass \nin the receiver (water cooling unit) are not at the bottom when the unit is \nturned off. Refill with refrigerant"
+  },
+  {
+    "Code": 870,
+    "Name": "PTI defrost",
+    "Type": "Alarm",
+    "Description": "PTI Defrost Fault",
+    "Indication": "",
+    "Details": "Possible causes:\n•\tDefect Tevap temperature sensor.\n•\tDefect Psuc pressure sensor.\n•\tDefect heaters.\n•\tDefect hot gas valve.\n•\tEvaporator was filled with too much ice.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Defrosting is terminated when Tevap rises above +15°C (+59°F). Check \nTevap and Psuc sensors according to trouble shooting in alarms AL 123 and \nAL 207.\n2) The heaters may be defect. Start the heaters in manual mode and see if the \ncurrent consumption is higher than 5 A per phase else the heaters or the \npower cables for the heaters may be defect.\n3) The hot gas valve is not working properly and the heaters may be defective. \nCheck trouble shooting for the hot gas valve in alarm AL 844.\n4) See if the evaporator is filled with ice (through the inspection holes). Be \ncareful with the evaporators fans!"
+  },
+  {
+    "Code": 880,
+    "Name": "PTI Tset -18",
+    "Type": "Alarm",
+    "Description": "PTI –18°C Set Fault",
+    "Indication": "indication of insufficient performance",
+    "Details": "Possible causes:\n•\tDoors are open.\n•\tThe cooling capacity is too limited.\n•\tThere may not be enough refrigerant in the unit.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Verify that the doors are closed.\n2) The unit may need refrigerant. Check if the small red balls in the sight glass \nin the receiver (water cooling unit) are not at the bottom when the unit is \nturned off. Refill with refrigerant."
+  },
+  {
+    "Code": 900,
+    "Name": "User stop",
+    "Type": "Fatal Alarm",
+    "Description": "User stop was executed from PC-program",
+    "Indication": "",
+    "Details": ""
+  },
+  {
+    "Code": 901,
+    "Name": "Measurement error",
+    "Type": "Warning",
+    "Description": "Error in measurement of condensator on circuit board",
+    "Indication": "The temperature measurement of the channel is faulty",
+    "Details": "Possible causes:\n• Measurement system of the controller is (partly) defective\nAccompanied alarms:\n• N/A.\nTrouble shooting:\n1) The controller is defect. Replace controller door."
+  },
+  {
+    "Code": 902,
+    "Name": "Battery malfunction",
+    "Type": "Alarm",
+    "Description": "Battery Malfunctioning",
+    "Indication": "Indication of defective battery",
+    "Details": "Possible causes:\n•\tThe battery used for logging is defect.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\nThe battery is defect. Replace controller door"
+  },
+  {
+    "Code": 903,
+    "Name": "Remote mon missing",
+    "Type": "Alarm",
+    "Description": "Remote Monitor Modem Missing. (Only valid for units with rem. monitor)",
+    "Indication": "Indication of missing or defective modem",
+    "Details": "Possible causes:\n• The communication cable, RMM-com is defect or unplugged.\n• Remote Monitor Modem, RMM is defect.\n• Power not connected to the RMM.\nAccompanied alarms:\n• AL 306, AL 500, AL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1. Check that the RMM-com cable is intact and installed (internally).\n2. If alarm AL 306 ‘High press switch’ or AL 500 ‘FC missing’ are also active, \nthe fuse F6 inside in the control cabinet is most likely blown. Replace the \nfuse.\n3. If there is no light in the Power LED of the RMM: Check that power is applied \nto the RMM. If power is applied, the RMM is defect and must be replaced.\n4. Check the status LED’s of the RMM. Power must be ON, Error must be off. \nReplace RMM if not ok.\n5. Check cable to controller door. If AL 903 is still, active replace controller door"
+  },
+  {
+    "Code": 904,
+    "Name": "Datalog error",
+    "Type": "Alarm",
+    "Description": "SCCU6 Data log Fault",
+    "Indication": "Circuit for storing the datalog is faulty",
+    "Details": "Possible causes:\n•\tDatalog in controller has become defect.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\nThe unit will continue its temperature control, but the logging of data is \nunreliable.\n1) Controller PCB defect. Replace controller door."
+  },
+  {
+    "Code": 905,
+    "Name": "Database corrupt",
+    "Type": "Log",
+    "Description": "SCCU6 Database Faulty",
+    "Indication": "Failed validation of EEPROM backup",
+    "Details": "Possible causes:\n•\tController PCB defect.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Controller PCB defect. Replace controller door."
+  },
+  {
+    "Code": 907,
+    "Name": "Realtime error",
+    "Type": "Alarm",
+    "Description": "Real-time Clock Unreliable",
+    "Indication": "Real-time clock battery defect",
+    "Details": "Possible causes:\n•\tReal-time clock battery defective.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Turn on the unit and let it run for a couple of hours\n2) Real-time clock battery defect. \nReplace controller door."
+  },
+  {
+    "Code": 908,
+    "Name": "Realtime invalid",
+    "Type": "Log",
+    "Description": "Real-time Clock Unavailable",
+    "Indication": "Real-time clock battery defect",
+    "Details": "Possible causes:\n•\tReal-time clock battery defect.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Real-time clock battery defective. \nReplace controller door."
+  },
+  {
+    "Code": 909,
+    "Name": "Display error",
+    "Type": "Warning",
+    "Description": "Display Unavailable",
+    "Indication": "Indication of defective display or defective display driver circuitry",
+    "Details": "Possible causes:\n• Defect cable from controller PCB to display.\n• Defect display.\n• Defect controller PCB\nAccompanied alarms:\n• AL 801 will be activated during FT- or PTI test.\nTrouble shooting:\nThe unit will continue temperature control, but settings and operation are \nnot visible on the display.\n1) Try to adjust contrast. See Contrast adjustment of the display p.32\n2) Turn unit off, wait 2 min. and turn it on again. If the problem is still there, \nreplace the controller door."
+  },
+  {
+    "Code": 910,
+    "Name": "Main power failure",
+    "Type": "Log",
+    "Description": "Main Power Fault",
+    "Indication": "indication of insufficient supply voltage",
+    "Details": "Possible causes:\n•\tUnstable or insufficient power supply.\nAccompanied alarms:\n•\tN/A.\nTrouble shooting:\n1) Supply unit with power according to specification."
+  },
+  {
+    "Code": 911,
+    "Name": "Battery voltage LO",
+    "Type": "Warning",
+    "Description": "Low Battery Voltage",
+    "Indication": "Indication of defective battery",
+    "Details": "Possible causes:\n•\tBattery too old, defective or used.\n•\tBattery cables defective.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check that connectors/cables for the battery are not damaged. If so replace \nthe battery."
+  },
+  {
+    "Code": 912,
+    "Name": "Battery voltage HI",
+    "Type": "Log",
+    "Description": "High Battery Voltage",
+    "Indication": "",
+    "Details": "Possible causes:\n•\tBattery defect.\n•\tBattery cables defect.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check that cables for the battery are not damaged and in contact with other \nvoltages. If so replace the battery."
+  },
+  {
+    "Code": 951,
+    "Name": "Power ref LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect sensor pulling power supply down.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24 V AC and 5 V signals to see if power supply has a \nshort circuit or other damages. If OK, the controller PCB is defect. Replace \ncontroller door."
+  },
+  {
+    "Code": 952,
+    "Name": "Power ref HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24V DC and 5V signals to see if power supply has \nan open circuit or other damages. If voltages are ok, the controller PCB is \ndefect. Replace controller door."
+  },
+  {
+    "Code": 953,
+    "Name": "Temp ref 1 LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for main controller.\n•\tDefect sensor pulling power supply down.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24 V DC and 5 V signals to see if power supply has a \nshort circuit or other damages. If OK, the controller PCB is defect. Replace \ncontroller door."
+  },
+  {
+    "Code": 954,
+    "Name": "Temp ref 1 HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefective power supply for controller PCB.\n•\tDefective controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms. \n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24 V DC and 5 V signals to see if power supply has \nan open circuit or other damages. If voltages are OK, the controller PCB is \ndefect. Replace controller door"
+  },
+  {
+    "Code": 955,
+    "Name": "Temp ref 2 LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect sensor pulling power supply down.\n•\tDefect controller PCB. \nAccompanied alarms:\n•\tThere may be sensor alarms. \n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24 V DC and 5 V signals to see if power supply has \nan open circuit or other damages. If voltages are OK, the controller PCB is \ndefect. Replace controller door."
+  },
+  {
+    "Code": 956,
+    "Name": "Temp ref 2 HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms. \n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24 V DC and 5 V signals to see if power supply has \nan open circuit or other damages. If voltages are OK, the controller PCB is \ndefect. Replace controller door."
+  },
+  {
+    "Code": 957,
+    "Name": "Gnd ref LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms. \n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24 V DC and 5 V signals to see if power supply has \nan open circuit or other damages. If voltages are OK, the controller PCB is \ndefective. Replace controller door."
+  },
+  {
+    "Code": 958,
+    "Name": "Gnd ref HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms. \n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24 V DC and 5 V signals to see if power supply has \nan open circuit or other damages. If voltages are OK, the controller PCB is \ndefect. Replace controller door."
+  },
+  {
+    "Code": 959,
+    "Name": "RH sens sup LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n• Defect power supply for controller PCB.\n• Defect relative humidity sensor.\n• Defect controller PCB.\nAccompanied alarms:\n• There may be sensor alarms, especially AL 302.\n• AL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1. Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2. Access the ”special menu” by pressing    for more than 3 sec. Scroll \ndown until you see the label ”U RH” in the display. The value of ”U RH” \nshould be in the range between 16 and 32. While displaying ”U RH”, \ndisconnect RH from the terminals PCB, and: - If “U RH” is now within the correct range, the RH sensor is defect. \nReplace the relative humidity sensor, RH. - If “U RH” is still outside the above range, the controller PCB is defect.\nReplace the controller door."
+  },
+  {
+    "Code": 960,
+    "Name": "RH sens sup HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n• Defect power supply for controller PCB.\n• Too high voltage for the unit.\n• Defect controller PCB.\nAccompanied alarms:\n• There may be sensor alarms.\n• AL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1. Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2. Check if power supply voltage for the unit is within specification. - If \nthe voltage is too high, temperature control and humidity control will be \naffected and the unit may get damaged. Supply unit with power according \nto specification. If the voltage is ok, the controller PCB is defect. Replace \ncontroller door.\n3. Access the ”special menu” by pressing    for more than 3 sec. Scroll \ndown until you see the label ”U RH” in the display. The value of ”U RH” \nshould be in the range between 16 and 32. While displaying ”U RH”, \ndisconnect RH from the terminals. - If “U RH” is now inside the above range the RH sensor is defect. Replace \nthe relative humidity sensor, RH. - If “U RH” is still outside the above range, the controller PCB is defect. \nReplace the controller door."
+  },
+  {
+    "Code": 961,
+    "Name": "Pdis sens sup LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect Pdis pressure transmitter.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms, especially AL 203.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Access the ”special menu” by pressing  for more than 3 sec. Scroll down \nuntil you see the label ”U Pdis” in the display. The value of ”U Pdis” should \nbe in the range between 4.80 V and 5.05 V DC.\n3) While displaying “U Pdis”, remove the connector at Pdis.\n−\tIf “U Pdis” is now inside the above range, the Pdis pressure transmitter \nis defective. Replace the Pdis pressure transmitter.\n−\tIf “U Pdis” is still outside the above range, proceed to next step.\n4) While displaying “U Pdis”, disconnect Pdis from the terminals according to \nwiring schematics inside in the control cabinet. \n−\tIf “U Pdis” is now inside the above range, the cable for Pdis is defect. \nReplace cable for Pdis.\n−\tIf “U Pdis” is now outside the above range, the controller PCB is defect. \nReplace the controller door."
+  },
+  {
+    "Code": 962,
+    "Name": "Pdis sens sup HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms, especially AL 203\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) See “Trouble shooting” AL 961"
+  },
+  {
+    "Code": 963,
+    "Name": "Psuc sens sup LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB. \n•\tDefect Psuc pressure transmitter.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms, especially AL 207.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Access the “special menu” by pressing  for more than 3 sec. Scroll down \nuntil you see the label “U Psuc” in the display. The value of “U Psuc“ should \nbe in the range between 4.80 V and 5.05 V DC.\n3) While displaying “U Psuc“, remove the connector at Psuc.\n−\tIf “U Psuc” is now inside the correct above range (4.80 V – 5.05 V DC), \nthe Psuc pressure transmitter is defective. Replace the Psuc pressure \ntransmitter.\n−\tIf “U Psuc” is still outside the above range, proceed to next step.\n4) While displaying “U Psuc“, disconnect Pdis from the terminals according to \nwiring schematics inside in the control cabinet.\n−\tIf “U Psuc” is now inside the above range the cable for Psuc is defect. \nMount connector correctly or replace connector cable for Psuc.\n−\tIf “U Psuc” is still outside, correct the above range, the controller PCB is \ndefect. Replace the controller door."
+  },
+  {
+    "Code": 964,
+    "Name": "Psuc sens sup HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) See “Trouble shooting” for AL 963"
+  },
+  {
+    "Code": 965,
+    "Name": "Controller sup LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms, especially AL 1XX and AL 2XX.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) The controller PCB is defect. Replace the controller door."
+  },
+  {
+    "Code": 966,
+    "Name": "Controller sup HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24 V DC and 5 V signals to see if power supply has \nan open circuit or other damages. If voltages are OK, the controller PCB is \ndefect. Replace controller door."
+  },
+  {
+    "Code": 969,
+    "Name": "AirEx sens sup LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect sensor pulling power supply down.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms, AL 3XX.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Access the “special menu” by pressing  for more than 3 sec. Scroll down \nuntil you see the label “U AirEx” in the display. The value of “U AirEx“ should \nbe in the range between 4.80 V DC and 5.05 V DC.\n3) While displaying “U AirEx“, remove the connector at AirEx potentiometer.\n−\tIf “U AirEx“ is now inside the correct above range (4.80 – 5.05 V DC), \nthe AirEx potentiometer is defective. Replace the AirEx potentiometer\n−\tIf “U AirEx” is still outside the above range, proceed to next step.\n4) While displaying “U AirEx“, disconnect “AirEx” from the terminals according \nto wiring schematics inside in the control cabinet.\n−\tIf “U AirEx” is now inside the above range the cable for “AirEx” is defect. \nMount connector correctly or replace connector cable for “AirEx”.\n−\tIf “U AirEx” is still outside, correct the above range. The controller PCB is \ndefect. Replace the controller door."
+  },
+  {
+    "Code": 970,
+    "Name": "AirEx sens sup HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms, AL 3XX.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24 V DC and 5 V signals to see if power supply has \nan open circuit or other damages. If voltages are ok, the controller PCB is \ndefect. Replace controller door."
+  },
+  {
+    "Code": 971,
+    "Name": "Sensor bus sup LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms \n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Access the “special menu” by pressing    for more than 3 sec. Scroll \ndown until you see the label “U Pspar” in the display. The value of “U \nPspar“ should be in the range between 4.80 and 5.05V DC.\n3) While displaying “U Pspar“, remove the connector at Pspar.- If “U Pspar” is now inside the correct above range (4.80 – 5.05V DC), the \nPspar pressure sensor is defect. Replace the sensor connected to Pspar.- If “U Pspar” is still outside the above range, proceed to next step.\n4) While displaying “U Pspar“, disconnect sensor from the terminals \naccording to wiring schematics inside in the control cabinet.- If “U Pspar” is now inside the above range the cable for Pspar is defect. \nMount connector correctly or replace connector cable for Pspar.- If “U Pspar” is still outside, correct the above range. The controller PCB is \ndefect. Replace the controller door."
+  },
+  {
+    "Code": 972,
+    "Name": "Pspare sens sup HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tThere may be sensor alarms.\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1. Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2. Access the “special menu” by pressing    for more than 3 sec. Scroll down \nuntil you see the label “U Pspar” in the display. The value of “U Pspar“ should \nbe in the range between 4.80 and 5.05V DC.\n3. While displaying “U Pspar“, remove the connector at Pspar.- If “U Pspar” is now inside the correct above range (4.80 – 5.05V DC), the \nPspar pressure sensor is defect. Replace the sensor connected to Pspar.- If “U Pspar” is still outside the above range, proceed to next step.\n4. While displaying “U Pspar“, disconnect sensor from the terminals according \nto wiring schematics inside in the control cabinet.- If “U Pspar” is now inside the above range the cable for Pspar is defect. \nMount connector correctly or replace connector cable for Pspar.- If “U Pspar” is still outside, correct the above range. The controller PCB is \ndefect. Replace the controller door."
+  },
+  {
+    "Code": 980,
+    "Name": "Tinternal LO",
+    "Type": "Warning",
+    "Description": "Controller Internal Voltage Reference Fault",
+    "Indication": "Indication of controller internal voltage reference fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) The controller PCB is defect. Replace the controller door."
+  },
+  {
+    "Code": 981,
+    "Name": "Tinternal HI",
+    "Type": "Warning",
+    "Description": "Controller Internal Temperature Sensor High Temperature Fault",
+    "Indication": "Indication of controller internal temperature sensor fault",
+    "Details": "Possible causes:\n•\tDefect power supply for controller PCB.\n•\tDefect controller PCB.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) Check if there are other active (sensor) alarms. Clear these alarms first \nusing their trouble shooting.\n2) Check voltage level of 24 V DC and 5 V signals to see if power supply has \nan open circuit or other damages. If voltages are OK, the controller PCB is \ndefect. Replace controller door."
+  },
+  {
+    "Code": 989,
+    "Name": "Software test ver",
+    "Type": "Warning",
+    "Description": "Software test version",
+    "Indication": "Indication of Software test version loading into controller",
+    "Details": "Possible causes:\n•\tTest sw in the controller PCB.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) There is a wrong sw version in the controller PCB. Update the software in \nthe controller to the latest version.\n2) There is a wrong sw version in the controller PCB. Replace the controller \ndoor."
+  },
+  {
+    "Code": 996,
+    "Name": "Software CRC error",
+    "Type": "Alarm",
+    "Description": "Prom CRC Fault",
+    "Indication": "",
+    "Details": "Possible causes:\n•\tValidity check of the program failed.\nAccompanied alarms:\n•\tAL 801 will be activated during FT- or PTI test.\nTrouble shooting:\n1) There is a fault on the controller PCB. Update the software in the controller \nto the latest version.\n2) There is still a fault on the controller PCB. Replace the controller door."
+  },
+  {
+    "Code": 997,
+    "Name": "Eeprom error",
+    "Type": "Alarm",
+    "Description": "EEPROM fault",
+    "Indication": "",
+    "Details": "Possible causes:\n• Check of validity of program storage failed.\nAccompanied alarms:\n• AL 801 will be activated during FT- or PTI test.\nTrouble shooting:                                                                                                                                                     1) There is a fault on the controller PCB. Replace the controller door        "
+  }
+]

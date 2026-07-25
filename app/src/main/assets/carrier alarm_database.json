@@ -1,0 +1,677 @@
+``json
+{
+"alarms": [
+{
+"alarmcode": "AL03",
+"alarmdescription": "Loss of Superheat Control",
+"cause": "Superheat has remained below 1.66C (3F) degrees for five minutes continuously while compressor running. Compressor drawing more than 2.0 amps, compressor pressure ratio is greater than 1.8, and Electronic Expansion Valve (EEV) is at 0% open.",
+"components": [
+{
+"component": "Electronic Expansion Valve (EEV)",
+"troubleshooting": "Check the operation of the EEV using Cd41.",
+"correctiveaction": "Replace EEV if defective."
+},
+{
+"component": "Evaporator Temperature Sensor(s) ETS & ETS1",
+"troubleshooting": "Verify accuracy of temperature sensors, refer to Sensor Checkout Procedure Section 6.19.",
+"correctiveaction": "Replace ETS or ETS1 if defective."
+},
+{
+"component": "Evaporator Fans",
+"troubleshooting": "Confirm fans operating properly.",
+"correctiveaction": "Replace fan(s) if defective, refer to EVAPORATOR FAN MOTOR ASSEMBLY Section 6.10."
+}
+]
+},
+{
+"alarmcode": "AL05",
+"alarmdescription": "Manual Defrost Switch Failure",
+"cause": "Controller has detected continuous Manual Defrost Switch activity for five minutes or more.",
+"components": [
+{
+"component": "Keypad",
+"troubleshooting": "Power cycle the unit.",
+"correctiveaction": "Resetting the unit may correct problem, monitor the unit. If the alarm reappears after 5 minutes replace the keypad."
+}
+]
+},
+{
+"alarmcode": "AL06",
+"alarmdescription": "Keypad or Keypad Harness Fail",
+"cause": "Controller has detected one of the keypad keys is continuously active.",
+"components": [
+{
+"component": "Keypad or Harness",
+"troubleshooting": "Power cycle the unit.",
+"correctiveaction": "Resetting the unit may correct problem, monitor the unit. If the alarm reappears replace the keypad and harness."
+}
+]
+},
+{
+"alarmcode": "AL07",
+"alarmdescription": "Fresh Air Vent Open with Frozen Set Point",
+"cause": "The VPS is reading greater than 0 CMH while unit is in frozen mode.",
+"components": [
+{
+"component": "Vent Position Sensor (VPS)",
+"troubleshooting": "Manually reposition vent and confirm using Cd45. Refer to VENT POSITION SENSOR SERVICE Section 6.18.",
+"correctiveaction": "If unable to obtain zero reading, replace defective VPS."
+}
+]
+},
+{
+"alarmcode": "AL08",
+"alarmdescription": "High Compressor Pressure Ratio",
+"cause": "Controller detects discharge pressure to suction pressure ratio is too high. The controller will attempt to correct the situation by restarting the compressor.",
+"components": [
+{
+"component": "Discharge Pressure Transducer (DPT)",
+"troubleshooting": "Confirm accurate DPT pressure readings, refer to MANIFOLD GAUGE SET Section 6.2.",
+"correctiveaction": "Replace DPT if defective."
+}
+]
+},
+{
+"alarmcode": "AL10",
+"alarmdescription": "CO2 Sensor Failure",
+"cause": "Alarm 10 is triggered when the CO2 sensor voltage is operating outside of the 0.9v to 4.7v range, or if the sensor is out of range.",
+"components": [
+{
+"component": "Display alarm only - no associated failure action",
+"troubleshooting": "Refer to eAutoFresh manual.",
+"correctiveaction": "The alarm is triggered off when voltage is within operating range."
+}
+]
+},
+{
+"alarmcode": "AL11",
+"alarmdescription": "Evaporator Motor 1 IP Trip",
+"cause": "Applicable to units with Single Evaporator Fan Capability (Cn F32 set to 1 EFO) only. The alarm is triggered if the evaporator fan motor #1 internal protector opens. If the alarm is active, probe check is deactivated.",
+"components": [
+{
+"component": "Evaporator Fan",
+"troubleshooting": "The unit will suspend probe check diagnostic logic and disable the probe check portion of defrost cycle.",
+"correctiveaction": "AL11 is triggered off when MC6 sensed low."
+}
+]
+},
+{
+"alarmcode": "AL12",
+"alarmdescription": "Evaporator Motor 2 IP Trip",
+"cause": "Applicable to units with Single Evaporator Fan Capability (Cn F32 set to 1 EFO) only. The alarm is triggered if the evaporator fan motor #2 internal protector opens. If the alarm is active, probe check is deactivated.",
+"components": [
+{
+"component": "Evaporator Fan",
+"troubleshooting": "The unit will suspend probe check diagnostic logic and disable the probe check portion of defrost cycle.",
+"correctiveaction": "AL12 is triggered off when MC6 sensed low."
+}
+]
+},
+{
+"alarmcode": "AL14",
+"alarmdescription": "Phase Sequence Detect Fault",
+"cause": "Controller is unable to determine the correct phase relationship.",
+"components": [
+{
+"component": "N/A",
+"troubleshooting": "Power cycle the unit.",
+"correctiveaction": "Resetting the unit may correct problem, monitor the unit."
+},
+{
+"component": "Wiring",
+"troubleshooting": "Check unit wiring. Confirm pressure readings during start-up; suction pressure should decrease and discharge pressure should increase.",
+"correctiveaction": "Correct wiring."
+},
+{
+"component": "Current Sensor",
+"troubleshooting": "Check Cd41, right most digit: If display is 3 or 4 check compressor/sensor wiring. If display is 5 the current sensor is defective.",
+"correctiveaction": "Replace current sensor if defective."
+}
+]
+},
+{
+"alarmcode": "AL16",
+"alarmdescription": "Compressor Current High",
+"cause": "Compressor current draw is over the calculated maximum for 10 minutes.",
+"components": [
+{
+"component": "Current Sensor",
+"troubleshooting": "Compare Cd3 to actual measured current at wire T1-T2 or T3 going to the compressor contactor. If there is a difference, determine whether this is caused by current sensor or amp clamp tool.",
+"correctiveaction": "Replace current sensor if defective."
+},
+{
+"component": "Amperage is indeed too high",
+"troubleshooting": "Confirm supply voltage/frequency is within specification and balanced according to Electrical Data Section 2.3.",
+"correctiveaction": "Correct power supply."
+},
+{
+"component": "Operating Conditions",
+"troubleshooting": "Make sure system pressures are relevant to operating conditions.",
+"correctiveaction": "Check air flow of condenser. Check refrigerant charge, refer to REFRIGERATION SYSTEM SERVICE Section 6.3."
+},
+{
+"component": "Monitor Unit",
+"troubleshooting": "Alarm is display only; the alarm may clear itself during operation.",
+"correctiveaction": "If alarm remains active or is repetitive replace compressor at next available opportunity, refer to COMPRESSOR Service Section 6.4."
+}
+]
+},
+{
+"alarmcode": "AL17",
+"alarmdescription": "Compressor Pressure Delta Fault",
+"cause": "Compressor has attempted to start in both directions and fails to generate sufficient pressure differential between SPT and DPT.",
+"components": [
+{
+"component": "N/A",
+"troubleshooting": "Controller will attempt restart every 20 minutes and deactivate the alarm if successful.",
+"correctiveaction": "Resume normal operation."
+},
+{
+"component": "Discharge Pressure Transducer (DPT)",
+"troubleshooting": "Confirm accurate DPT pressure readings, refer to MANIFOLD GAUGE SET Section 6.2.",
+"correctiveaction": "Replace DPT if defective."
+},
+{
+"component": "Suction Pressure Transducer (SPT)",
+"troubleshooting": "Confirm accurate SPT pressure readings, refer to MANIFOLD GAUGE SET Section 6.2.",
+"correctiveaction": "Replace SPT if defective."
+},
+{
+"component": "Monitor Unit",
+"troubleshooting": "Alarm is display only; the alarm may clear itself during operation.",
+"correctiveaction": "If alarm remains active or is repetitive replace compressor at next available opportunity."
+}
+]
+},
+{
+"alarmcode": "AL18",
+"alarmdescription": "Discharge Pressure High",
+"cause": "Discharge pressure is over the maximum for 10 minutes within the last hour.",
+"components": [
+{
+"component": "Restrictions in the refrigeration system",
+"troubleshooting": "Ensure Liquid Line Service Valve is fully open.",
+"correctiveaction": "Open Liquid Line Service Valve as needed."
+},
+{
+"component": "Filter Drier",
+"troubleshooting": "Check the filter drier; if it is iced up or very cold it indicates that the filter drier needs replacement.",
+"correctiveaction": "Replace the filter drier if needed, refer to FILTER DRIER Service Section 6.8."
+},
+{
+"component": "Condenser Fan",
+"troubleshooting": "Check condenser fan for proper operation.",
+"correctiveaction": "Correct as required."
+},
+{
+"component": "Discharge Pressure Transducer (DPT)",
+"troubleshooting": "Confirm accurate DPT pressure readings, refer to MANIFOLD GAUGE SET Section 6.2.",
+"correctiveaction": "Replace DPT if defective."
+},
+{
+"component": "Non-condensables in the refrigeration system",
+"troubleshooting": "With the unit off allow system to stabilize to ambient temperature. Check system pressure against PT Chart for 134a, refer to Table 6-6.",
+"correctiveaction": "Correct as required, refer to Refrigerant Charge Section 6.3.5."
+},
+{
+"component": "Refrigerant",
+"troubleshooting": "Check refrigerant level.",
+"correctiveaction": "Correct as required, refer to Refrigerant Charge Section 6.3.5."
+}
+]
+},
+{
+"alarmcode": "AL19",
+"alarmdescription": "Discharge Temperature High",
+"cause": "Discharge temperature exceeds 135C (275F) for 10 minutes within the last hour.",
+"components": [
+{
+"component": "Restrictions in the refrigeration system",
+"troubleshooting": "Ensure the Discharge Service Valve is fully open.",
+"correctiveaction": "Open the Discharge Service Valve as needed."
+},
+{
+"component": "Air flow restrictions",
+"troubleshooting": "Check the unit for air flow restrictions.",
+"correctiveaction": "Clean or remove any debris from coils."
+},
+{
+"component": "Non-condensables in the refrigeration system",
+"troubleshooting": "With the unit off allow system to stabilize to ambient temperature. Check system pressure against PT Chart for 134a, refer to Table 6-6.",
+"correctiveaction": "Correct as required, refer to Refrigerant Charge Section 6.3.5."
+},
+{
+"component": "Additional Alarms such as AL16, AL24",
+"troubleshooting": "Check compressor operation.",
+"correctiveaction": "If the alarm persists, it may indicate a failing compressor; replace the compressor, refer to COMPRESSOR Service Section 6.4."
+}
+]
+},
+{
+"alarmcode": "AL20",
+"alarmdescription": "Control Contactor Fuse (F3)/24VAC",
+"cause": "Control power fuse (F3A or F3B) is open.",
+"components": [
+{
+"component": "Fuse F3A",
+"troubleshooting": "Check F3A; if the fuse is open, check PA, PB, CH coils for short to ground.",
+"correctiveaction": "Replace the defective coil. Replace the fuse."
+},
+{
+"component": "Fuse F3B",
+"troubleshooting": "Check F3B; if the fuse is open, check ESV coil resistance at TP7 to TP9. If short to ground or resistance is less than 4 ohms, coil is defective. Check CF, ES, EF, HR coils for short to ground.",
+"correctiveaction": "Replace the defective coil. Replace the fuse."
+},
+{
+"component": "Controller (QC1)",
+"troubleshooting": "Check voltage at QC1; if voltage is present, it indicates a defective microprocessor.",
+"correctiveaction": "Refer to Controller Service Section 6.17."
+}
+]
+},
+{
+"alarmcode": "AL21",
+"alarmdescription": "Control Circuit Fuse (F1/F2)/18VAC",
+"cause": "One of the 18 VAC controller fuses (F1/F2) is open. Refer to Cd08.",
+"components": [
+{
+"component": "System Sensors",
+"troubleshooting": "Check system sensors for short to ground.",
+"correctiveaction": "Replace defective sensor(s)."
+},
+{
+"component": "Wiring",
+"troubleshooting": "Check wiring for short to ground.",
+"correctiveaction": "Repair as needed."
+},
+{
+"component": "Controller",
+"troubleshooting": "Controller may have an internal short.",
+"correctiveaction": "Replace controller, refer to Controller Service Section 6.17."
+}
+]
+},
+{
+"alarmcode": "AL22",
+"alarmdescription": "Evaporator Motor IP/Safety",
+"cause": "Evaporator motor internal protector (IP) is open.",
+"components": [
+{
+"component": "Evaporator Motor",
+"troubleshooting": "Shut down unit, disconnect power, and check Evaporator Motor IP at plug connection pins 4 & 6.",
+"correctiveaction": "Replace defective evaporator fan motor, refer to EVAPORATOR FAN MOTOR Service Section 6.10."
+}
+]
+},
+{
+"alarmcode": "AL23",
+"alarmdescription": "Loss of Phase B",
+"cause": "Controller fails to detect current draw.",
+"components": [
+{
+"component": "Incoming Power",
+"troubleshooting": "Check incoming power source.",
+"correctiveaction": "Correct power source as required."
+}
+]
+},
+{
+"alarmcode": "AL24",
+"alarmdescription": "Compressor Motor IP/Safety",
+"cause": "Compressor internal protector (IP) is open.",
+"components": [
+{
+"component": "Compressor",
+"troubleshooting": "Shut down unit, disconnect power, and check resistance of compressor windings at contactor T1-T2, T2-T3.",
+"correctiveaction": "Monitor unit; if alarm remains active or is repetitive replace the compressor at the next available opportunity, refer to COMPRESSOR Service Section 6.4."
+}
+]
+},
+{
+"alarmcode": "AL25",
+"alarmdescription": "Condenser Fan Motor IP/Safety",
+"cause": "Condenser fan motor internal protector (IP) is open.",
+"components": [
+{
+"component": "Insufficient Air Flow",
+"troubleshooting": "Shut down unit and check condenser fan for obstructions.",
+"correctiveaction": "Remove obstructions."
+},
+{
+"component": "Condenser Fan Motor",
+"troubleshooting": "Shut down unit, disconnect power, and check Condenser Fan Motor IP at plug connection pins 1 & 2.",
+"correctiveaction": "Replace defective condenser fan motor, refer to Condenser Fan Motor Assembly Service Section 6.7."
+}
+]
+},
+{
+"alarmcode": "AL26",
+"alarmdescription": "All Sensors Failure: Supply/Return Probes",
+"cause": "Sensors out of range.",
+"components": [
+{
+"component": "All sensors detected as out of range",
+"troubleshooting": "Perform Pre-trip P5.",
+"correctiveaction": "If P5 passes, no further action is required. If P5 fails, replace the defective sensor as determined by P5, refer to TEMPERATURE SENSOR Service Section 6.19."
+}
+]
+},
+{
+"alarmcode": "AL27",
+"alarmdescription": "Analog to Digital Accuracy Failure",
+"cause": "Controller AD converter faulty.",
+"components": [
+{
+"component": "Controller",
+"troubleshooting": "Power cycle the unit. If the alarm persists, it indicates a defective microprocessor.",
+"correctiveaction": "Replace defective microprocessor, refer to Controller Service Section 6.17."
+}
+]
+},
+{
+"alarmcode": "AL28",
+"alarmdescription": "Low Suction Pressure",
+"cause": "Suction pressure too low for normal operation.",
+"components": [
+{
+"component": "N/A",
+"troubleshooting": "Power cycle the unit.",
+"correctiveaction": "Resetting the unit may correct problem, monitor the unit."
+},
+{
+"component": "Suction Pressure Transducer (SPT)",
+"troubleshooting": "Confirm accurate SPT pressure readings, refer to MANIFOLD GAUGE SET Section 6.2.",
+"correctiveaction": "Replace SPT if defective."
+},
+{
+"component": "Discharge Pressure Transducer (DPT)",
+"troubleshooting": "Confirm accurate DPT pressure readings, refer to MANIFOLD GAUGE SET Section 6.2.",
+"correctiveaction": "Replace DPT if defective."
+}
+]
+},
+{
+"alarmcode": "AL50",
+"alarmdescription": "Air Vent Position Sensor (VPS)",
+"cause": "VPS sensor out of range.",
+"components": [
+{
+"component": "Vent Position Sensor (VPS)",
+"troubleshooting": "Make sure VPS is secure.",
+"correctiveaction": "Manually tighten panel. If the alarm persists, replace the sensor or the assembly."
+}
+]
+},
+{
+"alarmcode": "AL51",
+"alarmdescription": "Alarm List Failure / EEPROM Failure",
+"cause": "Controller Memory Failure.",
+"components": [
+{
+"component": "Controller",
+"troubleshooting": "Pressing the ENTER key when 'CLEAr' is displayed will attempt to clear the alarm.",
+"correctiveaction": "If action is successful (all alarms are inactive), alarm 51 will be reset. If alarm persists after power cycle, replace defective controller, refer to Controller Service Section 6.17."
+}
+]
+},
+{
+"alarmcode": "AL52",
+"alarmdescription": "EEPROM Alarm List Full",
+"cause": "Alarm list queue is full.",
+"components": [
+{
+"component": "Active Alarms",
+"troubleshooting": "Repair any alarms in the queue that are active. Indicated by 'AA'.",
+"correctiveaction": "Clear alarms, refer to CONTROLLER ALARMS Section 3.5."
+}
+]
+},
+{
+"alarmcode": "AL53",
+"alarmdescription": "Battery Pack Failure",
+"cause": "Battery voltage low.",
+"components": [
+{
+"component": "Battery",
+"troubleshooting": "If this alarm occurs on start up, allow a unit fitted with rechargeable batteries to operate for up to 24 hours to charge rechargeable batteries sufficiently. Once fully charged, the alarm will deactivate.",
+"correctiveaction": "To clear the alarm press ENTER and ALT simultaneously at the startup of Cd19 (Battery Check). If alarm persists, replace the battery pack, refer to Section 6.17.5 Battery Replacement."
+}
+]
+},
+{
+"alarmcode": "AL54",
+"alarmdescription": "Primary Supply Sensor (STS)",
+"cause": "Invalid Supply Temperature Sensor (STS) reading.",
+"components": [
+{
+"component": "Supply Temperature Sensor (STS)",
+"troubleshooting": "Perform Pre-trip P5.",
+"correctiveaction": "If P5 passes, no further action is required. If P5 fails, replace the defective sensor as determined by P5, refer to TEMPERATURE SENSOR Service Section 6.19."
+}
+]
+},
+{
+"alarmcode": "AL56",
+"alarmdescription": "Primary Return Sensor (RTS) Failure",
+"cause": "Invalid Return Temperature Sensor (RTS) reading.",
+"components": [
+{
+"component": "Return Temperature Sensor (RTS)",
+"troubleshooting": "Perform Pre-trip P5.",
+"correctiveaction": "If P5 passes, no further action is required. If P5 fails, replace the defective sensor as determined by P5, refer to TEMPERATURE SENSOR Service Section 6.19."
+}
+]
+},
+{
+"alarmcode": "AL57",
+"alarmdescription": "Ambient Sensor (AMBS) Failure",
+"cause": "Invalid Ambient Temperature Sensor (AMBS) reading.",
+"components": [
+{
+"component": "Ambient Temperature Sensor (AMBS)",
+"troubleshooting": "Test the AMBS, refer to Sensor Checkout Procedure Section 6.19.",
+"correctiveaction": "Replace AMBS if defective, refer to TEMPERATURE SENSOR Service Section 6.19."
+}
+]
+},
+{
+"alarmcode": "AL58",
+"alarmdescription": "Compressor High Pressure Safety (HPS)",
+"cause": "High pressure safety switch remains open for at least one minute.",
+"components": [
+{
+"component": "High Pressure Switch (HPS)",
+"troubleshooting": "Test the HPS; refer to Checking High Pressure Switch, Section 6.5.1.",
+"correctiveaction": "Replace HPS if defective, refer to Sensor Replacement, Section 6.5.2."
+},
+{
+"component": "Refrigeration System",
+"troubleshooting": "Check unit for air flow restrictions.",
+"correctiveaction": "Clean or remove any debris from coils."
+}
+]
+},
+{
+"alarmcode": "AL59",
+"alarmdescription": "Heater Termination Thermostat (HTT)",
+"cause": "Heat Termination Thermostat (HTT) is open.",
+"components": [
+{
+"component": "Heat Termination Thermostat (HTT)",
+"troubleshooting": "Check for 24 volts at test point TP10; if no voltage at TP10 after unit has reached set point, HTT is open.",
+"correctiveaction": "Replace HTT if defective, refer to Sensor Replacement Section 6.19.2."
+}
+]
+},
+{
+"alarmcode": "AL60",
+"alarmdescription": "Defrost Temperature Sensor (DTS) Failure",
+"cause": "Failure of the Defrost Temperature Sensor (DTS) to open.",
+"components": [
+{
+"component": "Defrost Temperature Sensor (DTS)",
+"troubleshooting": "Test the DTS; refer to Sensor Checkout Procedure Section 6.19.",
+"correctiveaction": "Replace the DTS if defective, refer to Sensor Replacement Section 6.19.2."
+}
+]
+},
+{
+"alarmcode": "AL61",
+"alarmdescription": "Heater Current Draw Fault/Failure",
+"cause": "Improper current draw during heat or defrost mode.",
+"components": [
+{
+"component": "Heater(s)",
+"troubleshooting": "While in heat or defrost mode, check for proper current draw at heater contactors, refer to ELECTRICAL DATA Section 2.3.",
+"correctiveaction": "Replace heater(s) if defective, refer to Section 6.9.2 Evaporator Heater Removal and Replacement."
+},
+{
+"component": "Contactor",
+"troubleshooting": "Check voltage at heater contactor on the heater side. If no voltage present, contactor may be defective.",
+"correctiveaction": "Replace heater contactor if defective."
+}
+]
+},
+{
+"alarmcode": "AL63",
+"alarmdescription": "Current Over Limit",
+"cause": "Unit operating above current limit.",
+"components": [
+{
+"component": "Refrigeration System",
+"troubleshooting": "Check unit for air flow restrictions. Check unit for proper operation.",
+"correctiveaction": "Clean or remove any debris from coils. Repair as needed."
+},
+{
+"component": "Power Supply",
+"troubleshooting": "Confirm supply voltage/frequency is within specification and balanced according to ELECTRICAL DATA Section 2.3.",
+"correctiveaction": "Correct power supply."
+},
+{
+"component": "Current Limit Setting",
+"troubleshooting": "Check current limit setting Code Cd32.",
+"correctiveaction": "The current limit can be raised (maximum of 23 amps) using Cd32."
+}
+]
+},
+{
+"alarmcode": "AL64",
+"alarmdescription": "Discharge Temperature Sensor (CPDS)",
+"cause": "Discharge temperature sensor out of range.",
+"components": [
+{
+"component": "Discharge Temperature Sensor (CPDS)",
+"troubleshooting": "Test the CPDS; refer to Sensor Checkout Procedure, Section 6.19.1.",
+"correctiveaction": "Replace the CPDS if defective, refer to Sensor Replacement Section 6.19.2."
+}
+]
+},
+{
+"alarmcode": "AL65",
+"alarmdescription": "Discharge Pressure Transducer (DPT) Failure",
+"cause": "Compressor Discharge Transducer is out of range.",
+"components": [
+{
+"component": "Compressor Discharge Transducer (DPT)",
+"troubleshooting": "Confirm accurate DPT pressure readings, refer to MANIFOLD GAUGE SET Section 6.2.",
+"correctiveaction": "Replace DPT if defective."
+}
+]
+},
+{
+"alarmcode": "AL66",
+"alarmdescription": "(SPT) Suction Pressure Transducer / (EPT) Evaporator Pressure Transducer Failure",
+"cause": "Suction Pressure Transducer (SPT) out of range.",
+"components": [
+{
+"component": "Suction Pressure Transducer (SPT)",
+"troubleshooting": "Confirm accurate EPT and SPT pressure readings, refer to MANIFOLD GAUGE SET Section 6.2. Performing a Pre-trip 5-9 test will also check the transducers.",
+"correctiveaction": "Replace EPT/SPT if defective."
+},
+{
+"component": "Monitor",
+"troubleshooting": "If the alarm persists, it may indicate a failing compressor.",
+"correctiveaction": "Refer to COMPRESSOR Service Section 6.4."
+}
+]
+},
+{
+"alarmcode": "AL67",
+"alarmdescription": "Humidity Sensor Failure",
+"cause": "Humidity Sensor (HS) reading out of range.",
+"components": [
+{
+"component": "Humidity Sensor (HS)",
+"troubleshooting": "Make sure the humidity sensor is properly connected in the socket. Make sure the humidity sensor wires have not been damaged.",
+"correctiveaction": "Monitor; replace HS if alarm persists."
+}
+]
+},
+{
+"alarmcode": "AL68",
+"alarmdescription": "Condenser Pressure Transducer Failure",
+"cause": "Thinline: condenser pressure transducer (CPC) is out of range. naturalLINE: flash tank pressure transducer (FPT) is out of range.",
+"components": [
+{
+"component": "Condenser Pressure Transducer - Thinline (CPC)",
+"troubleshooting": "N/A",
+"correctiveaction": "Unit will disable condenser pressure control if configured."
+},
+{
+"component": "Flash Tank Pressure Transducer - naturalLINE (FPT)",
+"troubleshooting": "Confirm accurate FPT pressure readings. It is not possible to check the FPT with gauges. Turn off the unit and let the pressure equalize. Then check that Cd12 (SPT), Cd13 (FPT), Cd14 (DPT) are all equal.",
+"correctiveaction": "Replace the FPT if defective."
+}
+]
+},
+{
+"alarmcode": "AL69",
+"alarmdescription": "Evaporator Temp Sensor (ETS1) Failure",
+"cause": "Evaporator Temperature Sensor (ETS1) out of range.",
+"components": [
+{
+"component": "Evaporator Temperature Sensor (ETS1)",
+"troubleshooting": "Test the ETS1, refer to Sensor Checkout Procedure Section 6.19.1.",
+"correctiveaction": "Replace Evaporator Temperature Sensor (ETS1) if defective."
+}
+]
+},
+{
+"alarmcode": "AL70",
+"alarmdescription": "Secondary Supply Sensor (SRS)",
+"cause": "Secondary Supply Sensor (SRS) is out of range.",
+"components": [
+{
+"component": "Secondary Supply Sensor (SRS)",
+"troubleshooting": "Perform Pre-trip P5.",
+"correctiveaction": "If P5 passes, no further action is required. If P5 fails, replace the defective sensor as determined by P5, refer to TEMPERATURE SENSOR Service Section 6.19."
+}
+]
+},
+{
+"alarmcode": "AL71",
+"alarmdescription": "Secondary Return Sensor (RRS)",
+"cause": "Secondary Return Sensor (RRS) is out of range.",
+"components": [
+{
+"component": "Secondary Return Sensor (RRS)",
+"troubleshooting": "Perform Pre-trip P5.",
+"correctiveaction": "If P5 passes, no further action is required. If P5 fails, replace the defective sensor as determined by P5, refer to TEMPERATURE SENSOR Service Section 6.19."
+}
+]
+},
+{
+"alarmcode": "AL72",
+"alarmdescription": "Control Temp Out of Range",
+"cause": "After the unit goes in-range for 30 minutes then out of range for a continuous 120 minutes.",
+"components": [
+{
+"component": "Refrigeration System",
+"troubleshooting": "Ensure unit is operating correctly.",
+"correctiveaction": "Power cycle unit. Control Temperature is in In-range. Any Pre-Trip mode resets the timers."
+}
+]
+}
+]
+}
+``
