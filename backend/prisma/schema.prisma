@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int            @id @default(autoincrement())
+  email        String         @unique
+  phone        String?
+  password     String
+  isVerified   Boolean        @default(false)
+  isAdmin      Boolean        @default(false)
+  createdAt    DateTime       @default(now())
+  otps         OTP[]
+  subscription Subscription?
+  payments     Payment[]
+}
+
+model OTP {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  code      String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Subscription {
+  id                Int       @id @default(autoincrement())
+  userId            Int       @unique
+  status            String    // "trial" | "active" | "expired"
+  plan              String?
+  trialStart        DateTime?
+  trialEnd          DateTime?
+  subscriptionStart DateTime?
+  subscriptionEnd   DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  user              User      @relation(fields: [userId], references: [id])
+}
+
+model Payment {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  method    String   // "stripe" | "paypal"
+  amount    Float
+  currency  String   @default("USD")
+  status    String   // "pending" | "completed" | "failed"
+  reference String?
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+}
