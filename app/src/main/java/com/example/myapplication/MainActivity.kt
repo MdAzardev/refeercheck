@@ -8,128 +8,172 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.myapplication.admin.AdminPortalScreen
+import com.example.myapplication.auth.AuthViewModel
+import com.example.myapplication.auth.LoginScreen
+import com.example.myapplication.auth.OtpVerificationScreen
+import com.example.myapplication.auth.RegisterScreen
+import com.example.myapplication.network.ApiClient
+import com.example.myapplication.subscription.SubscriptionGate
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.File
+import java.net.URLDecoder
+import java.net.URLEncoder
+import java.nio.charset.StandardCharsets
 
 class MainActivity : ComponentActivity() {
     private val gson = Gson()
     private val verificationFile by lazy { File(filesDir, "verification_data.json") }
     private val containerFile by lazy { File(filesDir, "container_data.json") }
     private val fileNameFile by lazy { File(filesDir, "imported_file_name.txt") }
+    // Legacy local profile file (kept for backward compat; new auth uses DataStore)
     private val profileFile by lazy { File(filesDir, "user_profile.json") }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
-        // Load Alarm Database from disk on startup
+
+        // Initialise ApiClient with context (needed for AuthManager DataStore)
+        ApiClient.init(this)
+
+        // Load alarm database from assets on startup
         AlarmCodeProvider.loadData(this)
 
         setContent {
+            val authViewModel = remember { AuthViewModel(applicationContext) }
+
+            val isLoggedIn by authViewModel.isLoggedIn.collectAsStateWithLifecycle(false)
+
+            // Show splash, then route based on login state
             var showSplash by remember { mutableStateOf(true) }
-            var userProfile by remember { mutableStateOf<UserProfile?>(null) }
-            var isLoadingProfile by remember { mutableStateOf(true) }
 
-            LaunchedEffect(Unit) {
-                if (profileFile.exists()) {
-                    try {
-                        val json = profileFile.readText()
-                        userProfile = gson.fromJson(json, UserProfile::class.java)
-                    } catch (e: Exception) {
-                        e.printStackTrace()
-                    }
-                }
-                isLoadingProfile = false
-            }
-
-            if (showSplash || isLoadingProfile) {
+            if (showSplash) {
                 SplashScreen(onAnimationFinished = { showSplash = false })
-            } else if (userProfile == null) {
-                ProfileRegistrationScreen(onProfileCreated = { profile ->
-                    userProfile = profile
-                    try {
-                        profileFile.writeText(gson.toJson(profile))
-                    } catch (e: Exception) {
-                        e.printStackTrace()
-                    }
-                })
+            } else if (!isLoggedIn) {
+                AuthNavGraph(authViewModel = authViewModel)
             } else {
-                MainContent(userProfile!!, onLogout = {
-                    if (profileFile.exists()) profileFile.delete()
-                    userProfile = null
-                })
+                SubscriptionGate(authViewModel = authViewModel) {
+                    MainContent(authViewModel = authViewModel)
+                }
             }
         }
     }
 
+    // ── Auth Navigation Graph ─────────────────────────────────────────────────
+
     @Composable
-    fun MainContent(profile: UserProfile, onLogout: () -> Unit) {
+    fun AuthNavGraph(authViewModel: AuthViewModel) {
         val navController = rememberNavController()
+        NavHost(navController = navController, startDestination = "login") {
+            composable("login") {
+                LoginScreen(
+                    authViewModel = authViewModel,
+                    onNavigateToRegister = { navController.navigate("register") },
+                    onLoginSuccess = {
+                        // Handled by isLoggedIn flow in parent
+                    }
+                )
+            }
+            composable("register") {
+                RegisterScreen(
+                    authViewModel = authViewModel,
+                    onNavigateBack = { navController.popBackStack() },
+                    onRegistered = { email ->
+                        val encoded = URLEncoder.encode(email, StandardCharsets.UTF_8.toString())
+                        navController.navigate("otp/$encoded") {
+                            popUpTo("register") { inclusive = true }
+                        }
+                    }
+                )
+            }
+            composable(
+                "otp/{email}",
+                arguments = listOf(navArgument("email") { type = NavType.StringType })
+            ) { backStack ->
+                val encoded = backStack.arguments?.getString("email") ?: ""
+                val email = URLDecoder.decode(encoded, StandardCharsets.UTF_8.toString())
+                OtpVerificationScreen(
+                    authViewModel = authViewModel,
+                    email = email,
+                    onBack = { navController.popBackStack() },
+                    onVerified = {
+                        // isLoggedIn flow will trigger re-compose of root content
+                    }
+                )
+            }
+        }
+    }
+
+    // ── Main Content (authenticated) ─────────────────────────────────────────
+
+    @Composable
+    fun MainContent(authViewModel: AuthViewModel) {
+        val navController = rememberNavController()
+
         val verificationList = remember { mutableStateListOf<Verification>() }
         val containerList = remember { mutableStateOf<List<ContainerData>>(emptyList()) }
         val importedFileName = remember { mutableStateOf("") }
 
+        // Local profile (legacy — kept for name/company display)
+        val userProfile = remember { mutableStateOf<UserProfile?>(null) }
+
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
 
-        val notificationCount = verificationList.count { 
-            it.status == "Not in Range" || it.status == "Alarm" || it.status == "Recheck" 
+        val notificationCount = verificationList.count {
+            it.status == "Not in Range" || it.status == "Alarm" || it.status == "Recheck"
         }
 
         LaunchedEffect(Unit) {
+            // Load legacy local profile if it exists (for name / company display)
+            if (profileFile.exists()) {
+                try { userProfile.value = gson.fromJson(profileFile.readText(), UserProfile::class.java) }
+                catch (_: Exception) {}
+            }
+            // Load verification data
             if (verificationFile.exists()) {
                 try {
-                    val json = verificationFile.readText()
                     val type = object : TypeToken<List<Verification>>() {}.type
-                    val list: List<Verification> = gson.fromJson(json, type)
+                    val list: List<Verification> = gson.fromJson(verificationFile.readText(), type)
                     verificationList.addAll(list)
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
+                } catch (_: Exception) {}
             }
+            // Load container data
             if (containerFile.exists()) {
                 try {
-                    val json = containerFile.readText()
                     val type = object : TypeToken<List<ContainerData>>() {}.type
-                    val list: List<ContainerData> = gson.fromJson(json, type)
+                    val list: List<ContainerData> = gson.fromJson(containerFile.readText(), type)
                     containerList.value = list
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
+                } catch (_: Exception) {}
             }
-            if (fileNameFile.exists()) {
-                importedFileName.value = fileNameFile.readText()
-            }
+            if (fileNameFile.exists()) importedFileName.value = fileNameFile.readText()
+
+            // Sync subscription from server
+            authViewModel.fetchSubscription()
         }
 
         val saveVerification = {
-            try {
-                val json = gson.toJson(verificationList.toList())
-                verificationFile.writeText(json)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
+            try { verificationFile.writeText(gson.toJson(verificationList.toList())) }
+            catch (_: Exception) {}
+        }
+        val saveContainers = {
+            try { containerFile.writeText(gson.toJson(containerList.value)) }
+            catch (_: Exception) {}
         }
 
-        val saveContainers = {
-            try {
-                val json = gson.toJson(containerList.value)
-                containerFile.writeText(json)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
+        val profile = userProfile.value ?: UserProfile()
 
         Scaffold(
-            bottomBar = { 
-                if (currentRoute != "dashboard") {
-                    BottomNavigationBar(navController, notificationCount) 
+            bottomBar = {
+                if (currentRoute != "dashboard" && currentRoute != "admin_portal") {
+                    BottomNavigationBar(navController, notificationCount)
                 }
             }
         ) { innerPadding ->
@@ -143,10 +187,10 @@ class MainActivity : ComponentActivity() {
                 }
                 composable(
                     "stage1?containerNumber={containerNumber}",
-                    arguments = listOf(navArgument("containerNumber") { 
+                    arguments = listOf(navArgument("containerNumber") {
                         type = NavType.StringType
                         nullable = true
-                        defaultValue = null 
+                        defaultValue = null
                     })
                 ) { backStackEntry ->
                     val containerNumber = backStackEntry.arguments?.getString("containerNumber")
@@ -174,9 +218,7 @@ class MainActivity : ComponentActivity() {
                             if (containerFile.exists()) containerFile.delete()
                             if (fileNameFile.exists()) fileNameFile.delete()
                         },
-                        onSaveVerification = {
-                            saveVerification()
-                        }
+                        onSaveVerification = { saveVerification() }
                     )
                 }
                 composable(
@@ -199,12 +241,9 @@ class MainActivity : ComponentActivity() {
                             val index = verificationList.indexOfFirst { it.containerNumber == verification.containerNumber }
                             if (index != -1) {
                                 try {
-                                    val updatedItem = verificationList[index].copy(status = newStatus)
-                                    verificationList[index] = updatedItem
+                                    verificationList[index] = verificationList[index].copy(status = newStatus)
                                     saveVerification()
-                                } catch (e: Exception) {
-                                    e.printStackTrace()
-                                }
+                                } catch (_: Exception) {}
                             }
                         }
                     )
@@ -218,8 +257,18 @@ class MainActivity : ComponentActivity() {
                 composable("profile") {
                     ProfileScreen(
                         profile = profile,
-                        onLogout = onLogout
+                        authViewModel = authViewModel,
+                        onLogout = {
+                            authViewModel.logout()
+                            // isLoggedIn flow will re-route to AuthNavGraph
+                        },
+                        onAdminPortal = {
+                            navController.navigate("admin_portal")
+                        }
                     )
+                }
+                composable("admin_portal") {
+                    AdminPortalScreen(onBack = { navController.popBackStack() })
                 }
             }
         }
@@ -228,10 +277,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun PlaceholderScreen(title: String, message: String) {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(text = title, style = MaterialTheme.typography.headlineMedium)
             Text(text = message, style = MaterialTheme.typography.bodyMedium)
