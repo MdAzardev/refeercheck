@@ -23,7 +23,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.myapplication.auth.AuthViewModel
 import com.example.myapplication.network.ApiClient
 import kotlinx.coroutines.launch
@@ -39,9 +38,16 @@ private val SubSub    = Color(0xFF778DA9)
 fun SubscriptionScreen(authViewModel: AuthViewModel) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    var isStripeLoading  by remember { mutableStateOf(false) }
+
     var isPaypalLoading  by remember { mutableStateOf(false) }
+    var isCaptureLoading by remember { mutableStateOf(false) }
+
     var errorMsg         by remember { mutableStateOf<String?>(null) }
+    var successMsg       by remember { mutableStateOf<String?>(null) }
+
+    var pendingPaypalOrderId    by remember { mutableStateOf<String?>(null) }
+    var pendingPaypalApproveUrl by remember { mutableStateOf<String?>(null) }
+
     var visible          by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) { visible = true }
@@ -93,7 +99,7 @@ fun SubscriptionScreen(authViewModel: AuthViewModel) {
 
                     Spacer(Modifier.height(28.dp))
 
-                    // Price card
+                    // Price card - Monthly ₹200
                     Surface(
                         color = SubAccent.copy(alpha = 0.08f),
                         shape = RoundedCornerShape(18.dp),
@@ -103,13 +109,13 @@ fun SubscriptionScreen(authViewModel: AuthViewModel) {
                             modifier = Modifier.padding(20.dp),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            Text("ANNUAL PLAN", fontSize = 11.sp, color = SubAccent, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
+                            Text("MONTHLY PLAN", fontSize = 11.sp, color = SubAccent, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
                             Spacer(Modifier.height(8.dp))
                             Row(verticalAlignment = Alignment.Bottom) {
-                                Text("$99", fontSize = 48.sp, fontWeight = FontWeight.ExtraBold, color = SubText)
-                                Text(" / year", fontSize = 16.sp, color = SubSub, modifier = Modifier.padding(bottom = 8.dp))
+                                Text("₹200", fontSize = 48.sp, fontWeight = FontWeight.ExtraBold, color = SubText)
+                                Text(" / month", fontSize = 16.sp, color = SubSub, modifier = Modifier.padding(bottom = 8.dp))
                             }
-                            Text("≈ $8.25/month — less than a meal", fontSize = 12.sp, color = SubSub)
+                            Text("Full unlimited access to all features", fontSize = 12.sp, color = SubSub)
                         }
                     }
 
@@ -125,7 +131,7 @@ fun SubscriptionScreen(authViewModel: AuthViewModel) {
 
                     Spacer(Modifier.height(24.dp))
 
-                    // Error
+                    // Error banner
                     AnimatedVisibility(visible = errorMsg != null) {
                         Surface(
                             color = Color(0xFFD32F2F).copy(alpha = 0.15f),
@@ -140,47 +146,92 @@ fun SubscriptionScreen(authViewModel: AuthViewModel) {
                         }
                     }
 
-                    // Stripe button
-                    Button(
-                        onClick = {
-                            isStripeLoading = true
-                            errorMsg = null
-                            scope.launch {
-                                try {
-                                    val resp = ApiClient.api.createStripeSession()
-                                    if (resp.isSuccessful && resp.body()?.success == true) {
-                                        val url = resp.body()?.data?.url
-                                        if (!url.isNullOrEmpty()) {
-                                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-                                        }
-                                    } else {
-                                        errorMsg = resp.body()?.message ?: "Failed to create payment session"
-                                    }
-                                } catch (e: Exception) {
-                                    errorMsg = e.message ?: "Network error"
-                                } finally {
-                                    isStripeLoading = false
-                                }
+                    // Success banner
+                    AnimatedVisibility(visible = successMsg != null) {
+                        Surface(
+                            color = Color(0xFF39FF14).copy(alpha = 0.15f),
+                            shape = RoundedCornerShape(12.dp),
+                            modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)
+                        ) {
+                            Row(Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+                                Icon(Icons.Default.CheckCircle, null, tint = Color(0xFF39FF14), modifier = Modifier.size(18.dp))
+                                Spacer(Modifier.width(8.dp))
+                                Text(successMsg ?: "", color = Color(0xFF39FF14), fontSize = 13.sp, fontWeight = FontWeight.Bold)
                             }
-                        },
-                        enabled = !isStripeLoading && !isPaypalLoading,
-                        modifier = Modifier.fillMaxWidth().height(54.dp),
-                        shape = RoundedCornerShape(14.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = SubAccent)
-                    ) {
-                        if (isStripeLoading) {
-                            CircularProgressIndicator(modifier = Modifier.size(22.dp), color = SubDark, strokeWidth = 2.dp)
-                        } else {
-                            Icon(Icons.Default.CreditCard, null, tint = SubDark, modifier = Modifier.size(20.dp))
-                            Spacer(Modifier.width(8.dp))
-                            Text("Pay with Card (Stripe)", fontWeight = FontWeight.Bold, color = SubDark)
                         }
                     }
 
-                    Spacer(Modifier.height(12.dp))
+                    // Pending PayPal completion card
+                    pendingPaypalOrderId?.let { orderId ->
+                        Surface(
+                            color = Color(0xFF009CDE).copy(alpha = 0.15f),
+                            shape = RoundedCornerShape(14.dp),
+                            modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)
+                        ) {
+                            Column(modifier = Modifier.padding(16.dp)) {
+                                Text("PayPal Order Created", fontWeight = FontWeight.Bold, color = Color(0xFF009CDE), fontSize = 14.sp)
+                                Text("Order ID: $orderId", color = SubSub, fontSize = 11.sp, modifier = Modifier.padding(top = 2.dp))
+                                Spacer(Modifier.height(10.dp))
 
-                    // PayPal button
-                    OutlinedButton(
+                                pendingPaypalApproveUrl?.let { url ->
+                                    OutlinedButton(
+                                        onClick = {
+                                            try { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) } catch (_: Exception) {}
+                                        },
+                                        modifier = Modifier.fillMaxWidth(),
+                                        shape = RoundedCornerShape(8.dp),
+                                        colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF009CDE))
+                                    ) {
+                                        Icon(Icons.Default.OpenInNew, null, modifier = Modifier.size(16.dp))
+                                        Spacer(Modifier.width(6.dp))
+                                        Text("Re-open PayPal in Browser", fontSize = 12.sp)
+                                    }
+                                    Spacer(Modifier.height(8.dp))
+                                }
+
+                                Button(
+                                    onClick = {
+                                        isCaptureLoading = true
+                                        errorMsg = null
+                                        scope.launch {
+                                            try {
+                                                val resp = ApiClient.api.capturePaypalOrder(orderId)
+                                                if (resp.isSuccessful && resp.body()?.success == true) {
+                                                    successMsg = "Payment successful! 1-Month Pro subscription active."
+                                                    authViewModel.fetchSubscription()
+                                                } else {
+                                                    errorMsg = resp.body()?.message ?: "PayPal payment capture failed"
+                                                }
+                                            } catch (e: Exception) {
+                                                errorMsg = e.message ?: "Network error during capture"
+                                            } finally {
+                                                isCaptureLoading = false
+                                            }
+                                        }
+                                    },
+                                    enabled = !isCaptureLoading,
+                                    modifier = Modifier.fillMaxWidth(),
+                                    shape = RoundedCornerShape(8.dp),
+                                    colors = ButtonDefaults.buttonColors(
+                                        containerColor = Color(0xFF009CDE),
+                                        disabledContainerColor = Color(0xFF009CDE).copy(alpha = 0.75f),
+                                        disabledContentColor = Color.White
+                                    )
+                                ) {
+                                    if (isCaptureLoading) {
+                                        CircularProgressIndicator(modifier = Modifier.size(20.dp), color = Color.White, strokeWidth = 2.5.dp)
+                                    } else {
+                                        Icon(Icons.Default.Verified, null, tint = Color.White, modifier = Modifier.size(16.dp))
+                                        Spacer(Modifier.width(6.dp))
+                                        Text("Confirm & Activate Subscription", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // PayPal button (ONLY payment method)
+                    Button(
                         onClick = {
                             isPaypalLoading = true
                             errorMsg = null
@@ -188,9 +239,18 @@ fun SubscriptionScreen(authViewModel: AuthViewModel) {
                                 try {
                                     val resp = ApiClient.api.createPaypalOrder()
                                     if (resp.isSuccessful && resp.body()?.success == true) {
-                                        // In production, open PayPal approval URL; for now show order ID
-                                        val orderId = resp.body()?.data?.orderId
-                                        errorMsg = "PayPal Order created: $orderId\nComplete payment in your PayPal app."
+                                        val data = resp.body()?.data
+                                        val orderId = data?.orderId
+                                        val approveUrl = data?.approveUrl
+
+                                        pendingPaypalOrderId = orderId
+                                        pendingPaypalApproveUrl = approveUrl
+
+                                        if (approveUrl != null && approveUrl.isNotEmpty()) {
+                                            try {
+                                                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(approveUrl)))
+                                            } catch (_: Exception) {}
+                                        }
                                     } else {
                                         errorMsg = resp.body()?.message ?: "Failed to create PayPal order"
                                     }
@@ -201,18 +261,21 @@ fun SubscriptionScreen(authViewModel: AuthViewModel) {
                                 }
                             }
                         },
-                        enabled = !isStripeLoading && !isPaypalLoading,
+                        enabled = !isPaypalLoading,
                         modifier = Modifier.fillMaxWidth().height(54.dp),
                         shape = RoundedCornerShape(14.dp),
-                        colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF003087)),
-                        border = androidx.compose.foundation.BorderStroke(1.5.dp, Color(0xFF009CDE))
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF003087),
+                            disabledContainerColor = Color(0xFF003087).copy(alpha = 0.75f),
+                            disabledContentColor = Color.White
+                        )
                     ) {
                         if (isPaypalLoading) {
-                            CircularProgressIndicator(modifier = Modifier.size(22.dp), color = Color(0xFF003087), strokeWidth = 2.dp)
+                            CircularProgressIndicator(modifier = Modifier.size(24.dp), color = Color(0xFF00BFFF), strokeWidth = 3.dp)
                         } else {
-                            Icon(Icons.Default.AccountBalance, null, tint = Color(0xFF009CDE), modifier = Modifier.size(20.dp))
+                            Icon(Icons.Default.AccountBalance, null, tint = Color.White, modifier = Modifier.size(20.dp))
                             Spacer(Modifier.width(8.dp))
-                            Text("Pay with PayPal", fontWeight = FontWeight.Bold, color = Color(0xFF009CDE))
+                            Text("Pay with PayPal (₹200/mo)", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.White)
                         }
                     }
 

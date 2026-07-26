@@ -195,10 +195,14 @@ fun LoginScreen(
                     enabled = !isLoading,
                     modifier = Modifier.fillMaxWidth().height(54.dp),
                     shape = RoundedCornerShape(14.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = AccentBlue)
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = AccentBlue,
+                        disabledContainerColor = AccentBlue.copy(alpha = 0.7f),
+                        disabledContentColor = DarkBg
+                    )
                 ) {
                     if (isLoading) {
-                        CircularProgressIndicator(modifier = Modifier.size(22.dp), color = Color.White, strokeWidth = 2.dp)
+                        CircularProgressIndicator(modifier = Modifier.size(24.dp), color = DarkBg, strokeWidth = 3.dp)
                     } else {
                         Text("Sign In", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = DarkBg)
                     }

@@ -90,7 +90,7 @@ data class AuthResponse(
 
 data class StripeSessionResponse(val sessionId: String, val url: String)
 
-data class PaypalOrderResponse(val orderId: String)
+data class PaypalOrderResponse(val orderId: String, val approveUrl: String? = null)
 
 // ─── Admin models ─────────────────────────────────────────────────────────────
 

@@ -179,10 +179,14 @@ fun OtpVerificationScreen(
                 enabled = !isLoading && otp.length == 6,
                 modifier = Modifier.fillMaxWidth().height(54.dp),
                 shape = RoundedCornerShape(14.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = OtpAccent)
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = OtpAccent,
+                    disabledContainerColor = if (otp.length == 6) OtpAccent.copy(alpha = 0.7f) else OtpAccent.copy(alpha = 0.3f),
+                    disabledContentColor = OtpDark
+                )
             ) {
                 if (isLoading) {
-                    CircularProgressIndicator(modifier = Modifier.size(22.dp), color = OtpDark, strokeWidth = 2.dp)
+                    CircularProgressIndicator(modifier = Modifier.size(24.dp), color = OtpDark, strokeWidth = 3.dp)
                 } else {
                     Icon(Icons.Default.VerifiedUser, null, tint = OtpDark, modifier = Modifier.size(20.dp))
                     Spacer(Modifier.width(8.dp))

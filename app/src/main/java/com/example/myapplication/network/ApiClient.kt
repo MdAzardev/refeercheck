@@ -16,7 +16,7 @@ object ApiClient {
      *  - Android Emulator:      http://10.0.2.2:8000/
      *  - Production:            https://your-domain.com/
      */
-    const val BASE_URL = "http://192.168.1.6:8000/"
+    const val BASE_URL = "http://192.168.31.209:8000/"
 
     private var authManager: AuthManager? = null
 

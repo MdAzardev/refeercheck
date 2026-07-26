@@ -234,10 +234,14 @@ fun RegisterScreen(
                     enabled = !isLoading,
                     modifier = Modifier.fillMaxWidth().height(54.dp),
                     shape = RoundedCornerShape(14.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = AccentBlue2)
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = AccentBlue2,
+                        disabledContainerColor = AccentBlue2.copy(alpha = 0.7f),
+                        disabledContentColor = DarkBg2
+                    )
                 ) {
                     if (isLoading) {
-                        CircularProgressIndicator(modifier = Modifier.size(22.dp), color = DarkBg2, strokeWidth = 2.dp)
+                        CircularProgressIndicator(modifier = Modifier.size(24.dp), color = DarkBg2, strokeWidth = 3.dp)
                     } else {
                         Text("Register & Get OTP", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = DarkBg2)
                     }
