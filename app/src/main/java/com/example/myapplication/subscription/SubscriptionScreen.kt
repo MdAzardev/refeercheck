@@ -3,8 +3,15 @@ package com.example.myapplication.subscription
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
+import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -15,6 +22,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -24,41 +32,46 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.auth.AuthViewModel
-import com.example.myapplication.network.ApiClient
-import kotlinx.coroutines.launch
 
+// ─── Launch Mode Flag ────────────────────────────────────────────────
+// Set to false once payment integration is live and tested.
+private const val PAYMENT_ENABLED = false
+
+// Support contact details
+private const val SUPPORT_EMAIL = "support@reefercheck.app"
+private const val PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.example.myapplication"
+
+// ─── Colour palette ──────────────────────────────────────────────────
 private val SubDark   = Color(0xFF0D1117)
 private val SubNavy   = Color(0xFF0D1B2A)
 private val SubAccent = Color(0xFF00BFFF)
 private val SubGold   = Color(0xFFFFD700)
 private val SubText   = Color(0xFFE0E1DD)
 private val SubSub    = Color(0xFF778DA9)
+private val SubAmber  = Color(0xFFFFA726)
+private val SubGreen  = Color(0xFF39FF14)
 
 @Composable
 fun SubscriptionScreen(authViewModel: AuthViewModel) {
     val context = LocalContext.current
-    val scope = rememberCoroutineScope()
-
-    var isPaypalLoading  by remember { mutableStateOf(false) }
-    var isCaptureLoading by remember { mutableStateOf(false) }
-
-    var errorMsg         by remember { mutableStateOf<String?>(null) }
-    var successMsg       by remember { mutableStateOf<String?>(null) }
-
-    var pendingPaypalOrderId    by remember { mutableStateOf<String?>(null) }
-    var pendingPaypalApproveUrl by remember { mutableStateOf<String?>(null) }
-
-    var visible          by remember { mutableStateOf(false) }
-
+    var visible by remember { mutableStateOf(false) }
     LaunchedEffect(Unit) { visible = true }
 
+    // Pulsing animation for the "coming soon" badge
+    val infiniteTransition = rememberInfiniteTransition(label = "pulse")
+    val pulse by infiniteTransition.animateFloat(
+        initialValue = 0.6f, targetValue = 1f,
+        animationSpec = infiniteRepeatable(tween(1000), RepeatMode.Reverse),
+        label = "pulse_alpha"
+    )
+
     val features = listOf(
-        Triple(Icons.Default.AcUnit,           "Full Alarm Lookup",         "All brands: Carrier, TK, Daikin, StarCool"),
-        Triple(Icons.Default.Assignment,        "Reefer Rounds",             "Full container verification workflow"),
-        Triple(Icons.Default.MenuBook,          "Technical Manuals",         "Access all reefer unit guides"),
-        Triple(Icons.Default.Notifications,     "Instant Notifications",     "Real-time alarm & status alerts"),
-        Triple(Icons.Default.Chat,              "Team Chat",                 "Communicate with your crew"),
-        Triple(Icons.Default.CloudSync,         "Offline Support",           "Works without internet connection"),
+        Triple(Icons.Default.AcUnit,        "Full Alarm Lookup",     "All brands: Carrier, TK, Daikin, StarCool"),
+        Triple(Icons.Default.Assignment,    "Reefer Rounds",         "Full container verification workflow"),
+        Triple(Icons.Default.MenuBook,      "Technical Manuals",     "Access all reefer unit guides"),
+        Triple(Icons.Default.Notifications, "Instant Notifications", "Real-time alarm & status alerts"),
+        Triple(Icons.Default.Chat,          "Team Chat",             "Communicate with your crew"),
+        Triple(Icons.Default.CloudSync,     "Offline Support",       "Works without internet connection"),
     )
 
     Box(
@@ -70,14 +83,13 @@ fun SubscriptionScreen(authViewModel: AuthViewModel) {
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
-                .padding(24.dp),
+                .padding(horizontal = 24.dp, vertical = 20.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Spacer(Modifier.height(20.dp))
-
-            AnimatedVisibility(visible = visible, enter = fadeIn()) {
+            AnimatedVisibility(visible = visible, enter = fadeIn() + slideInVertically { -40 }) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    // Lock icon
+
+                    // ── Lock icon ─────────────────────────────────────────
                     Surface(
                         shape = RoundedCornerShape(24.dp),
                         color = SubGold.copy(alpha = 0.12f),
@@ -90,25 +102,80 @@ fun SubscriptionScreen(authViewModel: AuthViewModel) {
 
                     Spacer(Modifier.height(20.dp))
 
-                    Text("Subscription Required", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold, color = SubText)
+                    Text(
+                        "Your Free Trial Has Ended",
+                        fontSize = 24.sp, fontWeight = FontWeight.ExtraBold, color = SubText,
+                        textAlign = TextAlign.Center
+                    )
                     Spacer(Modifier.height(8.dp))
                     Text(
-                        "Your trial has ended. Upgrade to continue\naccessing all Reefer Check features.",
+                        "Reefer Check Pro is required to continue.\nSubscription payments are coming very soon!",
                         fontSize = 14.sp, color = SubSub, textAlign = TextAlign.Center, lineHeight = 22.sp
                     )
 
-                    Spacer(Modifier.height(28.dp))
+                    Spacer(Modifier.height(24.dp))
 
-                    // Price card - Monthly ₹200
+                    // ── "Coming Soon" notice banner ───────────────────────
                     Surface(
-                        color = SubAccent.copy(alpha = 0.08f),
+                        color = SubAmber.copy(alpha = 0.10f),
+                        shape = RoundedCornerShape(16.dp),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .border(1.dp, SubAmber.copy(alpha = 0.35f), RoundedCornerShape(16.dp))
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(16.dp),
+                            verticalAlignment = Alignment.Top
+                        ) {
+                            Icon(
+                                Icons.Default.Info, null,
+                                tint = SubAmber,
+                                modifier = Modifier.size(22.dp).padding(top = 2.dp)
+                            )
+                            Spacer(Modifier.width(12.dp))
+                            Column {
+                                Text(
+                                    "Payment Integration — Coming Soon",
+                                    fontWeight = FontWeight.Bold, color = SubAmber, fontSize = 14.sp
+                                )
+                                Spacer(Modifier.height(6.dp))
+                                Text(
+                                    "We are actively working on enabling in-app payments. " +
+                                    "If you are facing any issues or need an extension, " +
+                                    "please contact our support team and we will sort it out immediately.",
+                                    color = SubText.copy(alpha = 0.85f), fontSize = 12.sp, lineHeight = 20.sp
+                                )
+                            }
+                        }
+                    }
+
+                    Spacer(Modifier.height(20.dp))
+
+                    // ── Price card ────────────────────────────────────────
+                    Surface(
+                        color = SubAccent.copy(alpha = 0.07f),
                         shape = RoundedCornerShape(18.dp),
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .border(1.dp, SubAccent.copy(alpha = 0.18f), RoundedCornerShape(18.dp))
                     ) {
                         Column(
                             modifier = Modifier.padding(20.dp),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
+                            // "Coming soon" badge
+                            Surface(
+                                color = SubAmber.copy(alpha = pulse * 0.25f),
+                                shape = RoundedCornerShape(20.dp)
+                            ) {
+                                Text(
+                                    "  PAYMENT COMING SOON  ",
+                                    fontSize = 10.sp, color = SubAmber,
+                                    fontWeight = FontWeight.ExtraBold, letterSpacing = 1.5.sp,
+                                    modifier = Modifier.padding(vertical = 4.dp, horizontal = 4.dp)
+                                )
+                            }
+                            Spacer(Modifier.height(10.dp))
                             Text("MONTHLY PLAN", fontSize = 11.sp, color = SubAccent, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
                             Spacer(Modifier.height(8.dp))
                             Row(verticalAlignment = Alignment.Bottom) {
@@ -119,10 +186,14 @@ fun SubscriptionScreen(authViewModel: AuthViewModel) {
                         }
                     }
 
-                    Spacer(Modifier.height(24.dp))
+                    Spacer(Modifier.height(22.dp))
 
-                    // Feature list
-                    Text("What's Included", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = SubText, modifier = Modifier.fillMaxWidth())
+                    // ── Feature list ──────────────────────────────────────
+                    Text(
+                        "What's Included",
+                        fontSize = 16.sp, fontWeight = FontWeight.Bold, color = SubText,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                     Spacer(Modifier.height(12.dp))
                     features.forEach { (icon, title, desc) ->
                         FeatureRow(icon = icon, title = title, description = desc)
@@ -131,151 +202,67 @@ fun SubscriptionScreen(authViewModel: AuthViewModel) {
 
                     Spacer(Modifier.height(24.dp))
 
-                    // Error banner
-                    AnimatedVisibility(visible = errorMsg != null) {
-                        Surface(
-                            color = Color(0xFFD32F2F).copy(alpha = 0.15f),
-                            shape = RoundedCornerShape(12.dp),
-                            modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)
-                        ) {
-                            Row(Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-                                Icon(Icons.Default.ErrorOutline, null, tint = Color(0xFFEF5350), modifier = Modifier.size(18.dp))
-                                Spacer(Modifier.width(8.dp))
-                                Text(errorMsg ?: "", color = Color(0xFFEF5350), fontSize = 13.sp)
-                            }
-                        }
-                    }
-
-                    // Success banner
-                    AnimatedVisibility(visible = successMsg != null) {
-                        Surface(
-                            color = Color(0xFF39FF14).copy(alpha = 0.15f),
-                            shape = RoundedCornerShape(12.dp),
-                            modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)
-                        ) {
-                            Row(Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-                                Icon(Icons.Default.CheckCircle, null, tint = Color(0xFF39FF14), modifier = Modifier.size(18.dp))
-                                Spacer(Modifier.width(8.dp))
-                                Text(successMsg ?: "", color = Color(0xFF39FF14), fontSize = 13.sp, fontWeight = FontWeight.Bold)
-                            }
-                        }
-                    }
-
-                    // Pending PayPal completion card
-                    pendingPaypalOrderId?.let { orderId ->
-                        Surface(
-                            color = Color(0xFF009CDE).copy(alpha = 0.15f),
+                    // ── Disabled Pay button (shows "Coming Soon") ─────────
+                    if (!PAYMENT_ENABLED) {
+                        Button(
+                            onClick = { /* payments not yet live */ },
+                            enabled = false,
+                            modifier = Modifier.fillMaxWidth().height(54.dp),
                             shape = RoundedCornerShape(14.dp),
-                            modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)
+                            colors = ButtonDefaults.buttonColors(
+                                disabledContainerColor = Color(0xFF003087).copy(alpha = 0.45f),
+                                disabledContentColor = Color.White.copy(alpha = 0.55f)
+                            )
                         ) {
-                            Column(modifier = Modifier.padding(16.dp)) {
-                                Text("PayPal Order Created", fontWeight = FontWeight.Bold, color = Color(0xFF009CDE), fontSize = 14.sp)
-                                Text("Order ID: $orderId", color = SubSub, fontSize = 11.sp, modifier = Modifier.padding(top = 2.dp))
-                                Spacer(Modifier.height(10.dp))
-
-                                pendingPaypalApproveUrl?.let { url ->
-                                    OutlinedButton(
-                                        onClick = {
-                                            try { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) } catch (_: Exception) {}
-                                        },
-                                        modifier = Modifier.fillMaxWidth(),
-                                        shape = RoundedCornerShape(8.dp),
-                                        colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF009CDE))
-                                    ) {
-                                        Icon(Icons.Default.OpenInNew, null, modifier = Modifier.size(16.dp))
-                                        Spacer(Modifier.width(6.dp))
-                                        Text("Re-open PayPal in Browser", fontSize = 12.sp)
-                                    }
-                                    Spacer(Modifier.height(8.dp))
-                                }
-
-                                Button(
-                                    onClick = {
-                                        isCaptureLoading = true
-                                        errorMsg = null
-                                        scope.launch {
-                                            try {
-                                                val resp = ApiClient.api.capturePaypalOrder(orderId)
-                                                if (resp.isSuccessful && resp.body()?.success == true) {
-                                                    successMsg = "Payment successful! 1-Month Pro subscription active."
-                                                    authViewModel.fetchSubscription()
-                                                } else {
-                                                    errorMsg = resp.body()?.message ?: "PayPal payment capture failed"
-                                                }
-                                            } catch (e: Exception) {
-                                                errorMsg = e.message ?: "Network error during capture"
-                                            } finally {
-                                                isCaptureLoading = false
-                                            }
-                                        }
-                                    },
-                                    enabled = !isCaptureLoading,
-                                    modifier = Modifier.fillMaxWidth(),
-                                    shape = RoundedCornerShape(8.dp),
-                                    colors = ButtonDefaults.buttonColors(
-                                        containerColor = Color(0xFF009CDE),
-                                        disabledContainerColor = Color(0xFF009CDE).copy(alpha = 0.75f),
-                                        disabledContentColor = Color.White
-                                    )
-                                ) {
-                                    if (isCaptureLoading) {
-                                        CircularProgressIndicator(modifier = Modifier.size(20.dp), color = Color.White, strokeWidth = 2.5.dp)
-                                    } else {
-                                        Icon(Icons.Default.Verified, null, tint = Color.White, modifier = Modifier.size(16.dp))
-                                        Spacer(Modifier.width(6.dp))
-                                        Text("Confirm & Activate Subscription", fontWeight = FontWeight.Bold, fontSize = 13.sp)
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    // PayPal button (ONLY payment method)
-                    Button(
-                        onClick = {
-                            isPaypalLoading = true
-                            errorMsg = null
-                            scope.launch {
-                                try {
-                                    val resp = ApiClient.api.createPaypalOrder()
-                                    if (resp.isSuccessful && resp.body()?.success == true) {
-                                        val data = resp.body()?.data
-                                        val orderId = data?.orderId
-                                        val approveUrl = data?.approveUrl
-
-                                        pendingPaypalOrderId = orderId
-                                        pendingPaypalApproveUrl = approveUrl
-
-                                        if (approveUrl != null && approveUrl.isNotEmpty()) {
-                                            try {
-                                                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(approveUrl)))
-                                            } catch (_: Exception) {}
-                                        }
-                                    } else {
-                                        errorMsg = resp.body()?.message ?: "Failed to create PayPal order"
-                                    }
-                                } catch (e: Exception) {
-                                    errorMsg = e.message ?: "Network error"
-                                } finally {
-                                    isPaypalLoading = false
-                                }
-                            }
-                        },
-                        enabled = !isPaypalLoading,
-                        modifier = Modifier.fillMaxWidth().height(54.dp),
-                        shape = RoundedCornerShape(14.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(0xFF003087),
-                            disabledContainerColor = Color(0xFF003087).copy(alpha = 0.75f),
-                            disabledContentColor = Color.White
-                        )
-                    ) {
-                        if (isPaypalLoading) {
-                            CircularProgressIndicator(modifier = Modifier.size(24.dp), color = Color(0xFF00BFFF), strokeWidth = 3.dp)
-                        } else {
-                            Icon(Icons.Default.AccountBalance, null, tint = Color.White, modifier = Modifier.size(20.dp))
+                            Icon(Icons.Default.AccountBalance, null, modifier = Modifier.size(20.dp))
                             Spacer(Modifier.width(8.dp))
-                            Text("Pay with PayPal (₹200/mo)", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.White)
+                            Text("Pay with PayPal — Coming Soon", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                        }
+
+                        Spacer(Modifier.height(14.dp))
+
+                        // ── Contact Support button ─────────────────────────
+                        Button(
+                            onClick = {
+                                val intent = Intent(Intent.ACTION_SENDTO).apply {
+                                    data = Uri.parse("mailto:$SUPPORT_EMAIL")
+                                    putExtra(Intent.EXTRA_SUBJECT, "Reefer Check - Subscription / Support Request")
+                                    putExtra(
+                                        Intent.EXTRA_TEXT,
+                                        "Hi Reefer Check Team,\n\nI need assistance with my subscription.\n\nRegistered Email: \nIssue: \n\nThank you."
+                                    )
+                                }
+                                try { context.startActivity(Intent.createChooser(intent, "Send email via...")) }
+                                catch (_: Exception) {}
+                            },
+                            modifier = Modifier.fillMaxWidth().height(52.dp),
+                            shape = RoundedCornerShape(14.dp),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = SubGreen.copy(alpha = 0.85f),
+                                contentColor = Color(0xFF0D1117)
+                            )
+                        ) {
+                            Icon(Icons.Default.Email, null, modifier = Modifier.size(20.dp))
+                            Spacer(Modifier.width(8.dp))
+                            Text("Contact Support", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                        }
+
+                        Spacer(Modifier.height(10.dp))
+
+                        // ── Check for App Update button ────────────────────
+                        OutlinedButton(
+                            onClick = {
+                                try { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(PLAY_STORE_URL))) }
+                                catch (_: Exception) {}
+                            },
+                            modifier = Modifier.fillMaxWidth().height(50.dp),
+                            shape = RoundedCornerShape(14.dp),
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = SubAccent),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, SubAccent.copy(alpha = 0.5f))
+                        ) {
+                            Icon(Icons.Default.SystemUpdate, null, modifier = Modifier.size(20.dp))
+                            Spacer(Modifier.width(8.dp))
+                            Text("Check for App Update", fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
                         }
                     }
 
