@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <!-- Allow cleartext HTTP traffic for local development and LAN testing -->
-    <base-config cleartextTrafficPermitted="true" />
+    <!-- Production: HTTPS only for VPS domain -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">refapp.mrrawthereltech.com</domain>
+    </domain-config>
+    <!-- Local dev only: allow HTTP for LAN/emulator testing -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">192.168.31.209</domain>
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
 </network-security-config>
