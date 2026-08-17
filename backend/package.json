@@ -17,7 +17,11 @@
     "dotenv": "^16.0.3",
     "cors": "^2.8.5",
     "stripe": "^12.0.0",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "cheerio": "^1.1.0",
+    "exceljs": "^4.4.0",
+    "pdfkit": "^0.17.1",
+    "svg-to-pdfkit": "^0.1.8"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

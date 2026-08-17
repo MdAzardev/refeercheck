@@ -12,11 +12,11 @@ import java.util.concurrent.TimeUnit
 object ApiClient {
     /**
      * BASE_URL options:
-     *  - Production (VPS):      https://mrrawthereltech.com/  ← ACTIVE
+     *  - Production (VPS):      https://www.refapp.mrrawthereltech.com/  ← ACTIVE
      *  - Physical device (LAN): http://192.168.31.209:8000/
      *  - Android Emulator:      http://10.0.2.2:8000/
      */
-    const val BASE_URL = "https://mrrawthereltech.com/"
+    const val BASE_URL = "https://www.refapp.mrrawthereltech.com/"
 
     private var authManager: AuthManager? = null
 

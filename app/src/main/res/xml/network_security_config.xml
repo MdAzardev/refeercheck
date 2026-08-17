@@ -2,7 +2,7 @@
 <network-security-config>
     <!-- Production: HTTPS only for VPS domain -->
     <domain-config cleartextTrafficPermitted="false">
-        <domain includeSubdomains="true">mrrawthereltech.com</domain>
+        <domain includeSubdomains="true">refapp.mrrawthereltech.com</domain>
     </domain-config>
     <!-- Local dev only: allow HTTP for LAN/emulator testing -->
     <domain-config cleartextTrafficPermitted="true">

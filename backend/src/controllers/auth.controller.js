@@ -11,13 +11,14 @@ const register = async (req, res) => {
   try {
     const { email, phone, password } = req.body;
     if (!email || !phone || !password) return error(res, 'Email, phone and password are required');
-    const exists = await prisma.user.findUnique({ where: { email } });
+    const cleanEmail = email.trim().toLowerCase();
+    const exists = await prisma.user.findUnique({ where: { email: cleanEmail } });
     if (exists) return error(res, 'Email already registered');
     const hashed = await bcrypt.hash(password, 10);
-    const user = await prisma.user.create({ data: { email, phone, password: hashed } });
+    const user = await prisma.user.create({ data: { email: cleanEmail, phone: phone.trim(), password: hashed } });
     const otp = generateOtp();
     await saveOtp(user.id, otp);
-    await sendOtpEmail(email, otp);
+    await sendOtpEmail(cleanEmail, otp);
     return success(res, null, 'OTP sent to your email. Check your inbox.', 201);
   } catch (err) {
     console.error('[register]', err);
@@ -30,7 +31,8 @@ const verifyOtpHandler = async (req, res) => {
   try {
     const { email, otp } = req.body;
     if (!email || !otp) return error(res, 'Email and OTP are required');
-    const user = await prisma.user.findUnique({ where: { email } });
+    const cleanEmail = email.trim().toLowerCase();
+    const user = await prisma.user.findUnique({ where: { email: cleanEmail } });
     if (!user) return error(res, 'User not found', 404);
     const valid = await verifyOtp(user.id, otp);
     if (!valid) return error(res, 'Invalid or expired OTP');
@@ -64,11 +66,12 @@ const resendOtp = async (req, res) => {
   try {
     const { email } = req.body;
     if (!email) return error(res, 'Email is required');
-    const user = await prisma.user.findUnique({ where: { email } });
+    const cleanEmail = email.trim().toLowerCase();
+    const user = await prisma.user.findUnique({ where: { email: cleanEmail } });
     if (!user) return error(res, 'User not found', 404);
     const otp = generateOtp();
     await saveOtp(user.id, otp);
-    await sendOtpEmail(email, otp);
+    await sendOtpEmail(cleanEmail, otp);
     return success(res, null, 'OTP resent successfully');
   } catch (err) {
     console.error('[resendOtp]', err);
@@ -81,7 +84,8 @@ const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     if (!email || !password) return error(res, 'Email and password are required');
-    const user = await prisma.user.findUnique({ where: { email } });
+    const cleanEmail = email.trim().toLowerCase();
+    const user = await prisma.user.findUnique({ where: { email: cleanEmail } });
     if (!user) return error(res, 'Invalid email or password', 401);
     if (!user.isVerified) return error(res, 'Please verify your email before logging in');
     const match = await bcrypt.compare(password, user.password);

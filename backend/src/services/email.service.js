@@ -1,11 +1,39 @@
 const nodemailer = require('nodemailer');
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
+const createTransporter = () => {
+  if (process.env.EMAIL_HOST) {
+    return nodemailer.createTransport({
+      host: process.env.EMAIL_HOST,
+      port: parseInt(process.env.EMAIL_PORT || '587'),
+      secure: parseInt(process.env.EMAIL_PORT || '587') === 465,
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
+  }
+  
+  return nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+};
+
+const transporter = createTransporter();
+
+// Verify connection configuration on startup
+transporter.verify((error) => {
+  if (error) {
+    console.error('❌ Email server configuration error:', error.message);
+  } else {
+    console.log('✅ Email server is ready to send messages');
+  }
 });
 
 const sendOtpEmail = async (to, otp) => {
@@ -49,4 +77,8 @@ const sendOtpEmail = async (to, otp) => {
   }
 };
 
-module.exports = { sendOtpEmail };
+const sendMail = async (options) => {
+  return transporter.sendMail(options);
+};
+
+module.exports = { transporter, sendOtpEmail, sendMail, createTransporter };
