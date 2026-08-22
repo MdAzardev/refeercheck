@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "com.mrrawthereltech.reefercheck"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "com.mrrawthereltech.reefercheck"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -17,21 +17,18 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    // 1. Add Signing Config (Replace with your actual file name and passwords)
     signingConfigs {
         create("release") {
-            storeFile = file("my-release-key.jks") // Place your .jks file in the 'app' folder
-            storePassword = "your_store_password"
-            keyAlias = "your_key_alias"
-            keyPassword = "your_key_password"
+            storeFile = rootProject.file("app/reefercheck-release-key.jks")
+            storePassword = "reefercheck123"
+            keyAlias = "reefercheck"
+            keyPassword = "reefercheck123"
         }
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = true // Standard for Google Play (optimizes size)
-            isShrinkResources = true
-            // 2. Assign the signing config to the release build
+            isMinifyEnabled = false
             signingConfig = signingConfigs.getByName("release")
 
             proguardFiles(
