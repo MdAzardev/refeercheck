@@ -44,6 +44,12 @@ android {
     buildFeatures {
         compose = true
     }
+
+    // Force AAPT to compress assets that are normally excluded (PDF, PPT, MPG)
+    // This reduces the final .aab size for Google Play upload
+    androidResources {
+        noCompress.clear()
+    }
 }
 
 dependencies {
