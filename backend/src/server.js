@@ -118,7 +118,78 @@ app.get('/delete-account', (req, res) => {
 });
 
 
+// Privacy Policy Page (required by Google Play Store policy)
+app.get('/privacy-policy', (req, res) => {
+  res.send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - Reefer Check</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0D1B2A; color: #e0e0e0; padding: 24px; }
+    .container { max-width: 720px; margin: 0 auto; padding: 40px 0; }
+    .logo { font-size: 26px; font-weight: 700; color: #00BFFF; margin-bottom: 4px; }
+    .updated { color: #88aacc; font-size: 13px; margin-bottom: 36px; }
+    h1 { font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 24px; }
+    h2 { font-size: 17px; font-weight: 600; color: #00BFFF; margin: 28px 0 10px; }
+    p, li { font-size: 14px; line-height: 1.8; color: #b0c4d8; margin-bottom: 10px; }
+    ul { padding-left: 20px; margin-bottom: 10px; }
+    a { color: #00BFFF; }
+    .divider { border: none; border-top: 1px solid #1e3a50; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">❄️ Reefer Check</div>
+    <div class="updated">Last updated: September 2026</div>
+    <h1>Privacy Policy</h1>
+    <p>This Privacy Policy describes how Reefer Check ("we", "our", or "us") collects, uses, and protects your personal information when you use our mobile application.</p>
+
+    <h2>1. Information We Collect</h2>
+    <ul>
+      <li><strong>Name</strong> – collected during account registration</li>
+      <li><strong>Email address</strong> – used for login and account management</li>
+      <li><strong>Phone number</strong> – used for OTP verification</li>
+      <li><strong>App activity</strong> – alarm lookups and app usage for improving the service</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li>To create and manage your account</li>
+      <li>To verify your identity via OTP</li>
+      <li>To provide access to app features (alarm lookup, manuals, reefer rounds)</li>
+      <li>To manage your subscription and trial period</li>
+      <li>To send important service notifications</li>
+    </ul>
+
+    <h2>3. Data Storage & Security</h2>
+    <p>All data is stored securely on our servers. All data transmitted between the app and our servers is encrypted using HTTPS (TLS). We do not sell or share your personal data with third parties.</p>
+
+    <h2>4. Data Retention</h2>
+    <p>We retain your data for as long as your account is active. Upon account deletion, all personal data is permanently removed within 7 business days. Some anonymised data may be retained for up to 90 days for legal compliance.</p>
+
+    <h2>5. Account Deletion</h2>
+    <p>You can delete your account at any time from within the app (Profile → Delete Account) or by submitting a request at:</p>
+    <p><a href="/delete-account">https://mrrawthereltech.com/delete-account</a></p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>Reefer Check is intended for professional use by adults. We do not knowingly collect data from children under 13.</p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date.</p>
+
+    <h2>8. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us at:<br/>
+    📧 <a href="mailto:support@reefercheck.com">support@reefercheck.com</a></p>
+  </div>
+</body>
+</html>`);
+});
+
 // Root level EmailSender Endpoints (Backwards Compatibility)
+
 const inquiryController = require('./controllers/inquiry.controller');
 app.post('/send-code', inquiryController.sendCode);
 app.post('/verify-code', inquiryController.verifyCode);
