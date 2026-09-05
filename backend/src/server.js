@@ -64,6 +64,60 @@ app.get('/health', async (req, res) => {
   });
 });
 
+// Account Deletion Request Page (required by Google Play Store policy)
+app.get('/delete-account', (req, res) => {
+  res.send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete Account - Reefer Check</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0D1B2A; color: #e0e0e0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+    .card { background: #1a2a3a; border-radius: 16px; padding: 40px; max-width: 560px; width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    .logo { font-size: 28px; font-weight: 700; color: #00BFFF; margin-bottom: 8px; }
+    .subtitle { color: #88aacc; font-size: 14px; margin-bottom: 32px; }
+    h1 { font-size: 22px; font-weight: 600; margin-bottom: 16px; color: #fff; }
+    p { font-size: 15px; line-height: 1.7; color: #b0c4d8; margin-bottom: 16px; }
+    .steps { background: #0f2030; border-radius: 10px; padding: 20px 24px; margin: 20px 0; }
+    .steps ol { padding-left: 20px; }
+    .steps li { padding: 6px 0; font-size: 14px; color: #c0d8ee; }
+    .highlight { color: #00BFFF; font-weight: 600; }
+    .email-box { background: #0D1B2A; border: 1px solid #00BFFF44; border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 15px; }
+    .note { font-size: 13px; color: #778899; background: #0f2030; border-left: 3px solid #00BFFF; padding: 12px 16px; border-radius: 4px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">❄️ Reefer Check</div>
+    <div class="subtitle">Account Management</div>
+    <h1>Request Account Deletion</h1>
+    <p>You can request deletion of your Reefer Check account and all associated data at any time.</p>
+    <div class="steps">
+      <ol>
+        <li>Send an email to <span class="highlight">support@reefercheck.com</span></li>
+        <li>Use subject: <span class="highlight">Delete My Account</span></li>
+        <li>Include your registered <span class="highlight">email address</span> in the message</li>
+        <li>We will process your request within <span class="highlight">7 business days</span></li>
+      </ol>
+    </div>
+    <div class="email-box">
+      📧 <strong>support@reefercheck.com</strong>
+    </div>
+    <p>Upon deletion, the following data will be permanently removed:</p>
+    <p>✅ Account profile (name, email, phone)<br/>
+       ✅ Subscription records<br/>
+       ✅ All app activity and history</p>
+    <div class="note">
+      ℹ️ Some anonymised data may be retained for legal compliance and fraud prevention for up to 90 days.
+    </div>
+  </div>
+</body>
+</html>`);
+});
+
+
 // Root level EmailSender Endpoints (Backwards Compatibility)
 const inquiryController = require('./controllers/inquiry.controller');
 app.post('/send-code', inquiryController.sendCode);
